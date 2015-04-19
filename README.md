@@ -1,2 +1,2 @@
-# tmthydvnprt.githun.io
+# tmthydvnprt.github.io
 the internet-facing extension of my self
