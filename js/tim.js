@@ -8,6 +8,7 @@ $(document).ready(function () {
 	var page         = $('#page'),
 		alphabet     = '`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?',
 		verbInterval = 0,
+		verbTimeout  = 0,
 		charInterval = 0,
         bringOut     = 0;
     
@@ -34,7 +35,7 @@ $(document).ready(function () {
             r              = '',
             i              = 0,
             charPeriod     = 35,
-            verbPeriod     = 3200,
+            verbPeriod     = 800,
             randCharNum    = 6,
             randChar       = 0,
             charIndx       = 0;
@@ -47,10 +48,18 @@ $(document).ready(function () {
             blankText += '_';
         }
 
-        // timing intervals
-        verbInterval = setInterval(function () {
+        // 'build' verb by randomly iterate thru characters and 'landing' on correct letters
+        function renderVerb() {
             
+            // initialize verb
+            clearTimeout(verbTimeout);
             verbText = blankText;
+            verbIndx = (verbIndx + 1) % verbs.length;
+            randChar  = 0;
+            charIndx  = 0;
+            verb.text(verbText);
+            
+            // iterate thru random characters for each letter
             charInterval = setInterval(function () {
                 if (charIndx < verbs[verbIndx].length) {
                     if (randChar < randCharNum) {
@@ -65,14 +74,18 @@ $(document).ready(function () {
                     verb.text(verbText);
                 } else {
                     verbText = verbs[verbIndx] + verbText.substr(verbs[verbIndx].length);
-                    verbIndx = (verbIndx + 1) % verbs.length;
                     randChar  = 0;
                     charIndx  = 0;
                     verb.text(verbText);
                     clearInterval(charInterval);
+                    // wait for next verb
+                    verbTimeout = setTimeout(renderVerb, verbPeriod);
                 }
             }, charPeriod);
-        }, verbPeriod);
+        }
+        
+        // kickoff first timeout
+        verbTimeout = setTimeout(renderVerb, verbPeriod);
     }
     
 	// route hashchanges to page
