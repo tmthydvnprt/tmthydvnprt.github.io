@@ -29,27 +29,28 @@ $(document).ready(function () {
             verbs          = ['read', 'code', 'write', 'walk', 'ponder', 'hike', 'garden'],
             verbIndx       = 0,
             maxVerbLen     = 0,
+            blankText      = '',
             verbText       = '',
             r              = '',
             i              = 0,
-            charPeriod     = 40,
-            verbPeriod     = 2500,
-            randCharNum    = 5,
+            charPeriod     = 35,
+            verbPeriod     = 3200,
+            randCharNum    = 6,
             randChar       = 0,
             charIndx       = 0;
         verbs.forEach(function (item) {
             maxVerbLen = Math.max(maxVerbLen, item.length);
         });
+        
+        //verbText = new Array(maxVerbLen + 1).join('_');
+        for (i = 0; i < maxVerbLen; i += 1) {
+            blankText += '_';
+        }
 
         // timing intervals
         verbInterval = setInterval(function () {
             
-            //verbText = new Array(maxVerbLen + 1).join('_');
-            verbText = "";
-            for (i = 0; i < maxVerbLen + 1; i += 1) {
-                verbText += "_";
-            }
-            
+            verbText = blankText;
             charInterval = setInterval(function () {
                 if (charIndx < verbs[verbIndx].length) {
                     if (randChar < randCharNum) {
