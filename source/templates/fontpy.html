@@ -1,0 +1,65 @@
+<template id="fontpy-template">
+	<section class="bringIn">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<header><h1 class="text-center"><em><code>font-size</code> Derivation Script</em></h1></header>
+				<h4>script :</h4>
+<pre class="prettyprint linenums">
+import numpy as np
+from scipy.optimize import curve_fit
+
+# cubic polynomial
+def f1( x, a, b, c, d ):
+    return a * np.power( x, 3 ) + b * np.power( x, 2 ) + c * x + d
+
+# function transformation
+def f2( x, A, B, C, D ):
+    return A * f1( B * ( x - C) , a, b, c, d) + D
+
+# curve-fitting bootstrap font-sizes
+xdata   = np.array([1,2,3,4,5,6])
+ydata   = np.array([36,30,24,18,14,12])
+a,b,c,d = curve_fit(f1, xdata, ydata1 )[0]
+
+print 'bootstrap curve-fit font-size : '
+print 'f1(x) = a*x^3 + b*x^2 + c*x + d'
+print ('a = %s\nb = %s\nc = %s\nd = %s') % (a,b,c,d)
+print 'result : '
+print 'f1(x) =', np.round( f1( xdata, a, b, c, d) )
+print
+
+# curve-fit to satisfy f2(5) = 16 & f2(1) = 40
+x       = np.array([1,5,5,6])
+y       = np.array([40,16,16,12])
+A,B,C,D = curve_fit(f2, x, y )[0]
+
+print 'transformed font-size : '
+print 'f2(x) = A*f2( B*(X-C) ) + D'
+print ('A = %s\nB = %s\nC = %s\nD = %s') % (A,B,C,D)
+print 'result : '
+print 'f2(x) =', np.round( f2( xdata, A, B, C, D ) )
+</pre>
+					<h4>output :</h4>
+<pre class="prettyprint">
+bootstrap curve-fit font-size :
+f1(x) = a*x^3 + b*x^2 + c*x + d
+a = 0.148148148146
+b = -1.05555555556
+c = -3.77513227514
+d = 40.6666666668
+result :
+f1(x) = [ 36.  30.  24.  18.  14.  12.]
+
+transformed font-size :
+f2(x) = A*f2( B*(X-C) ) + D
+A = 1.10356767764
+B = 0.945187900556
+C = 0.521467937491
+D = -2.77089436869
+result :
+f2(x) = [ 40.  34.  28.  22.  16.  12.]
+</pre>
+			</div>
+		</div>
+	</section>
+</template>

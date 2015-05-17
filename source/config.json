@@ -1,0 +1,22 @@
+{
+    "name"        : "tmthydvnprt",
+    "domain"      : "tmthydvnprt.com",
+    "title"       : "tim(othy)",
+    "author"      : "tmthydvnprt",
+    "email"       : "tim@tmthydvnprt.com",
+    "description" : "the internet-facing extension of my self",
+    "keywords"    : ["tim", "timothy", "davenport", "resume", "profile", "website"],
+    "changefreq"  : "monthly",
+    "priority"    : "0.5",
+    "local"       : true,
+    "patchcomment": true,
+    "quiltcomment": true,
+    "assetcomment": true,
+    "pagecomment" : true,
+    "pageobject"  : false,
+    "buildblog"   : false,
+    "buildatom"   : false,
+    "buildrss"    : false,
+    "copydate"    : 2014,
+    "copyrighter" : "tmthydvnprt"
+}

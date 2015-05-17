@@ -1,0 +1,28 @@
+<template id="time-template">
+	<section class="bringIn">
+		<div id="bigclock">
+			<div id="bigframe" class="updn2">
+				<time id="bigword">&zwnj;</time>
+				<div id="bigminute">&zwnj;</div>
+				<div id="bighour">&zwnj;</div>
+				<div id="bigsecond">&zwnj;</div>
+				<ul id="bignumbers">
+					<li>1</li><li>2</li><li>3</li>
+					<li>4</li><li>5</li><li>6</li>
+					<li>7</li><li>8</li><li>9</li>
+					<li>10</li><li>11</li><li>12</li>
+				</ul>
+			</div>
+			<div class="timetext">
+				<h4><small>Local</small></h4>
+				<time class="h3" id="local">1234567890</time>
+				<h4><small><abbr title="Greenwich Mean Time">GMT</abbr> <small>( yes, <abbr title="Coordinated Universal Time">UTC</abbr>, but <abbr title="Greenwich Mean Time">GMT</abbr> is more quaint )<a href="http://en.wikipedia.org/wiki/Greenwich_Mean_Time" target="_blank"><sup>W</sup></a></small></small></h4>
+				<time class="h3" id="utc">1234567890</time>
+				<h4><small>Unix (<abbr title="Portable Operating System Interface">Posix</abbr>, Epoch) Time<a href="http://en.wikipedia.org/wiki/Unix_time" target="_blank"><sup>W</sup></a></small></h4>
+				<time class="h3" id="posix">1234567890</time>
+				<h4><small>Julian Date<a href="http://en.wikipedia.org/wiki/Julian_day" target="_blank"><sup>W</sup></a></small></h4>
+				<time class="h3" id="julian">1234567890</time>
+			</div>
+		</div>
+	</section>
+</template>

@@ -151,7 +151,7 @@ function renderMicroFormat(mfObj, mfTemplate) {
 					// add attributes if necessary
 					if (prop.slice(0, 2) === 'dt') {
 						html.find('.' + prop).attr('datetime', obj[prop]);
-					} else if (prop === "u-url") {
+					} else if (prop.slice(0,2) === "u-") {
 						html.find('.' + prop).attr('href', obj[prop]);
 					} else if (prop === "u-email") {
 						html.find('.' + prop).attr('href', 'mailto:' + obj[prop]);
