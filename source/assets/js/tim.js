@@ -135,6 +135,20 @@ $(document).ready(function () {
 		}
 	}
 
+    // add string formatting
+    if (!String.prototype.format) {
+        String.prototype.format = function() {
+            var str = this.toString();
+            if (!arguments.length)
+                return str;
+            var args = typeof arguments[0],
+                args = (("string" === args || "number" === args) ? arguments : arguments[0]);
+            for (arg in args)
+                str = str.replace(RegExp("\\{" + arg + "\\}", "gi"), args[arg]);
+            return str;
+        }
+    }
+    
 	// store pages
 	var pages = {
 		home     : function () {
@@ -211,6 +225,33 @@ $(document).ready(function () {
 		},
 		ruminations : function () {
 			renderTemplate('ruminations', 'tim(othy) > ruminations');
+		},
+		projects : function () {
+            
+			renderTemplate('projects', 'tim(othy) > projects');
+            $.getJSON('https://api.github.com/users/tmthydvnprt/repos', function (data) {
+                var repos = [],                
+                    ITEM_TEMPLATE = [
+                        '<li class="list-group-item">',
+                        '    <div class="pull-right text-right">',
+                        '        <span class="badge"><i class="fa fa-file"></i> {size}</span><br>',
+                        '        <code>{language}</code>',
+                        '    </div>',
+                        '    <h4 class="list-group-item-heading"><a href="http://tmthydvnprt.github.io/{name}">{name} <i class="fa fa-link"></i></a> <small>(<a href="{html_url}"><i class="fa fa-book"></i> repo</a>)</small></h4>',
+                        '    <p class="list-group-item-text">',
+                        '        {description}<br>',
+                        '        <small><time>{created_at}</time><br><time>{updated_at}</time></small>',
+                        '    </p>',
+                        '</li>'
+                    ].join('');
+                
+                data.forEach(function (item) {
+                    var repo_item = item;
+                    repos.push(ITEM_TEMPLATE.format(repo_item));
+                });
+                $('#project-list').append(repos.join('\n'));
+            });
+
 		},
 		resume      : function () {
 			renderTemplate('resume', 'tim(othy) > r&eacute;sum&eacute;');
