@@ -153,8 +153,18 @@ t
 <hr/>
 </div>
 </div>
+<!--
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h2>Stats</h2>
+                <div id="project-stats">
+                </div>
+            </div>
+        </div>
+-->
 <div class="row">
 <div class="col-sm-8 col-sm-offset-2">
+<h2>Repositories</h2>
 <ul class="list-group" id="project-list">
 </ul>
 </div>
