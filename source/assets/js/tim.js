@@ -33,6 +33,7 @@ $(document).ready(function () {
         newlocation       = '',
 		alphabet          = '`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?',
 		verbInterval      = 0,
+		verbTimeout       = 0,
 		charInterval      = 0,
 		secondInterval    = 0,
 		secondBigInterval = 0,
@@ -137,48 +138,70 @@ $(document).ready(function () {
 	// store pages
 	var pages = {
 		home     : function () {
+            
 			renderTemplate('home', 'tim(othy)');
 
-			var verb           = $('#verb'),
-				verbs          = ['read', 'code', 'write', 'walk', 'ponder', 'hike', 'garden'],
-				verbIndx       = 0,
-				maxVerbLen     = 0,
-				verbText       = '',
-				r              = '',
-				charPeriod     = 40,
-				verbPeriod     = 2500,
-				randCharNum    = 5,
-				randChar       = 0,
-				charIndx       = 0;
+            var verb           = $('#verb'),
+                verbs          = ['read', 'code', 'write', 'walk', 'ponder', 'hike', 'garden'],
+                verbIndx       = 0,
+                maxVerbLen     = 0,
+                blankText      = '',
+                verbText       = '',
+                r              = '',
+                i              = 0,
+                charPeriod     = 35,
+                verbPeriod     = 800,
+                randCharNum    = 6,
+                randChar       = 0,
+                charIndx       = 0;
+            
 			verbs.forEach(function (item) {
 				maxVerbLen = Math.max(maxVerbLen, item.length);
 			});
+            
+            //verbText = new Array(maxVerbLen + 1).join('_');
+            for (i = 0; i < maxVerbLen; i += 1) {
+                blankText += '_';
+            }
+            
+            // 'build' verb by randomly iterate thru characters and 'landing' on correct letters
+            function renderVerb() {
 
-			// timing intervals
-			verbInterval = setInterval(function () {
-				verbText = new Array(maxVerbLen + 1).join('_');
-				charInterval = setInterval(function () {
-					if (charIndx < verbs[verbIndx].length) {
-						if (randChar < randCharNum) {
-							r        = Math.floor(alphabet.length * Math.random());
-							verbText = verbText.substr(0, charIndx) + alphabet[r] + verbText.substr(charIndx + 1);
-							randChar += 1;
-						} else {
-							verbText = verbText.substr(0, charIndx) + verbs[verbIndx][charIndx] + verbText.substr(charIndx + 1);
-							charIndx += 1;
-							randChar = 0;
-						}
-						verb.text(verbText);
-					} else {
-						verbText = verbs[verbIndx] + verbText.substr(verbs[verbIndx].length);
-						verbIndx = (verbIndx + 1) % verbs.length;
-						randChar  = 0;
-						charIndx  = 0;
-						verb.text(verbText);
-						clearInterval(charInterval);
-					}
-				}, charPeriod);
-			}, verbPeriod);
+                // initialize verb
+                clearTimeout(verbTimeout);
+                verbText = blankText;
+                verbIndx = (verbIndx + 1) % verbs.length;
+                randChar  = 0;
+                charIndx  = 0;
+                verb.text(verbText);
+
+                // iterate thru random characters for each letter
+                charInterval = setInterval(function () {
+                    if (charIndx < verbs[verbIndx].length) {
+                        if (randChar < randCharNum) {
+                            r        = Math.floor(alphabet.length * Math.random());
+                            verbText = verbText.substr(0, charIndx) + alphabet[r] + verbText.substr(charIndx + 1);
+                            randChar += 1;
+                        } else {
+                            verbText = verbText.substr(0, charIndx) + verbs[verbIndx][charIndx] + verbText.substr(charIndx + 1);
+                            charIndx += 1;
+                            randChar = 0;
+                        }
+                        verb.text(verbText);
+                    } else {
+                        verbText = verbs[verbIndx] + verbText.substr(verbs[verbIndx].length);
+                        randChar  = 0;
+                        charIndx  = 0;
+                        verb.text(verbText);
+                        clearInterval(charInterval);
+                        // wait for next verb
+                        verbTimeout = setTimeout(renderVerb, verbPeriod);
+                    }
+                }, charPeriod);
+            }
+
+            // kickoff first timeout
+            verbTimeout = setTimeout(renderVerb, verbPeriod);
 		},
 		epigraph    : function () {
 			renderTemplate('epigraph', 'tim(othy) > epigraph');
@@ -214,11 +237,11 @@ $(document).ready(function () {
 				$('#lorem h1').text($(this).css('font-family').split(', ')[0].replace(/'/g, ''));
 				$('#lorem').css({
 					'font-family' : $(this).css('font-family'),
-					'top'        : window.pageYOffset
+					'top'         : window.pageYOffset
 				});
 			}, function () {
 				$('#lorem').css({
-					'top'        : '-1000px'
+					'top' : '-1000px'
 				});
 			});
 
