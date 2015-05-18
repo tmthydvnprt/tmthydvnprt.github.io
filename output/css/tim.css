@@ -1385,7 +1385,7 @@ main section {
 }
 
 main section.bringIn {
-	animation: flipIn 512ms ease-in 1 both;
+	animation: flipIn 1024ms ease-in 1 both;
 }
 main section.bringOut {
 	animation: flipOut 512ms ease-out 1 both;
