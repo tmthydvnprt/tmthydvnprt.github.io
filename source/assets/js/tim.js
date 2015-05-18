@@ -39,7 +39,7 @@ $(document).ready(function () {
 		secondBigInterval = 0,
 		initHoldOff       = 0,
 		bringOut          = 0,
-		pageOrder         = ['home', 'epigraph', 'synopsis', 'ruminations', 'resume', 'colophon', 'contact'],
+		pageOrder         = ['home', 'epigraph', 'synopsis', 'ruminations', 'projects', 'resume', 'colophon', 'contact'],
 		currentPage       = 0,
 		geometers         = '<h1 class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</h1>';
 
@@ -137,16 +137,20 @@ $(document).ready(function () {
 
     // add string formatting
     if (!String.prototype.format) {
-        String.prototype.format = function() {
-            var str = this.toString();
-            if (!arguments.length)
+        String.prototype.format = function () {
+            var str = this.toString(),
+                args,
+                arg;
+            if (!arguments.length) {
                 return str;
-            var args = typeof arguments[0],
-                args = (("string" === args || "number" === args) ? arguments : arguments[0]);
-            for (arg in args)
-                str = str.replace(RegExp("\\{" + arg + "\\}", "gi"), args[arg]);
+            }
+            args = typeof arguments[0];
+            args = ("string" === args || "number" === args) ? arguments : arguments[0];
+            for (arg in args) {
+                str = str.replace(new RegExp("\\{" + arg + "\\}", "gi"), args[arg]);
+            }
             return str;
-        }
+        };
     }
     
 	// store pages
@@ -229,27 +233,75 @@ $(document).ready(function () {
 		projects : function () {
             
 			renderTemplate('projects', 'tim(othy) > projects');
-            $.getJSON('https://api.github.com/users/tmthydvnprt/repos', function (data) {
-                var repos = [],                
-                    ITEM_TEMPLATE = [
-                        '<li class="list-group-item">',
-                        '    <div class="pull-right text-right">',
-                        '        <span class="badge"><i class="fa fa-file"></i> {size}</span><br>',
-                        '        <code>{language}</code>',
-                        '    </div>',
-                        '    <h4 class="list-group-item-heading"><a href="http://tmthydvnprt.github.io/{name}">{name} <i class="fa fa-link"></i></a> <small>(<a href="{html_url}"><i class="fa fa-book"></i> repo</a>)</small></h4>',
-                        '    <p class="list-group-item-text">',
-                        '        {description}<br>',
-                        '        <small><time>{created_at}</time><br><time>{updated_at}</time></small>',
-                        '    </p>',
-                        '</li>'
-                    ].join('');
+            
+            function getRepo() {
+                return $.getJSON('https://api.github.com/users/tmthydvnprt/repos');
+            }
+
+            var i = 0,
+                repos = [],
+                LANG_TEMPLATE = '<code>{lang}</code> <span class="badge">{count} kiB</span>',
+                FORK_TEMPLATE = '<i class="fa fa-code-fork"></i> ',
+                ITEM_TEMPLATE = [
+                    '<li class="list-group-item">',
+                    '    <div class="row">',
+                    '        <div class="col-xs-7 col-sm-8">',
+                    '            <h4 class="list-group-item-heading">{if_fork}<a href="http://tmthydvnprt.github.io/{name}">{name} <i class="fa fa-link"></i></a> <small>(<a href="{html_url}"><i class="fa fa-book"></i> repo</a>)</small></h4>',
+                    '            <p class="list-group-item-text">',
+                    '                {description}<br>',
+                    '                <small><time>{created_at}</time><br><time>{updated_at}</time></small>',
+                    '            </p>',
+                    '        </div>',
+                    '        <div class="col-xs-5 col-sm-4 text-right">',
+                    '            <i class="fa fa-file-code-o"></i> <span class="badge">{size} files</span><br>',
+                    '            {language_list}',
+                    '        </div>',
+                    '    </div>',
+                    '</li>'
+                ].join('');
+            
+            $.when(getRepo()).done(function (data) {
+                
+                var url_array = [],
+                    lang_list = {};
+                
+                function getLanguage(data) {
+                    return $.getJSON(data.languages_url, function (languages) {
+                        var lang_array = [],
+                            lang = '',
+                            count = 0;
+                        for (lang in languages) {
+                            if (languages.hasOwnProperty(lang)) {
+                                lang_array.push(LANG_TEMPLATE.format(
+                                    {"lang": lang, "count": Math.floor(languages[lang] / 10.24) / 100}
+                                ));
+                            }
+                        }
+                        lang_list[data.name] = lang_array;
+                    });
+                }
                 
                 data.forEach(function (item) {
-                    var repo_item = item;
-                    repos.push(ITEM_TEMPLATE.format(repo_item));
+                    url_array.push(getLanguage(item));
                 });
-                $('#project-list').append(repos.join('\n'));
+                    
+                $.when.apply($, url_array).done(function (languages) {
+                    var repo_item;
+                    console.log(lang_list);
+                    for (i = 0; i < data.length; i += 1) {
+                        repo_item = data[i];
+                        
+                        if (repo_item.fork) {
+                            repo_item.if_fork = FORK_TEMPLATE;
+                        } else {
+                            repo_item.if_fork = '';
+                        }
+                        repo_item.language_list = lang_list[data[i].name].join('<br>');
+                        repos.push(ITEM_TEMPLATE.format(repo_item));
+                    }
+                
+                    $('#project-list').append(repos.join('\n'));
+                });
             });
 
 		},
