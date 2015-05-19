@@ -41,6 +41,8 @@ $(document).ready(function () {
 		bringOut          = 0,
 		pageOrder         = ['home', 'epigraph', 'synopsis', 'ruminations', 'projects', 'resume', 'colophon', 'contact'],
 		currentPage       = 0,
+        //this will store the scroll position
+        keepScroll        = false,
 		geometers         = '<h1 class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</h1>';
 
     
@@ -308,9 +310,9 @@ $(document).ready(function () {
 		resume      : function () {
 			renderTemplate('resume', 'tim(othy) > r&eacute;sum&eacute;');
 			$('#tim-resume').html(renderMicroFormat(timResume, $('#h-resume-template').html()));
-			$('#tim-resume').append('<hr><h1 class="text-center"><em>Timeline</em></h1>');
-			$('#tim-resume').append(ganttResume(timResume));
-			$('#tim-resume').append(geometers);
+			$('#tim-resume div').attr('id', 'document');
+			$('#tim-timeline').html(ganttResume(timResume, 'Timeline'));
+            $('#tim-timeline div').attr('id', 'timeline');
 		},
 		jsonresume  : function () {
 			renderTemplate('jsonresume', 'tim(othy) > r&eacute;sum&eacute; > (json + microformat2)');
@@ -369,9 +371,9 @@ $(document).ready(function () {
 	};
 
 	// route hashchanges to page
-	function router() {
-
-		// clear last page stuff
+	function router(e) {
+        		
+        // clear last page stuff
 		clearInterval(charInterval);
 		clearInterval(verbInterval);
 		clearInterval(secondBigInterval);
@@ -383,16 +385,18 @@ $(document).ready(function () {
         urlpath = location.pathname.split('/');
         filename = urlpath.slice(-1)[0];
         
-        console.log('page ' + page);
-        console.log('hash ' + hash);
-        console.log('urlpath ' + urlpath);
-        console.log('filename ' + filename);
+        console.log('page    : ' + page);
+        console.log('hash    : ' + hash);
+        console.log('urlpath : ' + urlpath);
+        console.log('filename: ' + filename);
         
-        // off-page hash
+        // index page with internal hash routing
         if (filename === 'index.html') {
-            // default to home if one index page
+            
+            // default to home if on index page
             hash = hash || '!/home';
             
+            // on-page hash
             if (hash.slice(0, 2) === '!/') {
                 
                 $('#page section').addClass('bringOut');
@@ -412,21 +416,32 @@ $(document).ready(function () {
 
                     // setup
                     page.addClass('rendered');
-
                     $('html,body').animate({
                         scrollTop: 0
                     }, 512);
+                    
+                    $('a[href*="#"]').click(function (e) {
+                        // stop auto scroll
+                        keepScroll = document.body.scrollTop;
+                    });
 
                     clearInterval(bringOut);
                 }, 500);
 
-            // on-page hash = scroll to any on page target
+            // on-page hash
             } else if (hash) {
+                // special case back/next hash
                 if (hash === 'back' || hash === 'next') {
                     backNextChange(hash);
+                // regular scroll to target hash
                 } else {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (keepScroll !== false) {
+                        //move scroll position to stored position
+                        document.body.scrollTop = keepScroll;
+                        keepScroll = false;
+                    }
+                    var target = $('#' + hash);
+                    target = target.length ? target : $('[name=' + hash + ']');
                     if (target.length) {
                         $('html,body').animate({
                             scrollTop: target.offset().top - 60
@@ -434,13 +449,19 @@ $(document).ready(function () {
                     }
                 }
             }
+        // if on any other page
         } else {
+            // add index to hashrouting
             if (hash.slice(0, 2) === '!/') {
                 urlpath[urlpath.length - 1] = "index.html";
                 newlocation = urlpath.join("/") + location.hash;
                 location.assign(newlocation);
+            } else {
+                console.log('do nothing');
             }
         }
+        
+        return false;
 	}
 
 	initHoldOff = setTimeout(function () {

@@ -178,9 +178,9 @@ function renderMicroFormat(mfObj, mfTemplate) {
 	html.find('img:not([src])').remove();
 	return html;
 }
-function ganttResume(mfObj) {
+function ganttResume(mfObj, title) {
 
-	var html      = $.parseHTML('<div id="gantt-resume"><p>Education</p><div class="p-education"></div><p>Experience</p><div class="p-experience"></div><p>Skill</p><div class="p-skill"></div><div class="lines"></div></div>'),
+	var html      = $.parseHTML('<div><header><em><h1 class="p-name text-center">' + title + '</h1></em></header><hr><div class="gantt-resume"><p>Education</p><div class="p-education"></div><p>Experience</p><div class="p-experience"></div><p>Skill</p><div class="p-skill"></div><div class="lines"></div></div></div>'),
 		item      = {},
 		ganttObj  = {
 			'Education'  : [],

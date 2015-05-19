@@ -1,7 +1,7 @@
 /*globals $,microformat,timContact,timeDuration */
 
 var timResume = $.extend({}, microformat["h-resume"], {
-    "p-name"             : "Engineer",
+    "p-name"             : "R&eacute;sum&eacute;",
     "p-summary"          : "<s>An electrical engineer turned software developer (the most interesting techniques cannot be done in hardware). Loves high-level languages & algorithms that allow for development at an information / data level that is mostly abstracted from it's processing implementation. (enter python, stage right, playing the part of executable psuedo-code).</s>",
     "p-contact"          : timContact,
     "p-education"        : [

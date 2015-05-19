@@ -306,34 +306,34 @@ blockquote,.lead {
 	top:-8px;
 	left:-40px;
 	transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-	transition: transform 0.6s ease 0.0s, opacity 0.6s ease 0.0s;
+	transition: transform 0.5s ease 0.0s, opacity 0.6s ease 0.0s;
 }
 #menu #menuholder nav ul li:nth-child(2) {
-	transition: transform 0.6s ease 0.05s, opacity 0.6s ease 0.05s;
+	transition: transform 0.5s ease 0.05s, opacity 0.6s ease 0.05s;
 }
 #menu #menuholder nav ul li:nth-child(3) {
-	transition: transform 0.6s ease 0.10s, opacity 0.6s ease 0.10s;
+	transition: transform 0.5s ease 0.10s, opacity 0.6s ease 0.10s;
 }
 #menu #menuholder nav ul li:nth-child(4) {
-	transition: transform 0.6s ease 0.15s, opacity 0.6s ease 0.15s;
+	transition: transform 0.5s ease 0.15s, opacity 0.6s ease 0.15s;
 }
 #menu #menuholder nav ul li:nth-child(5) {
-	transition: transform 0.6s ease 0.20s, opacity 0.6s ease 0.20s;
+	transition: transform 0.5s ease 0.20s, opacity 0.6s ease 0.20s;
 }
 #menu #menuholder nav ul li:nth-child(6) {
-	transition: transform 0.6s ease 0.25s, opacity 0.6s ease 0.25s;
+	transition: transform 0.5s ease 0.25s, opacity 0.6s ease 0.25s;
 }
 #menu #menuholder nav ul li:nth-child(7) {
-	transition: transform 0.6s ease 0.30s, opacity 0.6s ease 0.30s;
+	transition: transform 0.5s ease 0.30s, opacity 0.6s ease 0.30s;
 }
 #menu #menuholder nav ul li:nth-child(8) {
-	transition: transform 0.6s ease 0.35s, opacity 0.6s ease 0.35s;
+	transition: transform 0.5s ease 0.35s, opacity 0.6s ease 0.35s;
 }
 #menu #menuholder nav ul li:nth-child(9) {
-	transition: transform 0.6s ease 0.40s, opacity 0.6s ease 0.40s;
+	transition: transform 0.5s ease 0.40s, opacity 0.6s ease 0.40s;
 }
 #menu #menuholder nav ul li:nth-child(10) {
-	transition: transform 0.6s ease 0.45s, opacity 0.6s ease 0.45s;
+	transition: transform 0.5s ease 0.45s, opacity 0.6s ease 0.45s;
 }
 #menu #menuholder nav ul li a {
 	position: absolute;
@@ -695,6 +695,24 @@ blockquote,.lead {
 
 /* Resume Page
 ----------------------------------------------------------------------------------------------------------------------------- */
+#resume-menu {
+    position: fixed;
+    z-index: 100;
+    width:100%;
+    padding:2px 16px;
+	transition: all 1s ease;
+}
+@media (min-width: 768px) {
+	#resume-menu {
+		padding: 2px 50px;
+	}
+}
+#resume-menu ul {
+    padding: 8px 8px;
+    margin: 0px 64px;
+    background-color: rgba(27, 188, 155, 0.75);
+}
+
 #resume .p-rating[title*="0-5 rating :"]::after {
 	color :#336e7b;
 }
@@ -726,34 +744,34 @@ blockquote,.lead {
 }
 #resume .h-competency .row {
 }
-#gantt-resume {
+.gantt-resume {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
-#gantt-resume .p-education,
-#gantt-resume .p-experience,
-#gantt-resume .p-skill {
+.gantt-resume .p-education,
+.gantt-resume .p-experience,
+.gantt-resume .p-skill {
 	position: relative;
 	border: 1px solid #16a085;
 	padding-left: 48px;
 	padding-right: 16px;
 }
-#gantt-resume .p-education {
+.gantt-resume .p-education {
 	z-index: 4;
 }
-#gantt-resume .p-experience {
+.gantt-resume .p-experience {
 	z-index: 3;
 }
-#gantt-resume .p-skill {
+.gantt-resume .p-skill {
 	z-index: 2;
 }
-#gantt-resume .p-education:hover,
-#gantt-resume .p-experience:hover,
-#gantt-resume .p-skill:hover {
+.gantt-resume .p-education:hover,
+.gantt-resume .p-experience:hover,
+.gantt-resume .p-skill:hover {
 	z-index: 5;
 }
-#gantt-resume > p {
+.gantt-resume > p {
 	position: absolute;
 	margin: 0px;
 	margin-top: -20px;
@@ -762,45 +780,45 @@ blockquote,.lead {
 	transform-origin: 0% 100%;
 	z-index: 3;
 }
-#gantt-resume .gantt-event {
+.gantt-resume .gantt-event {
 	position: relative;
 	margin: 8px 0px;
 	height:16px;
 	font-size: 80%;
 	padding:0px;
 }
-#gantt-resume .p-skill .p-name {
+.gantt-resume .p-skill .p-name {
 	padding-left: 4px;
 	margin: 0px -16px 0px 8px;
 	border-bottom: 1px dashed #16a085;
 }
-#gantt-resume .p-skill .p-skillset {
+.gantt-resume .p-skill .p-skillset {
 }
 
-#gantt-resume .p-skill .p-skillset .p-name {
+.gantt-resume .p-skill .p-skillset .p-name {
 	padding-left: 4px;
 	margin: 0px -16px 0px 16px;
 	border-bottom: 1px dotted #16a085;
 
 }
-#gantt-resume .p-education .gantt-event {
+.gantt-resume .p-education .gantt-event {
 	background: #16a085;
 }
-#gantt-resume .p-experience .gantt-event {
+.gantt-resume .p-experience .gantt-event {
 	background: #00a887;
 }
-#gantt-resume .p-skill .gantt-event {
+.gantt-resume .p-skill .gantt-event {
 	background: #1bbc9b;
 }
 
-#gantt-resume .gantt-event .p-abbr {
+.gantt-resume .gantt-event .p-abbr {
 	color: #fdfefd;
 	text-align: center;
 	margin: 0px;
 	overflow: hidden;
 	padding: 0px;
 }
-#gantt-resume .gantt-event .gantt-info {
+.gantt-resume .gantt-event .gantt-info {
 	position: absolute;
 	opacity: 0;
 	padding: 8px;
@@ -815,7 +833,7 @@ blockquote,.lead {
 	border-bottom: 0px solid #336e7b;
 	transition: all 0.5s ease;
 }
-#gantt-resume .gantt-event:hover .gantt-info {
+.gantt-resume .gantt-event:hover .gantt-info {
 	opacity: 1;
 	padding: 8px;
 	margin-top:-32px;
@@ -826,8 +844,8 @@ blockquote,.lead {
 	border-top-width: 8px;
 	border-bottom-width: 4px;
 }
-#gantt-resume .gantt-event .display-start,
-#gantt-resume .gantt-event .display-end {
+.gantt-resume .gantt-event .display-start,
+.gantt-resume .gantt-event .display-end {
 	position: absolute;
 	width:24px;
 	height:24px;
@@ -839,27 +857,27 @@ blockquote,.lead {
 	color: #44c8ad;
 	border: 6px solid #336e7b;
 }
-#gantt-resume .gantt-event .display-start {
+.gantt-resume .gantt-event .display-start {
 	left:0%;
 }
-#gantt-resume .gantt-event .display-end {
+.gantt-resume .gantt-event .display-end {
 	left:100%;
 }
 
-#gantt-resume .gantt-event .display-start.off-page {
+.gantt-resume .gantt-event .display-start.off-page {
 	margin-left: 0px;
 	background: none;
 	border: none;
 	color:#336e7b;
 }
-#gantt-resume .gantt-event .display-start.off-page:after {
+.gantt-resume .gantt-event .display-start.off-page:after {
 	content:"\21D0";
 	font-size: 150%;
 }
 
 
-#gantt-resume .gantt-event .display-start time,
-#gantt-resume .gantt-event .display-end time {
+.gantt-resume .gantt-event .display-start time,
+.gantt-resume .gantt-event .display-end time {
 	position: absolute;
 	margin-top:-16px;
 	padding: 8px;
@@ -869,12 +887,12 @@ blockquote,.lead {
 	transition: all 0.5s ease;
 	z-index: 20;
 }
-#gantt-resume .gantt-event .display-start:hover time,
-#gantt-resume .gantt-event .display-end:hover time {
+.gantt-resume .gantt-event .display-start:hover time,
+.gantt-resume .gantt-event .display-end:hover time {
 	opacity: 1;
 	margin-top:-48px;
 }
-#gantt-resume .lines {
+.gantt-resume .lines {
 	position: absolute;
 	top:0%;
 	margin-left: 48px;
@@ -885,21 +903,21 @@ blockquote,.lead {
 	border-left-color: #16a085;
 	z-index: 1;
 }
-#gantt-resume .line {
+.gantt-resume .line {
 	position: relative;
 	float: left;
 	width:1px;
 	height: 100%;
 	background-color: #94dfd0;
 }
-#gantt-resume .line time {
+.gantt-resume .line time {
 	position: absolute;
 	top:100%;
 	font-size: 75%;
 	white-space: nowrap;
 	transform: translateX(-50%);
 }
-#gantt-resume .line time[datetime]:not(.no-hover)::before {
+.gantt-resume .line time[datetime]:not(.no-hover)::before {
 	white-space: nowrap;
 }
 
@@ -1408,6 +1426,10 @@ main section.bringOut {
 	animation: flipOut 512ms ease-out 1 both;
 }
 
+#resume-menu.bringIn {
+	animation: dropdown 512ms linear 1024ms 1 both;
+}
+
 /* Animations
 ----------------------------------------------------------------------------------------------------------------------------- */
 @keyframes flipIn {
@@ -1419,6 +1441,11 @@ main section.bringOut {
 	100% {opacity:0;transform: translateY(128px) rotateY(-64deg);transform-origin: 50% 50%;}
 }
 
+@keyframes dropdown {
+	0%   {opacity:   0;transform: translateY(-64px);}
+	80%  {opacity:   1;transform: translateY(20px);}
+	100% {opacity:   1;transform: translateY(0px);}
+}
 @keyframes flip {
 	0%   {transform: rotate(  0deg);}
 	100% {transform: rotate(359deg);}
