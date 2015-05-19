@@ -207,6 +207,9 @@ blockquote,.lead {
 .updn4 {
 	animation: updn 7000ms linear 3s infinite both;
 }
+.updn5 {
+	animation: updn 6000ms linear 4s infinite both;
+}
 .logo {
 	position: relative;
 	height:1024px;
@@ -548,8 +551,9 @@ blockquote,.lead {
 	opacity: 1;
 }
 
-/* Copy Corner
+/* Copy/At Corner
 ----------------------------------------------------------------------------------------------------------------------------- */
+#at,
 #copy {
 	position: fixed;
 	bottom:8px;
@@ -560,15 +564,22 @@ blockquote,.lead {
 	text-shadow: 2px 1px 1px #1bbc9b;
 	cursor: pointer;
 }
+#at {
+    bottom:32px;
+}
 @media (min-width: 768px) {
+    #at,
 	#copy {
 		bottom:16px;
 		left:16px;
 		text-shadow: none;
 	}
+    #at {
+        bottom:64px;
+    }
 }
-
-#copy #copyright {
+#at #slideover,
+#copy #slideover {
 	position: absolute;
 	top:4px;
 	left:32px;
@@ -583,16 +594,19 @@ blockquote,.lead {
 	text-shadow: none;
 	z-index: -1;
 }
-#copy #copyright a {
+#at #slideover a,
+#copy #slideover a {
 	color:#bbebe1;
 }
 @media (min-width: 768px) {
-	#copy #copyright {
+    #at #slideover,
+	#copy #slideover {
 		top:0px;
 		font-size: 100%;
 	}
 }
-#copy:hover #copyright {
+#at:hover #slideover,
+#copy:hover #slideover {
 	left:-8px;
 	width:400px;
 	padding-left:32px;
@@ -1372,6 +1386,9 @@ li.L9 {
 }
 #copy.holdoff {
 	transform: translateY(64px) translateX(-64px)!important;
+}
+#at.holdoff {
+	transform: translateY(128px) translateX(-64px)!important;
 }
 
 /* Page Switching

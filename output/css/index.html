@@ -114,7 +114,10 @@ t
 <p>Click the arrows (or use your keyboard's arrow keys) to view <em>pages</em> in order, otherwise use the <em>planetary menu</em> in the upper left.</p>
 </div>
 <div class="holdoff updn4" id="copy">
-	&copy; <span id="copyright">2015, <a alt="tmthydvnprt" class="no-hover" href="#!/contact" title="tmthydvnprt">tmthydvnprt</a>.</span>
+	&copy; <span id="slideover">2015, <a alt="tmthydvnprt" class="no-hover" href="#!/contact" title="tmthydvnprt">tmthydvnprt</a>.</span>
+</div>
+<div class="holdoff updn5" id="at">
+    @ <span id="slideover"><a alt="Contact Me" class="no-hover" href="#!/contact" title="Contact Me">Contact Me</a></span>
 </div>
 <!--quilted templates patch-->
 <template id="monogram-template">
@@ -161,11 +164,12 @@ t
                 </div>
             </div>
         </div>
--->
+        -->
 <div class="row">
 <div class="col-sm-8 col-sm-offset-2">
 <h2>Repositories</h2>
 <ul class="list-group" id="project-list">
+<h1 class="text-center">... gathering data ...</h1>
 </ul>
 </div>
 </div>
@@ -254,14 +258,10 @@ f2(x) = [ 40.  34.  28.  22.  16.  12.]
 <p>
 					What you are about to experience may or may not make sense; either you <em>will</em> understand, or you will have been given <strong>strings</strong>, threads to unravel a spool of endless topics <em>to</em> understand.
 				</p>
-<p style="opacity:0;">This was copied from tmthydvnprt.com.</p>
 <p>
 					 Unquestionably, one ought never be board, for there are far to great a number of things to fascinate and occupy the mind.
 				</p>
-<p style="opacity:0;">This was copied from tmthydvnprt.com.</p>
-<p>
-                    google everything!
-                </p>
+<p>google everything!</p>
 <p style="opacity:0;">This was copied from tmthydvnprt.com.</p>
 <footer><cite title="tmthydvnprt.com"><a alt="tmthydvnprt.com" href="tmthydvnprt.com/#!/epigraph" title="tmthydvnprt.com">tmthydvnprt.com</a></cite></footer>
 </blockquote>
@@ -316,7 +316,9 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA
 						 still with an interactive or nested experience, seems very elegant. Being interested in Machine Learning, the idea of
 						 a semantic web is wonderful; therefore, the <samp><a alt="#!/resume" href="#!/resume" title="#!/resume">#!/resume</a></samp> and <samp><a alt="#!/contact" href="#!/contact" title="#!/contact">#!/contact</a></samp>
 <em>pages</em> use <a alt="microformat2" href="http://microformats.org/wiki/microformats2" target="_blank" title="microformat2">microformat2</a> structured data.
-						 All hover events, less one, are implemented using <samp>CSS</samp> and not <samp>JavaScript</samp>.
+                         The <samp><a alt="#!/projects" href="#!/projects" title="#!/projects">#!/projects</a></samp> <em>page</em> uses <code>ajax</code> calls to the <a alt="GitHub API" href="https://developer.github.com/v3/" title="GitHub API">GitHub API</a> for gathering project data.
+                         All hover events and animations, less one, are implemented using <code>css</code> and <strong>not</strong> <code>JavaScript</code>.
+                        
 					</p>
 <p> All <code>.html</code>, <code>.css</code> &amp; <code>.js</code> is home grown except for <small>(credit where credit is due)</small> :</p>
 <ol>
@@ -329,9 +331,10 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA
 </ol>
 <p><small>Please <a alt="contact" href="#!/contact" title="contact">contact</a> me if something is misrepresented.</small></p>
 <h3>Tools</h3>
+<hr/>
 <p class="tools">A couple of extremely sophisticated abacuses and a lot of tiny modifiable stone tablets.</p>
 <blockquote class="blockquote-hover">
-<p>The thing that hath been, it is that which shall be; and that which is done is that which shall be done: <strong>and there is no new thing under the sun.</strong></p>
+<p>The thing that hath been, it is that which shall be; and that which is done is that which shall be done: <strong><u>and there is no new thing under the sun</u></strong>.</p>
 <footer>
 <a alt="
 Ecclesiastes 1:9
@@ -427,7 +430,12 @@ Ecclesiastes 1:9
 </div>
 <h4>Curiosities</h4>
 <hr/>
-<p>The <a alt="monogram" href="#!/monogram" title="monogram">monogram</a> was made with tightly placed <code>html</code>/<code>css</code>. An embedded <code>base64</code> image version for the R&eacute;sum&eacute; <em>page</em> was made with this really simple <a alt="python script" href="#!/base64imagepy" title="python script">python script</a>.</p>
+<p>What's with the <code><abbr title="Uniform Resource Locator">url</abbr></code> &amp; name?</p>
+<ol>
+<li>consitent user name, nobody had clamied it on <em>any</em> service I needed,</li>
+<li>begin interested in language and information transfered via characters, vowels are somewhat unecessary to record, like the phoenician alphabet<a alt="W" href="http://en.wikipedia.org/wiki/Phoenician_alphabet" target="_blank" title="W"><sup>W</sup></a> or any abjad<a alt="W" href="http://en.wikipedia.org/wiki/Abjad" target="_blank" title="W"><sup>W</sup></a>.</li>
+</ol>
+<p>The <a alt="monogram" href="#!/monogram" title="monogram">monogram</a> was made with tightly placed <code>html</code>/<code>css</code>. An embedded <code>base64</code> image version for the <samp><a alt="#!/resume" href="#!/resume" title="#!/resume">#!/resume</a></samp> <em>page</em> was made with this really simple <a alt="python script" href="#!/base64imagepy" title="python script">python script</a>.</p>
 <p>The <em>planetary menu</em> is a nod to the wonder of astronomy and a, potentially humorous, commentary to the fact that by <em>navigating</em> my website, you are metaphorically <em>navigating</em> a world I created.</p>
 <p>I find it interesting to use mathematical relationships to define numbers instead of arbitrary or aesthetic choice.  Often the mathematical becomes aesthetic. If an overall trend/equation is not used to set a group of numbers (as in the typography described above), or if only a single number is needed, I try to use something that first satisfies</p>
 <p class="text-center">

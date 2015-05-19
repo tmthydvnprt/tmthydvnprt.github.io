@@ -300,7 +300,7 @@ $(document).ready(function () {
                         repos.push(ITEM_TEMPLATE.format(repo_item));
                     }
                 
-                    $('#project-list').append(repos.join('\n'));
+                    $('#project-list').html(repos.join('\n'));
                 });
             });
 
