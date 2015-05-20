@@ -606,11 +606,13 @@ Ecclesiastes 1:9
 </template>
 <template id="home-template">
 <section class="bringIn">
+<div>
 <header id="intro">
 <h1 class="text-font"><span class="bigger"><span class="t1">tim</span><span class="bracket">(</span><span class="t2">othy</span><span class="bracket">)</span></span></h1>
 <h1 class="text-font"><span class="bigger">I <span id="verb">______</span> for fun.</span></h1>
 </header>
 <p class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</p>
+</div>
 </section>
 </template>
 <template id="time-template">
