@@ -8,17 +8,26 @@ html {
 	overflow-x: hidden !important;
 }
 body {
+	position: relative;
 	height: 100%;
 	min-height: 100%;
 }
+/*
+html, body {
+    padding-top: 65px; 
+}
+*/
 main {
+    position: relative;
 	transition: opacity 0.6s ease;
+	perspective: 2000px;
 }
 main.fill-container {
 	min-height: 100%;
 	height: 100%;
 	padding: 0px 0px 0px;
 }
+
 section {
 	width: 100%;
 	height: 100%;
@@ -30,6 +39,11 @@ section {
 	section {
 		padding: 50px;
 	}
+}
+main section {
+	position: relative;
+    z-index: 0;
+	transform: translateY(-10%) rotateY(90deg);
 }
 
 main:not(#page) > section > div {
@@ -695,22 +709,44 @@ blockquote,.lead {
 
 /* Resume Page
 ----------------------------------------------------------------------------------------------------------------------------- */
-#resume-menu {
+
+#resume {
     position: fixed;
-    z-index: 100;
-    width:100%;
-    padding:2px 16px;
-	transition: all 1s ease;
+    overflow: scroll;
 }
-@media (min-width: 768px) {
-	#resume-menu {
-		padding: 2px 50px;
-	}
+#resume-menu {
+	transition: all 1s ease;
 }
 #resume-menu ul {
     padding: 8px 8px;
     margin: 0px 64px;
+}
+
+#resume-menu .navbar {
     background-color: rgba(27, 188, 155, 0.75);
+}
+#resume-menu .navbar-header {
+    float:left!important;
+    margin-right: 0!important;
+    margin-left: 0!important;
+}
+#resume-menu .navbar-brand {
+    margin-left:0px!important;
+}
+#resume-menu .navbar-nav.navbar-left {
+    float: left!important;
+    margin: 0;
+}
+#resume-menu .navbar-nav.navbar-right {
+    float: right!important;
+    margin: 0;
+}
+#resume-menu .navbar-nav>li {
+    float:left!important;
+}
+#resume-menu .navbar-nav>li>a {
+    padding-top: 12px!important;
+    padding-bottom: 12px!important;
 }
 
 #resume .p-rating[title*="0-5 rating :"]::after {
@@ -740,6 +776,7 @@ blockquote,.lead {
 }
 
 #resume .p-competency {
+	padding-left: 16px;
 	padding-left: 16px;
 }
 #resume .h-competency .row {
@@ -1411,13 +1448,6 @@ li.L9 {
 
 /* Page Switching
 ----------------------------------------------------------------------------------------------------------------------------- */
-main {
-	perspective: 2000px;
-}
-main section {
-	position: absolute;
-	transform: translateY(-10%) rotateY(90deg);
-}
 
 main section.bringIn {
 	animation: flipIn 1024ms ease-in 1 both;
