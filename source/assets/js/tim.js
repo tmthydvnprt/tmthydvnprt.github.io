@@ -399,6 +399,10 @@ $(document).ready(function () {
             // on-page hash
             if (hash.slice(0, 2) === '!/') {
                 
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 256);
+                
                 $('#page section').addClass('bringOut');
 
                 bringOut = setTimeout(function () {
