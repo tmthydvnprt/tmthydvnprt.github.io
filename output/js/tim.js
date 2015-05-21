@@ -399,16 +399,20 @@ $(document).ready(function () {
             // on-page hash
             if (hash.slice(0, 2) === '!/') {
                 
+                // zoom to the top
                 $('html,body').animate({
                     scrollTop: 0
-                }, 256);
+                }, 300);
                 
+                // animate out
                 $('#page section').addClass('bringOut');
 
+                // wait until animation it done
                 bringOut = setTimeout(function () {
                     page.removeClass('rendered');
                     page.addClass('routing');
 
+                    // route to new page
                     hash = hash.slice(2);
                     if (pages.hasOwnProperty(hash)) {
                         currentPage = pageOrder.indexOf(hash);
@@ -418,13 +422,9 @@ $(document).ready(function () {
                         pages.home();
                     }
 
-                    // setup
+                    // setup page
                     page.addClass('rendered');
-                    $('html,body').animate({
-                        scrollTop: 0
-                    }, 512);
-                    
-                    $('a[href*="#"]').click(function (e) {
+                    $('a[href*="#"]').click(function () {
                         // stop auto scroll
                         keepScroll = document.body.scrollTop;
                     });
