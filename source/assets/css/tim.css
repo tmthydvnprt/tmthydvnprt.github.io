@@ -665,7 +665,7 @@ blockquote,.lead {
 }
 #intro {
 	position: absolute;
-	top:50%;
+	top:200%;
 	left:50%;
 	transition: all 1s ease 0.1s;
 	transform: translate(-50%,-50%);
@@ -713,7 +713,7 @@ blockquote,.lead {
 }
 @media (min-width: 768px) {
 	#epigraph > div {
-		top:50%;
+		top:300%;
 		left:25%;
 		transform: translate(-12.5%,-50%);
 	}
