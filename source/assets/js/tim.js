@@ -182,7 +182,7 @@ $(document).ready(function () {
             // add all verbs for showing on hover
             for (v = 0; v < verbs.length; v += 1) {
                 verbHtml.push(VERB_TEMPLATE.format({
-                    "delay" : (v / verbs.length),
+                    "delay" : (0.5 * v / verbs.length),
                     "verb" : verbs[v]
                 }));
             }

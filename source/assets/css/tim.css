@@ -775,12 +775,12 @@ blockquote,.lead {
     float: left;
     margin: 2px;
     opacity: 0;
-    transition: all 1s ease;
-    top:-20%;
+    transition: all 512ms ease;
+    transform: translate(-20%, -200%) rotate(-23deg);
 }
 #verb-list:hover .label {
     opacity: 1;
-    top:0%;
+    transform: translate(0%, 0%) rotate(0deg);
 }
 
 /* Epigraph Page
