@@ -31,6 +31,7 @@ $(document).ready(function () {
         urlpath           = '',
         filename          = '',
         newlocation       = '',
+        API_FAIL_STR      = '<li class="list-group-item"><h1 class="text-center"><s>...gathering data...</s><br>...<em>tried</em> to gather data...<br>We\'ve been <strong><a href="https://developer.github.com/v3/#rate-limiting" target="_blank">rate-limited</a></strong> by GitHub\'s API</a>!<br><small>Calls from this <a href="https://www.google.com/#q=what+is+my+ip" target="_blank"><abbr title="Internet Protocol">IP</abbr> address</a> will fail for one hour.</small><br><i class="fa fa-frown-o fa-2x"></i></h1></li>',
 		alphabet          = '`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?',
 		verbInterval      = 0,
 		verbTimeout       = 0,
@@ -320,6 +321,10 @@ $(document).ready(function () {
                 
                     $('#project-list').html(repos.join('\n'));
                 });
+            }).fail(function () {
+                setTimeout(function () {
+                    $('#project-list').html(API_FAIL_STR);
+                }, 512);
             });
 
 		},
