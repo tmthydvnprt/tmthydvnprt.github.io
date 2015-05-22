@@ -162,6 +162,9 @@ $(document).ready(function () {
 			renderTemplate('home', 'tim(othy)');
 
             var verb           = $('#verb'),
+                verbList       = $('#verb-list'),
+                VERB_TEMPLATE  = '<span class="label label-primary" style="-webkit-transition-delay:{delay}s;-moz-transition-delay:{delay}s;-ms-transition-delay:{delay}s;-o-transition-delay:{delay}s;transition-delay:{delay}s;">{verb}</span>',
+                verbHtml       = [],
                 verbs          = 'code read write walk hike learn ponder wonder wander think garden plant grow compute calc graph plot invest save "work"'.split(' '),
                 verbIndx       = 0,
                 maxVerbLen     = 0,
@@ -169,13 +172,25 @@ $(document).ready(function () {
                 verbText       = '',
                 r              = '',
                 i              = 0,
+                v              = 0,
                 charPeriod     = 35,
                 verbPeriod     = 800,
                 randCharNum    = 6,
                 randChar       = 0,
                 charIndx       = 0;
             
-			verbs.forEach(function (item) {
+            // add all verbs for showing on hover
+            for (v = 0; v < verbs.length; v += 1) {
+                verbHtml.push(VERB_TEMPLATE.format({
+                    "delay" : (v / verbs.length),
+                    "verb" : verbs[v]
+                }));
+            }
+            
+            verbList.html(verbHtml.join(''));
+            
+			// find max length
+            verbs.forEach(function (item) {
 				maxVerbLen = Math.max(maxVerbLen, item.length);
 			});
             
@@ -190,7 +205,8 @@ $(document).ready(function () {
                 // initialize verb
                 clearTimeout(verbTimeout);
                 verbText = blankText;
-                verbIndx = (verbIndx + 1) % verbs.length;
+                verbIndx = Math.floor(verbs.length * Math.random());
+                // verbIndx = (verbIndx + 1) % verbs.length;
                 randChar  = 0;
                 charIndx  = 0;
                 verb.text(verbText);
@@ -219,7 +235,7 @@ $(document).ready(function () {
                     }
                 }, charPeriod);
             }
-
+            
             // kickoff first timeout
             verbTimeout = setTimeout(renderVerb, verbPeriod);
 		},
