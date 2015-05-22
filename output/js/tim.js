@@ -166,7 +166,7 @@ $(document).ready(function () {
                 verbList       = $('#verb-list'),
                 VERB_TEMPLATE  = '<span class="label label-primary" style="-webkit-transition-delay:{delay}s;-moz-transition-delay:{delay}s;-ms-transition-delay:{delay}s;-o-transition-delay:{delay}s;transition-delay:{delay}s;">{verb}</span>',
                 verbHtml       = [],
-                verbs          = 'code read write learn think ponder wonder wander walk hike garden plant grow calc design develop compute graph plot save invest "work"'.split(' '),
+                verbs          = 'code read write study learn think ponder wonder wander walk hike garden plant grow calc design develop compute graph plot save invest "work"'.split(' '),
                 verbIndx       = 0,
                 maxVerbLen     = 0,
                 blankText      = '',
