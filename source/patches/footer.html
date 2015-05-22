@@ -1,5 +1,5 @@
 <div id="clock" class="holdoff updn2">
-	<a href="#!/time" class="no-hover">
+	<a href="#!/time" class="no-hover" alt="time" title="time">
 		<div id="frame">
 			<div id="minute">&zwnj;</div>
 			<div id="hour">&zwnj;</div>
@@ -16,9 +16,24 @@
 	<header><h1><em>?</em></h1></header>
 	<p>Click the arrows (or use your keyboard's arrow keys) to view <em>pages</em> in order, otherwise use the <em>planetary menu</em> in the upper left.</p>
 </div>
-<div id="copy" class="holdoff updn4">
-	&copy; <span id="slideover">{{copydate}}, <a class="no-hover" href="#!/contact">{{copyrighter}}</a>.</span>
-</div>
 <div id="at" class="holdoff updn5">
-    @ <span id="slideover"><a class="no-hover" href="#!/contact">Contact Me</a></span>
+    @
+     <span id="slideover">
+        <a class="no-hover" href="#!/contact" alt="contact" title="contact">contact me 
+            <span class="bracket">{</span>
+            <ul class="social-list list-inline">
+                <li><i class="fa-fw fa fa-envelope "></i></li>
+                <li><i class="fa-fw fa fa-link "></i></li>
+                <li><i class="fa-fw fa fa-twitter "></i></li>
+                <li><i class="fa-fw fa fa-github "></i></li>
+                <li><i class="fa-fw fa fa-stack-overflow "></i></li>
+                <li><i class="fa-fw fa fa-mobile "></i></li>
+                <li><i class="fa-fw fa fa-location-arrow valign-top"></i></li>
+            </ul>
+            <span class="bracket">}</span>
+        </a>
+    </span>
+</div>
+<div id="copy" class="holdoff updn4">
+	&copy; <span id="slideover"> {{copydate}}, <a class="no-hover" href="#!/contact">{{copyrighter}}</a>.</span>
 </div>

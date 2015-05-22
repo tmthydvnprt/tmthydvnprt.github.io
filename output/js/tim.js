@@ -162,7 +162,7 @@ $(document).ready(function () {
 			renderTemplate('home', 'tim(othy)');
 
             var verb           = $('#verb'),
-                verbs          = ['read', 'code', 'write', 'walk', 'ponder', 'hike', 'garden'],
+                verbs          = 'code read write walk hike learn ponder wonder wander think garden plant grow compute calc graph plot invest save "work"'.split(' '),
                 verbIndx       = 0,
                 maxVerbLen     = 0,
                 blankText      = '',
