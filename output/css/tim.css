@@ -773,12 +773,52 @@ blockquote,.lead {
 #verb-list .label {
     position: relative;
     float: left;
-    margin: 2px;
+    margin: 0.1em;
     opacity: 0;
+    z-index: 10;
     transition: all 512ms ease;
-    transform: translate(-20%, -200%) rotate(-23deg);
+    transform: translate(0%, -200%) rotate(-23deg);
 }
 #verb-list:hover .label {
+    opacity: 1;
+    transform: translate(10%, 0%) rotate(0deg);
+}
+#verb-list .big.bracket {
+    position: absolute;
+    opacity: 0;
+    color: #00ffcc;
+    top: -25%;
+    line-height: 1;
+    font-size: 90px;
+    z-index: 0;
+    transition: all 512ms ease;
+    transform-origin: bottom;
+}
+#verb-list .big.bracket.left {
+    left:-12%;
+    transform: translate( 50%, 20%) rotate(-23deg);
+}
+#verb-list .big.bracket.right {
+    right:-12%;
+    transform: translate(-50%, 20%) rotate( 23deg);
+}
+@media (min-width: 768px) {
+	#verb-list .big.bracket {
+        top: -40%;
+		font-size: 200px;
+	}
+}
+@media (min-width: 992px) {
+	#verb-list .big.bracket {
+		font-size: 240px;
+	}
+}
+@media (min-width: 1200px) {
+	#verb-list .big.bracket {
+		font-size: 300px;
+	}
+}
+#verb-list:hover .big.bracket {
     opacity: 1;
     transform: translate(0%, 0%) rotate(0deg);
 }

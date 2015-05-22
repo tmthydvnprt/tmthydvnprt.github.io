@@ -165,7 +165,7 @@ $(document).ready(function () {
                 verbList       = $('#verb-list'),
                 VERB_TEMPLATE  = '<span class="label label-primary" style="-webkit-transition-delay:{delay}s;-moz-transition-delay:{delay}s;-ms-transition-delay:{delay}s;-o-transition-delay:{delay}s;transition-delay:{delay}s;">{verb}</span>',
                 verbHtml       = [],
-                verbs          = 'code read write walk hike learn ponder wonder wander think garden plant grow compute calc graph plot invest save "work"'.split(' '),
+                verbs          = 'code read write learn think ponder wonder wander walk hike garden plant grow calc design develop compute graph plot save invest "work"'.split(' '),
                 verbIndx       = 0,
                 maxVerbLen     = 0,
                 blankText      = '',
@@ -187,7 +187,7 @@ $(document).ready(function () {
                 }));
             }
             
-            verbList.html(verbHtml.join(''));
+            verbList.html('<span class="big bracket left">{</span>' + verbHtml.join('') + '<span class="big bracket right">}</span>');
             
 			// find max length
             verbs.forEach(function (item) {
