@@ -141,6 +141,7 @@ time[datetime]:not(.no-hover)::before {
 	transform: translate(-50%,-50%);
 	z-index:500;
 	display: block;
+    pointer-events: none;
 }
 time[datetime]:not(.no-hover)::before {
 	background-color: #34495e;
@@ -1055,6 +1056,7 @@ blockquote,.lead {
 	opacity: 0;
 	transition: all 0.5s ease;
 	z-index: 20;
+    pointer-events: none;
 }
 .gantt-resume .gantt-event .display-start:hover time,
 .gantt-resume .gantt-event .display-end:hover time {
@@ -1088,6 +1090,7 @@ blockquote,.lead {
 }
 .gantt-resume .line time[datetime]:not(.no-hover)::before {
 	white-space: nowrap;
+    pointer-events: none;
 }
 
 /* Json Resume Page
@@ -1245,6 +1248,7 @@ li.L9 {
 	border: 1px solid #666;
 	border-radius: 50%;
 	transition: all 0.5s ease;
+    pointer-events: none;
 }
 .swatch:hover::before {
 	margin-top: -6px;
