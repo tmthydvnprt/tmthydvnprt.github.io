@@ -2,16 +2,6 @@
 
 $(document).ready(function () {
 
-/*
-	var pithies = [
-		'Sometimes I think orchestras rock out harder than metal heads.',
-		'I would alter Freud\'s statement to say "to love and to learn"',
-		'This is some pithy quote that would sum up myself & this whole website.',
-		'Unquestionably, one ought never be board, for there are far to great a number of things to fascinate and occupy the mind.',
-		'What you are about to experience may or may not make sense; either you <em>will</em> understand, or you will have been given <strong>strings</strong>, threads to unravel a spool of endless topics <em>to</em> understand.'
-	];
-*/
-
 	// page js
 	// -------------------------------------------------------------------------------------
 	var page              = $('#page'),
@@ -374,7 +364,7 @@ $(document).ready(function () {
 			prettyPrint();
 		},
 		time        : function () {
-			renderTemplate('time', 'timo(othy) > time');
+			renderTemplate('time', 'tim(othy) > time');
 			$('#clock').addClass('holdoff-time');
 			bigSecond = $('#bigsecond');
 			bigMinute = $('#bigminute');
@@ -388,6 +378,9 @@ $(document).ready(function () {
 			secondBigInterval = setInterval(function () {
 				tickBigClock();
 			}, 1000);
+		},
+		unknown   : function () {
+			renderTemplate('unknown', 'tim(othy) > unknown');
 		}
 	};
 
@@ -440,7 +433,7 @@ $(document).ready(function () {
                         pages[hash]();
                     } else {
                         currentPage = 0;
-                        pages.home();
+                        pages.unknown();
                     }
 
                     // setup page

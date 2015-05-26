@@ -836,8 +836,8 @@ blockquote,.lead {
 @media (min-width: 768px) {
 	#epigraph > div {
 		top:300%;
-		left:25%;
-		transform: translate(-12.5%,-50%);
+		left:50%;
+		transform: translate(-50%,-50%);
 	}
 }
 
@@ -1370,6 +1370,7 @@ li.L9 {
 	position: relative;
 	left:50%;
 	width:204px;
+    margin-top: -10%;
 	margin-left: -102px;
 }
 @media (min-width: 768px) {
@@ -1401,32 +1402,27 @@ li.L9 {
 #monogram .logowrapper:first-child .logo-letter {
 	color:#fdfefd;
 }
-
+#monogram h1 {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40%;
+}
+@media (min-width: 768px) {
+	#monogram h1 {
+        margin-top: 20%;
+    }
+}
 /* Time Page
 ----------------------------------------------------------------------------------------------------------------------------- */
 #bigclock {
 	position: absolute;
-	top:50%;
+	top:20%;
 	left:50%;
-	transform: translate(-50%,-90%);
+	transform: translate(-50%,-0%);
 	white-space: nowrap;
 	transition: all 1.5s ease 0.1s;
 	z-index: 500;
-}
-@media (min-width: 768px) {
-	#bigclock {
-		top: 46%;
-	}
-}
-@media (min-width: 992px) {
-	#bigclock {
-		top: 43%;
-	}
-}
-@media (min-width: 1200px) {
-	#bigclock {
-		top: 40%;
-	}
 }
 #bigclock #bigword {
 	position: absolute;
