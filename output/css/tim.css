@@ -831,7 +831,17 @@ blockquote,.lead {
 }
 #epigraph > div {
 	position: absolute;
+    top:200%;
 
+}
+#epigraph header h1,
+#epigraph header h2,
+#epigraph header h3,
+#epigraph header h4,
+#epigraph header h5,
+#epigraph header h6 {
+    line-height: 1!important;
+    margin: 0;
 }
 @media (min-width: 768px) {
 	#epigraph > div {
@@ -850,6 +860,9 @@ blockquote,.lead {
 }
 /* Ruminations Page
 ----------------------------------------------------------------------------------------------------------------------------- */
+#ruminations {
+    line-height: 1;
+}
 @media (min-width: 768px) {
 	#ruminations {
 		padding-top: 0px;
@@ -874,6 +887,15 @@ blockquote,.lead {
     margin: 2px;
 }
 
+#ruminations h1,
+#ruminations h2,
+#ruminations h3,
+#ruminations h4,
+#ruminations h5,
+#ruminations h6 {
+    margin-top: 11px;
+    margin-bottom: 5px;
+}
 /* Resume Page
 ----------------------------------------------------------------------------------------------------------------------------- */
 
@@ -1192,10 +1214,9 @@ li.L9 {
 	position: absolute;
 	content: "Timothy Michael Davenport";
 	font-size: 550%;
-	width:90%;
+	width:2048px;
 	font-family : 'Poiret One';
 	font-weight: bold;
-	text-align: center;
 	opacity: 0;
 	margin-top:-128px;
 	transition: all 0.5s ease;
@@ -1582,7 +1603,7 @@ li.L9 {
 ----------------------------------------------------------------------------------------------------------------------------- */
 
 main section.bringIn {
-	animation: flipIn 1024ms ease-in 1 both;
+	animation: flipIn 512ms ease-in 1 both;
 }
 main section.bringOut {
 	animation: flipOut 512ms ease-out 1 both;
@@ -1594,12 +1615,12 @@ main section.bringOut {
 /* Animations
 ----------------------------------------------------------------------------------------------------------------------------- */
 @keyframes flipIn {
-	0%   {opacity:   0;transform: translateY(-128px) rotateY( 64deg);transform-origin: 50% 50%;}
-	100% {opacity:   1;transform: translateY(  0%) rotateY(  0deg);transform-origin: 50% 50%;}
+	0%   {opacity:0;transform: scale(0.8) translateY( 256px) rotateY( 64deg);transform-origin: 50% 0%;}
+	100% {opacity:1;transform: scale(1.0) translateY(   0px) rotateY(  0deg);transform-origin: 50% 0%;}
 }
 @keyframes flipOut {
-	0%   {opacity:1;transform: translateY(0% ) rotateY(  0deg);transform-origin: 50% 50%;}
-	100% {opacity:0;transform: translateY(128px) rotateY(-64deg);transform-origin: 50% 50%;}
+	0%   {opacity:1;transform: scale(1.0) translateY(   0px) rotateY(  0deg);transform-origin: 50% 0%;}
+	100% {opacity:0;transform: scale(0.8) translateY( 256px) rotateY(-64deg);transform-origin: 50% 0%;}
 }
 
 @keyframes dropdown {

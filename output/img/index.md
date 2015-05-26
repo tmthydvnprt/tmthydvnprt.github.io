@@ -254,13 +254,13 @@ f2(x) = [ 40.  34.  28.  22.  16.  12.]
 <template id="epigraph-template">
 <section class="bringIn">
 <div>
-<header><h1><em>Epigraph</em></h1></header>
+<header>
+<h1><em>Epigraph <small>/ Epigram</small></em></h1>
+<h3><em><small>(I'd find it to be a nice epitaph too)</small></em></h3>
+</header>
 <hr/>
 <blockquote>
-<p>
-                     Unquestionably, one ought never be bored, for there are far to great a number of things to fascinate and occupy the mind.
-                </p>
-<p style="opacity:0;">This was copied from tmthydvnprt.com.</p>
+<p>Unquestionably, one ought never be bored, for there are far to great a number of things to fascinate and occupy the mind.<span style="opacity:0;">This was copied from tmthydvnprt.com.</span></p>
 <footer><cite title="tmthydvnprt.com"><a alt="tmthydvnprt.com" href="tmthydvnprt.com/#!/epigraph" title="tmthydvnprt.com">tmthydvnprt.com</a></cite></footer>
 </blockquote>
 <p class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</p>
@@ -305,11 +305,12 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA
 <div>
 <header><h1 class="text-center"><em>Colophon</em> <small>finishing touch</small></h1></header>
 <p class="lead text-center">
-                        Coded in <time datetime="2015">Two Thousand Fifteen</time> in the southern regions of California.<br/> <small>A place for the internet-facing extension of my self to reside.</small></p>
+                        Coded throughout <time datetime="2015">Two Thousand Fifteen</time><br/>in the southern regions of California.<br/> <small>A place for the internet-facing extension of my self to reside.</small></p>
 <h3>Design</h3>
 <hr/>
 <p>
-						A look at the <span class="code-font">source</span> of this site will identify a static one-page design with <code>&lt;template&gt;</code>s and a simple
+						The site's strucutre is based loosely on a book (epigraph, fliping animation, colophon, <abbr title="et cetera 'and so forth'">etc.</abbr>).
+                        A look at the <span class="code-font">source</span> of this site will identify a static one-page design with <code>&lt;template&gt;</code>s and a simple
 						 <code>hashchange</code> router. Downloading a whole website from one <code><abbr title="Uniform Resource Locator">url</abbr></code>,
 						 still with an interactive or nested experience, seems very elegant. Being interested in Machine Learning, the idea of
 						 a semantic web is wonderful; therefore, the <samp><a alt="#!/resume" href="#!/resume" title="#!/resume">#!/resume</a></samp> and <samp><a alt="#!/contact" href="#!/contact" title="#!/contact">#!/contact</a></samp>
@@ -511,7 +512,7 @@ Ecclesiastes 1:9
 <div class="col-sm-12">
 <div class="row">
 <div class="col-sm-12">
-<header><h1><em>Ruminations</em> <small>&mdash; the things that fascinate and occupy my mind</small></h1></header>
+<header><h1><em>Ruminations</em> <small>&mdash; the things that fascinate and occupy <strong>my</strong> mind</small></h1></header>
 <hr/>
 </div>
 </div>
@@ -520,6 +521,14 @@ Ecclesiastes 1:9
 <h3><em>Computational</em><br/><small>exploration for exploration's sake</small></h3>
 <ul>
 <li><code>Python</code> <small>(<abbr title="id est 'that is'">i.e.</abbr> executable pseudo-code!)</small></li>
+<li>Data Visualization
+                                <ul>
+<li>Ploting, Graphing</li>
+<li>Making complex data simple &amp; accessible</li>
+<li>Data Munging <a alt="W" href="http://en.wikipedia.org/wiki/Data_wrangling" target="_blank" title="W"><sup>W</sup></a></li>
+<li>Map Reduce<a alt="W" href="http://en.wikipedia.org/wiki/MapReduce" target="_blank" title="W"><sup>W</sup></a> type aggregating</li>
+</ul>
+</li>
 <li>
 								Machine Learning <a alt="W" href="http://en.wikipedia.org/wiki/Machine_learning" target="_blank" title="W"><sup>W</sup></a> <small>( <strong>Not</strong> Artificial Intelligence <a alt="W" href="http://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" title="W"><sup>W</sup></a>)</small>
 <ul>
@@ -536,15 +545,14 @@ Ecclesiastes 1:9
 </li>
 </ul>
 </li>
-<li>Grapheme <a alt="W" href="http://en.wikipedia.org/wiki/Grapheme" target="_blank" title="W"><sup>W</sup></a> Processing<br/>
-<small>(character-based)</small>
+<li>Grapheme <a alt="W" href="http://en.wikipedia.org/wiki/Grapheme" target="_blank" title="W"><sup>W</sup></a> Processing
+                                <small>(character-based)</small>
 <ul>
+<li>Syntax and Grammers</li>
 <li>Regular Expressions <a alt="W" href="http://en.wikipedia.org/wiki/Regular_Expressions" target="_blank" title="W"><sup>W</sup></a></li>
 <li>Lexers <a alt="W" href="http://en.wikipedia.org/wiki/Lexical_analysis" target="_blank" title="W"><sup>W</sup></a> and Parsers <a alt="W" href="http://en.wikipedia.org/wiki/Parsing" target="_blank" title="W"><sup>W</sup></a></li>
-<li>Data Munging <a alt="W" href="http://en.wikipedia.org/wiki/Data_wrangling" target="_blank" title="W"><sup>W</sup></a></li>
 </ul>
 </li>
-<li><em>&hellip;Always adding more&hellip;</em></li>
 </ul>
 </div>
 <div class="col-sm-4">
@@ -567,11 +575,11 @@ Ecclesiastes 1:9
 <li>Time &amp; Space
                                 <ul>
 <li>Chronology <a alt="W" href="http://en.wikipedia.org/wiki/Chronology" target="_blank" title="W"><sup>W</sup></a> &amp; Chronometry <a alt="W" href="http://en.wikipedia.org/wiki/Chronometry" target="_blank" title="W"><sup>W</sup></a></li>
-<li>Positioning (longitude/latitude)</li>
+<li>Navigation <small>(<abbr title="videlicet 'namely'">viz.</abbr> longitude/latitude)</small></li>
 </ul>
 </li>
 <li>Astronomy</li>
-<li>History</li>
+<li>History <small>(in general, and of everything in these lists)</small></li>
 <li>Language<br/>
 <small>(<abbr title="videlicet 'namely'">viz.</abbr> clever prose with interesting structure and diction)</small>
 </li>
