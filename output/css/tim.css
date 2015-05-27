@@ -858,6 +858,36 @@ blockquote,.lead {
 		padding-top: 0px;
 	}
 }
+#project-features .well {
+    background-color: #44c8ad;
+    border: 1px solid #16a085;
+}
+#project-features .iframe-wrap {
+    width:100%;
+    height: 300px;
+    padding: 0;
+    overflow: hidden; 
+}
+#project-features iframe {
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: 0.1% 0.1%;
+}
+#project h1,
+#project h2,
+#project h3,
+#project h4,
+#project h5,
+#project h6 {
+    margin-top: 11px; 
+    margin-bottom: 5px; 
+}
+#project hr {
+    margin-top: 11px; 
+    margin-bottom: 11px; 
+}
+
 /* Ruminations Page
 ----------------------------------------------------------------------------------------------------------------------------- */
 #ruminations {
