@@ -34,6 +34,7 @@ $(document).ready(function () {
 		currentPage       = 0,
         //this will store the scroll position
         keepScroll        = false,
+        keepHash          = '',
         cachedRepos       = null,
 		geometers         = '<h1 class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</h1>';
 
@@ -448,6 +449,7 @@ $(document).ready(function () {
                     page.addClass('rendered');
                     $('a[href*="#"]').click(function () {
                         // stop auto scroll
+                        keepHash = location.hash;
                         keepScroll = document.body.scrollTop;
                     });
 
@@ -465,6 +467,7 @@ $(document).ready(function () {
                         //move scroll position to stored position
                         document.body.scrollTop = keepScroll;
                         keepScroll = false;
+//                        location.hash = keepHash;
                     }
                     var target = $('#' + hash);
                     target = target.length ? target : $('[name=' + hash + ']');
