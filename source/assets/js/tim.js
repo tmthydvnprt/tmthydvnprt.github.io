@@ -408,9 +408,8 @@ $(document).ready(function () {
         urlpath = location.pathname.split('/');
         filename = urlpath.slice(-1)[0];
         
-        console.log('page    : ' + page);
-        console.log('hash    : ' + hash);
         console.log('urlpath : ' + urlpath);
+        console.log('hash    : ' + hash);
         console.log('filename: ' + filename);
         
         // index page with internal hash routing
@@ -429,6 +428,7 @@ $(document).ready(function () {
                 
                 // animate out
                 $('#page section').addClass('bringOut');
+                $('.bringIn').addClass('bringOut');
 
                 // wait until animation it done
                 bringOut = setTimeout(function () {
@@ -441,7 +441,6 @@ $(document).ready(function () {
                         currentPage = pageOrder.indexOf(hash);
                         pages[hash]();
                     } else {
-                        currentPage = 0;
                         pages.unknown();
                     }
 
@@ -487,6 +486,7 @@ $(document).ready(function () {
                 location.assign(newlocation);
             } else {
                 console.log('do nothing');
+                pages.unknown();
             }
         }
         
