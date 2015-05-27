@@ -74,7 +74,10 @@ $(document).ready(function () {
 		hourStr = ones.concat(teens)[hour % 12];
 		return '<p>' + hourStr + '</p><p>' + minuteStr + '</p><p>' + secondStr + '</p>';
 	}
-
+    function formatDate(d) {
+        var MONTHS = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
+        return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    }
 	function tickClock() {
 		var now    = new Date(),
 			hrDeg  = 180 + Math.floor(360 * (now.getHours()   / 12)) % 360,
@@ -253,7 +256,7 @@ $(document).ready(function () {
 
                 var i = 0,
                     repos = [],
-                    LANG_TEMPLATE = '<code>{lang}</code> <span class="badge">{count} kiB</span>',
+                    LANG_TEMPLATE = '<li><code>{lang}</code> <span class="badge">{count} kiB</span></li>',
                     FORK_TEMPLATE = '<i class="fa fa-code-fork"></i> ',
                     ITEM_TEMPLATE = [
                         '<li class="list-group-item">',
@@ -261,13 +264,19 @@ $(document).ready(function () {
                         '        <div class="col-xs-7 col-sm-8">',
                         '            <h4 class="list-group-item-heading">{if_fork}<a href="http://tmthydvnprt.github.io/{name}">{name} <i class="fa fa-link"></i></a> <small>(<a href="{html_url}"><i class="fa fa-book"></i> repo</a>)</small></h4>',
                         '            <p class="list-group-item-text">',
-                        '                {description}<br>',
-                        '                <small><time>{created_at}</time><br><time>{updated_at}</time></small>',
+                        '                {description}',
+                        '                <ul class="list-inline">',
+                        '                    <li><small><i class="fa fa-fw fa-clock-o"></i> <time>{created_at}</time></small></li>',
+                        '                    <li><small><i class="fa fa-fw fa-refresh"></i> <time>{updated_at}</time></small></li>',
+                        '                    <li><small><i class="fa fa-fw fa-cloud-upload"></i> <time>{pushed_at}</time></small></li>',
+                        '                </ul>',
                         '            </p>',
                         '        </div>',
                         '        <div class="col-xs-5 col-sm-4 text-right">',
-                        '            <i class="fa fa-file-code-o"></i> <span class="badge">{size} files</span><br>',
-                        '            {language_list}',
+                        '            <ul class="list-unstyled">',
+                        '                <li><i class="fa fa-file-code-o"></i> <span class="badge">{size} files</span></li>',
+                        '                {language_list}',
+                        '            </ul>',
                         '        </div>',
                         '    </div>',
                         '</li>'
@@ -277,7 +286,7 @@ $(document).ready(function () {
 
                     var url_array = [],
                         lang_list = {};
-
+                    
                     function getLanguage(data) {
                         return $.getJSON(data.languages_url, function (languages) {
                             var lang_array = [],
@@ -303,13 +312,18 @@ $(document).ready(function () {
                         console.log(lang_list);
                         for (i = 0; i < data.length; i += 1) {
                             repo_item = data[i];
+                            
+                            // make time nice
+                            repo_item.created_at = formatDate(new Date(repo_item.created_at));
+                            repo_item.updated_at = formatDate(new Date(repo_item.updated_at));
+                            repo_item.pushed_at = formatDate(new Date(repo_item.pushed_at));
 
                             if (repo_item.fork) {
                                 repo_item.if_fork = FORK_TEMPLATE;
                             } else {
                                 repo_item.if_fork = '';
                             }
-                            repo_item.language_list = lang_list[data[i].name].join('<br>');
+                            repo_item.language_list = lang_list[data[i].name].join('');
                             repos.push(ITEM_TEMPLATE.format(repo_item));
                         }
                         
