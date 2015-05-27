@@ -62,7 +62,7 @@ main:not(#page) > section > div {
 ----------------------------------------------------------------------------------------------------------------------------- */
 /* this navbar does not collapse */
 .navbar {
-    background-color: rgba(27, 188, 155, 0.8);
+    background-color: rgba(27, 188, 155, 0.9);
 }
 .navbar-header {
     float:left!important;
@@ -1615,7 +1615,7 @@ main section.bringOut {
 /* Animations
 ----------------------------------------------------------------------------------------------------------------------------- */
 @keyframes flipIn {
-	0%   {opacity:0;transform: scale(0.8) translateY( 256px) rotateY( 64deg);transform-origin: 50% 0%;}
+	0%   {opacity:0;transform: scale(0.8) translateY(-128px) rotateY( 64deg);transform-origin: 50% 0%;}
 	100% {opacity:1;transform: scale(1.0) translateY(   0px) rotateY(  0deg);transform-origin: 50% 0%;}
 }
 @keyframes flipOut {
