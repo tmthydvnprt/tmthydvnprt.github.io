@@ -306,7 +306,7 @@ blockquote,.lead {
 	height: 32px;
 	top   : 8px;
 	left  : 8px;
-	transition: all 0.5s ease;
+	transition: all 1.5s cubic-bezier(0.94, 2.61, 0.53, 0.18);
 	border-radius: 50% 50%;
 	z-index: 1000;
 }
@@ -495,7 +495,7 @@ blockquote,.lead {
 	position: fixed;
 	top:8px;
 	right:8px;
-	transition: all 1s ease 0.1s;
+	transition: all 1s cubic-bezier(0.94, 2.61, 0.53, 0.18);
 	z-index: 500;
 }
 @media (min-width: 768px) {
@@ -560,7 +560,7 @@ blockquote,.lead {
 	position: fixed;
 	bottom:8px;
 	right:8px;
-	transition: all 1.5s ease 0.2s;
+	transition: all 1.5s cubic-bezier(0.94, 2.61, 0.53, 0.18);
 	z-index: 1100;
 }
 @media (min-width: 768px) {
@@ -605,7 +605,7 @@ blockquote,.lead {
 	position: fixed;
 	bottom:8px;
 	left:8px;
-	transition: all 2s ease 0.3s;
+	transition: all 1.5s cubic-bezier(0.94, 2.61, 0.53, 0.18)  1.5s;
 	z-index: 1000;
 	font-size: 150%;
 	text-shadow: 2px 1px 1px #1bbc9b;
@@ -1609,7 +1609,10 @@ main section.bringOut {
 	animation: flipOut 512ms ease-out 1 both;
 }
 #resume-menu.bringIn {
-	animation: dropdown 512ms linear 1024ms 1 both;
+	animation: dropdown 800ms cubic-bezier(0.46, 2.06, 0.57, 0.66) 512ms 1 both;
+}
+#resume-menu.bringOut {
+	animation: dropdown 800ms cubic-bezier(0.46, 2.06, 0.57, 0.66) 512ms 1 reverse both;
 }
 
 /* Animations
@@ -1622,12 +1625,11 @@ main section.bringOut {
 	0%   {opacity:1;transform: scale(1.0) translateY(   0px) rotateY(  0deg);transform-origin: 50% 0%;}
 	100% {opacity:0;transform: scale(0.8) translateY( 256px) rotateY(-64deg);transform-origin: 50% 0%;}
 }
-
 @keyframes dropdown {
-	0%   {opacity:   0; margin-top: -64px; }
-	80%  {opacity:   1; margin-top:  20px; }
-	100% {opacity:   1; margin-top:   0px; }
+	0%   {opacity:   0; transform: scale(1.1) translateY(-64px);}
+	100% {opacity:   1; transform: scale(1  ) translateY(  0px);}
 }
+
 @keyframes flip {
 	0%   {transform: rotate(  0deg);}
 	100% {transform: rotate(359deg);}
