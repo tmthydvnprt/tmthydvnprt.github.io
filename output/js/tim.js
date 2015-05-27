@@ -427,7 +427,7 @@ $(document).ready(function () {
                 }, 300);
                 
                 // animate out
-                $('#page section').addClass('bringOut');
+                //$('#page section').addClass('bringOut');
                 $('.bringIn').addClass('bringOut');
 
                 // wait until animation it done
