@@ -863,10 +863,24 @@ blockquote,.lead {
     border: 1px solid #16a085;
 }
 #project-features .iframe-wrap {
+    position: relative;
     width:100%;
     height: 300px;
     padding: 0;
     overflow: hidden; 
+}
+#projects .iframeblock {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(14, 232, 232, 0.1);
+    z-index: 100;
+    transition: all 1s cubic-bezier(0.46, 2.50, 0.57, 0.66);
+}
+#projects .iframeblock:hover {
+    background-color: rgba(14, 232, 232, 0.5);
 }
 #project-features iframe {
     width: 200%;
@@ -874,16 +888,16 @@ blockquote,.lead {
     transform: scale(0.5);
     transform-origin: 0.1% 0.1%;
 }
-#project h1,
-#project h2,
-#project h3,
-#project h4,
-#project h5,
-#project h6 {
+#projects h1,
+#projects h2,
+#projects h3,
+#projects h4,
+#projects h5,
+#projects h6 {
     margin-top: 11px; 
     margin-bottom: 5px; 
 }
-#project hr {
+#projects hr {
     margin-top: 11px; 
     margin-bottom: 11px; 
 }

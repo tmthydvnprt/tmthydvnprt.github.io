@@ -158,13 +158,14 @@
 </div>
 </div>
 <div class="row">
-<div class="col-sm-8 col-sm-offset-2">
+<div class="col-sm-12">
 <h2>Featured Projects</h2>
 <div id="project-features">
 <div class="row">
 <div class="col-sm-4">
 <div class="well well-sm text-center">
 <div class="iframe-wrap">
+<div class="iframeblock"></div>
 <iframe src="http://tmthydvnprt.com/quilt/"></iframe>
 </div>
 <h2><a alt="quilt" href="http://tmthydvnprt.com/quilt/" title="quilt">quilt</a></h2>
@@ -173,6 +174,7 @@
 <div class="col-sm-4">
 <div class="well well-sm text-center">
 <div class="iframe-wrap">
+<div class="iframeblock"></div>
 <iframe src="http://tmthydvnprt.com/juxtapy/"></iframe>
 </div>
 <h2><a alt="juxtapy" href="http://tmthydvnprt.com/juxtapy/" title="juxtapy">juxtapy</a></h2>
@@ -181,6 +183,7 @@
 <div class="col-sm-4">
 <div class="well well-sm text-center">
 <div class="iframe-wrap">
+<div class="iframeblock"></div>
 <iframe src="http://tmthydvnprt.com/aggregit/"></iframe>
 </div>
 <h2><a alt="aggregit" href="http://tmthydvnprt.com/aggregit/" title="aggregit">aggregit</a></h2>
