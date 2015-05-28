@@ -2,7 +2,7 @@
 
 var timResume = $.extend({}, microformat["h-resume"], {
     "p-name"             : "R&eacute;sum&eacute;",
-    "p-summary"          : "An electrical engineer turned computer scientist (after coming across extremely interesting techniques used during graduate research). Loves high-level languages & algorithms that allow for development at an information / data level where <em>most</em> of the implementation abstracted from the processing (enter python, stage right, playing the part of executable psuedo-code).",
+    "p-summary"          : "An electrical engineer turned computer scientist (after coming across extremely interesting techniques used during graduate research). Loves high-level languages & algorithms that allow for development at an information / data level where <em>most</em> of the implementation is abstracted from the processing (enter python, stage right, playing the part of executable psuedo-code). With a good dose of client side web stack experience for interesting presentation layers and user interaction, long-term interests include python, machine learning, data-mining, data visualization and natural language processing.",
     "p-contact"          : timContact,
     "p-education"        : [
         $.extend({}, microformat["h-event"], {
