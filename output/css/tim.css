@@ -1647,10 +1647,10 @@ li.L9 {
 ----------------------------------------------------------------------------------------------------------------------------- */
 
 main section.bringIn {
-	animation: flipIn 512ms ease-in 1 both;
+	animation: flipIn 512ms ease 1 both;
 }
 main section.bringOut {
-	animation: flipOut 512ms ease-out 1 both;
+	animation: flipOut 512ms ease 1 both;
 }
 #resume-menu.bringIn {
 	animation: dropdown 512ms cubic-bezier(0.46, 2.50, 0.57, 0.66) 512ms 1 backwards;
