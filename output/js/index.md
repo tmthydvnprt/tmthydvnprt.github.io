@@ -140,7 +140,7 @@
 <nav class="navbar navbar-default navbar-fixed-top bringIn" id="resume-menu">
 <div class="container">
 <div class="navbar-header">
-<span class="navbar-brand">R&eacute;sum&eacute;:</span>
+<span class="navbar-brand"><a alt="R&eacute;sum&eacute; :" class="no-hover" href="#!/resume" title="R&eacute;sum&eacute; :">R&eacute;sum&eacute; :</a></span>
 <ul class="nav navbar-nav navbar-left">
 <li><a alt=" document" class="no-hover" href="#document" title=" document"><i class="fa fa-fw fa-file-text"></i> document</a></li>
 <li><a alt=" timeline" class="no-hover" href="#timeline" title=" timeline"><i class="fa fa-fw fa-tasks"></i> timeline</a></li>

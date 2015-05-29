@@ -480,7 +480,7 @@ $(document).ready(function () {
                         //move scroll position to stored position
                         document.body.scrollTop = keepScroll;
                         keepScroll = false;
-//                        location.hash = keepHash;
+                        //location.hash = keepHash;
                     }
                     var target = $('#' + hash);
                     target = target.length ? target : $('[name=' + hash + ']');
