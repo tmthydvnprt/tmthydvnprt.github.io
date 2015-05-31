@@ -980,6 +980,11 @@ blockquote,.lead {
 }
 #resume .h-competency .row {
 }
+
+#resume .p-publications blockquote {
+    font-size: 90%;
+}
+
 .gantt-resume {
 	position: relative;
 	width: 100%;

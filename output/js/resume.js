@@ -194,7 +194,7 @@ var timResume = $.extend({}, microformat["h-resume"], {
             ]
         })
     ],
-    "p-publication" : [
+    "p-publications" : [
         $.extend({}, microformat["h-cite"], {
             "p-publication"      : "Master's Thesis",
             "p-name"             : "Early Forest Fire Detection using Texture Analysis of Principal Components from Multispectral Video",
@@ -202,6 +202,14 @@ var timResume = $.extend({}, microformat["h-resume"], {
             "p-author"           : "Timothy M. Davenport",
             "u-url"              : "http://digitalcommons.calpoly.edu/theses/795/",
             "p-content"          : "[Abstract] The aim of this study is to incorporate the spectral, temporal and spatial attributes of a smoke plume for Early Forest Fire Detection. Image processing techniques are used on multispectral (red, green, blue, mid-wave infrared, and long-wave infrared) video to segment and indentify the presence of a smoke plume within a scene. <a href=\"http://digitalcommons.calpoly.edu/theses/795/#abstract\">...</a>"
+        }),
+        $.extend({}, microformat["h-cite"], {
+            "p-publication"      : "SPIE Conference Paper",
+            "p-name"             : "Characterization and identification of smoke plume for early forest Detection",
+            "dt-published"       : "2012-10",
+            "p-author"           : "Saghri, J.A., Jacobs, J.T., Kohler, D., Davenport, T., Moussa, G.",
+            "u-url"              : "http://spie.org/Publications/Proceedings/Paper/10.1117/12.930755",
+            "p-content"          : "[Absctract] Characterization and discrimination of fire smoke for a land-based early forest fire detection system are discussed. Preliminary results of several fire plume identification schemes applied to multispectral video data obtained from a number of controlled fire experiments are presented. The temporal, spectral, and spatial signatures of the fire are exploited. The methods discussed include: (1) range filtering followed by entropy filtering of the infrared (IR) video data, (2) dual range moving average differencing followed by principal component analysis (PCA) of IR video data, and (3) PCA of visible color video data followed by texture analysis and segmentation. The three schemes presented are tailored to detect the fire core, the heat plume, and the smoke, respectively."
         })
     ],
     "p-note" : 'This r&eacute;sum&eacute; is a <a href=\"#!/jsonresume\">json object</a> containing <a href=\"http://microformats.org/wiki/microformats2\">microformat2</a> structured data and rendered as html.  The semantic data uses the draft vocabularies <code>h-resume</code>, <code>h-card</code>, <code>h-adr</code>, <code>h-geo</code> and <code>h-event</code>, along with experiemental vocabularies <code>h-skill</code>, <code>h-skillset</code>, <code>h-competency</code> and <code>h-cite</code>.  Artistic license was exercised by using non-standard custom properties (e.g. <code>dt-start</code>/<code>end</code> in <code>h-compentency</code>, or <code>p-note</code> in any <code>h</code> vocab); however these were, hopefully, used as logical extentions of the official <abbr title="Application Programming Interface">API</abbr> and shouldn\'t break a microformat2 parser. <a href="#!/contact">Contact</a> me if you have suggestions.'
