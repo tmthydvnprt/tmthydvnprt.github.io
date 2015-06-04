@@ -2,7 +2,7 @@
 
 var timResume = $.extend({}, microformat["h-resume"], {
     "p-name"             : "R&eacute;sum&eacute;",
-    "p-summary"          : "An electrical engineer turned computer scientist (after coming across extremely interesting techniques used during graduate research). Loves high-level languages & algorithms that allow for development at an information / data level where <em>most</em> of the implementation is abstracted from the processing (enter python, stage right, playing the part of executable psuedo-code). With a good dose of client side web stack experience for interesting presentation layers and user interaction, long-term interests include python, machine learning, data-mining, data visualization and natural language processing.",
+    "p-summary"          : "An electrical engineer turned computer scientist. A professional history of <code>vhdl</code>, a personal and academic history of <code>matlab</code>, <code>javascript</code>, and <code>python</code>.  I talk to and teach machines, I convince them to do what I want.",
     "p-contact"          : timContact,
     "p-education"        : [
         $.extend({}, microformat["h-event"], {
@@ -130,17 +130,17 @@ var timResume = $.extend({}, microformat["h-resume"], {
                             "p-summary"          : "PHP",
                             "p-abbr"             : "PHP",
                             "p-rating"           : "2",
-                            "dt-start"           : "2012-08",
-                            "dt-end"             : "2013-08",
-                            "dt-duration"        : timeDuration("2012-08", "2013-08")
+                            "dt-start"           : "2012-10",
+                            "dt-end"             : "2013-10",
+                            "dt-duration"        : timeDuration("2012-10", "2013-10")
                         }),
                         $.extend({}, microformat["h-competency"], {
                             "p-summary"          : "Bash",
                             "p-abbr"             : "Bash",
                             "p-rating"           : "1",
-                            "dt-start"           : "2012-10",
-                            "dt-end"             : "2013-10",
-                            "dt-duration"        : timeDuration("2012-10", "2013-10")
+                            "dt-start"           : "2012-12",
+                            "dt-end"             : "present",
+                            "dt-duration"        : timeDuration("2012-12", "present")
                         }),
                         $.extend({}, microformat["h-competency"], {
                             "p-summary"          : "Tcl, Verilog, VisualBasic, C, AWK, Sed",

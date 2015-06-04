@@ -877,10 +877,23 @@ blockquote,.lead {
     height:100%;
     background-color: rgba(14, 232, 232, 0.1);
     z-index: 100;
-    transition: all 1s cubic-bezier(0.46, 2.50, 0.57, 0.66);
+    transition: all 0.5s ease-in-out;
 }
 #projects .iframeblock:hover {
-    background-color: rgba(14, 232, 232, 0.5);
+    background-color: rgba(14, 232, 232, 0.8);
+}
+#projects .iframeblock div {
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-60%) scale(1.05);
+    opacity: 0;
+    background-color: #bbebe1;
+    transition: all 0.4s cubic-bezier(0.46, 2.50, 0.57, 0.66) 0.1s;
+}
+#projects .iframeblock:hover div {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;    
 }
 #project-features iframe {
     width: 200%;

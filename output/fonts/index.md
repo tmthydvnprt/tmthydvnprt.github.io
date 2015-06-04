@@ -165,28 +165,49 @@
 <div class="col-sm-4">
 <div class="well well-sm text-center">
 <div class="iframe-wrap">
-<div class="iframeblock"></div>
+<a alt="Quilt" class="no-hover" href="http://tmthydvnprt.com/quilt/" title="Quilt">
+<div class="iframeblock">
+<div>
+<h2>quilt</h2>
+<h2><small>A <code>Python</code> based statis site <code>html</code> <em>stitcher</em>.</small></h2>
+</div>
+</div>
+</a>
 <iframe src="http://tmthydvnprt.com/quilt/"></iframe>
 </div>
-<h2><a alt="quilt" href="http://tmthydvnprt.com/quilt/" title="quilt">quilt</a></h2>
+<h2><a alt="Quilt" href="http://tmthydvnprt.com/quilt/" title="Quilt">Quilt</a></h2>
 </div>
 </div>
 <div class="col-sm-4">
 <div class="well well-sm text-center">
 <div class="iframe-wrap">
-<div class="iframeblock"></div>
+<a alt="Juxtapy" class="no-hover" href="http://tmthydvnprt.com/juxtapy/" title="Juxtapy">
+<div class="iframeblock">
+<div>
+<h2>Juxtapy</h2>
+<h2><small>Folder and File juxtaposing in Python</small></h2>
+</div>
+</div>
+</a>
 <iframe src="http://tmthydvnprt.com/juxtapy/"></iframe>
 </div>
-<h2><a alt="juxtapy" href="http://tmthydvnprt.com/juxtapy/" title="juxtapy">juxtapy</a></h2>
+<h2><a alt="Juxtapy" href="http://tmthydvnprt.com/juxtapy/" title="Juxtapy">Juxtapy</a></h2>
 </div>
 </div>
 <div class="col-sm-4">
 <div class="well well-sm text-center">
 <div class="iframe-wrap">
-<div class="iframeblock"></div>
+<a alt="Aggregit" class="no-hover" href="http://tmthydvnprt.com/aggregit/" title="Aggregit">
+<div class="iframeblock">
+<div>
+<h2>Aggregit</h2>
+<h2><small>See <em>all</em> your data across <em>all</em> your GitHub repositories.</small></h2>
+</div>
+</div>
+</a>
 <iframe src="http://tmthydvnprt.com/aggregit/"></iframe>
 </div>
-<h2><a alt="aggregit" href="http://tmthydvnprt.com/aggregit/" title="aggregit">aggregit</a></h2>
+<h2><a alt="Aggregit" href="http://tmthydvnprt.com/aggregit/" title="Aggregit">Aggregit</a></h2>
 </div>
 </div>
 </div>
@@ -458,8 +479,8 @@ Ecclesiastes 1:9
 <hr/>
 <p>What's with the <code><abbr title="Uniform Resource Locator">url</abbr></code> &amp; name?</p>
 <ol>
-<li>consistent user name, nobody had claimed it on <em>any</em> service I needed (\o/),</li>
-<li>begin interested in language and information transferred via characters, vowels are somewhat unnecessary to record, like the phoenician alphabet <a alt="W" href="http://en.wikipedia.org/wiki/Phoenician_alphabet" target="_blank" title="W"><sup>W</sup></a> or any abjad <a alt="W" href="http://en.wikipedia.org/wiki/Abjad" target="_blank" title="W"><sup>W</sup></a>.</li>
+<li>consistent user name, nobody had claimed it on <em>any</em> service I needed \o/,</li>
+<li>being interested in language and information transferred via characters, vowels are somewhat unnecessary to record, like the phoenician alphabet <a alt="W" href="http://en.wikipedia.org/wiki/Phoenician_alphabet" target="_blank" title="W"><sup>W</sup></a> or any abjad <a alt="W" href="http://en.wikipedia.org/wiki/Abjad" target="_blank" title="W"><sup>W</sup></a>.</li>
 </ol>
 <p>The <a alt="monogram" href="#!/monogram" title="monogram">monogram</a> was made with tightly placed <code>html</code>/<code>css</code>. An embedded <code>base64</code> image version for the <samp><a alt="#!/resume" href="#!/resume" title="#!/resume">#!/resume</a></samp> <em>page</em> was made with this really simple <a alt="python script" href="#!/base64imagepy" title="python script">python script</a>.</p>
 <p>The <em>planetary menu</em> is a nod to the wonder of astronomy and a, potentially humorous, commentary to the fact that by <em>navigating</em> my website, you are metaphorically <em>navigating</em> a world I created.</p>
@@ -575,8 +596,8 @@ Ecclesiastes 1:9
 <li>Grapheme <a alt="W" href="http://en.wikipedia.org/wiki/Grapheme" target="_blank" title="W"><sup>W</sup></a> Processing
                                 <small>(character-based)</small>
 <ul>
-<li>Syntax and Grammars</li>
 <li>Regular Expressions <a alt="W" href="http://en.wikipedia.org/wiki/Regular_Expressions" target="_blank" title="W"><sup>W</sup></a></li>
+<li>Syntax and Grammars</li>
 <li>Lexers <a alt="W" href="http://en.wikipedia.org/wiki/Lexical_analysis" target="_blank" title="W"><sup>W</sup></a> and Parsers <a alt="W" href="http://en.wikipedia.org/wiki/Parsing" target="_blank" title="W"><sup>W</sup></a></li>
 </ul>
 </li>
@@ -690,14 +711,16 @@ Ecclesiastes 1:9
 <header><h1><em>Synopsis</em></h1></header>
 <hr/>
 <p class="lead">
-                    I have not yet written this.
-                </p>
-<p class="lead">
-                    An electrical engineer turned computer scientist (after coming across extremely interesting techniques used during graduate research). 
+                    An electrical engineer turned computer scientist (after coming across extremely interesting techniques 
+                    used during graduate research). 
                 </p>
 <p>
-                    Loves high-level languages &amp; algorithms that allow for development at an information / data level where most of the implementation is abstracted from the processing (enter python, stage right, playing the part of executable psuedo-code). With a good dose of client side web stack experience for interesting presentation layers and user interaction, long-term interests include python, machine learning, data-mining, data visualization and natural language processing.
+                    I love high-level languages &amp; algorithms that allow for development at an information/data level where <em>most</em> of the low level implementation is abstracted from the processing (enter python, stage right, playing the part of executable pseudo-code). With a good dose of client side web stack experience, a history of writing low level <abbr title="Digital Signal Processing">DSP</abbr> algorithms in <code>vhdl</code> on <abbr title="Field Programmable Gate Arrays">FPGA</abbr>s, and a continued research interest in machine learning, data-mining, natural language processing, 
 				</p>
+<p>
+                You know when you read a good book or a quote from your favorite author and you find one of those sentences where you just can't believe what they were able to express with a particular sequence of words? It can be simple or complex, short or long. It was so creative, exactly what you feel and know, but so clever that you are suprised?  Your spirits rise, you say Hmm? and AH HA! simultaneously and your mind is satisfied. That is how I feel when I read and write python.  I can't believe what and how things can be expressed with this language.  It is beautiful.
+				</p>
+<!--// for creating interesting and beautiful presentation layers or user interactions // the possibilities of what can be done when one learns to talk to machines are endless! -->
 </div>
 </div>
 </section>
