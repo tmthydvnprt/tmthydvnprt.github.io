@@ -8,15 +8,14 @@
     "keywords"    : ["tim", "timothy", "davenport", "resume", "profile", "website"],
     "changefreq"  : "monthly",
     "priority"    : "0.5",
-    "local"       : false,
+    "blogname"    : "Autonomy &amp; Mastery",
+    "atomid"      : "randomid",
+    "rssid"       : "randomid",
+    "copydate"    : 2015,
+    "copyrighter" : "Timothy Davenport",
     "patchcomment": true,
     "quiltcomment": false,
     "assetcomment": true,
     "pagecomment" : false,
-    "pageobject"  : false,
-    "buildblog"   : false,
-    "buildatom"   : false,
-    "buildrss"    : false,
-    "copydate"    : 2015,
-    "copyrighter" : "Timothy Davenport"
+    "pageobject"  : false
 }

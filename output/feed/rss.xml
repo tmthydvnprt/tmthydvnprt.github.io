@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>tmthydvnprt Feed</title>
+        <description>/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/pages/posts</description>
+        <link>tmthydvnprt.com</link>
+        <id>randomid</id>
+        <language>en-us</language>
+        <lastBuildDate>2015-06-05T08:14:38-7:00</lastBuildDate>
+        <pubDate>2015-06-05T08:14:38-7:00</pubDate>
+        <managingEditor>tmthydvnprt</managingEditor>
+           <item>
+        <title>Hello World</title>
+        <link>tmthydvnprt.com/posts/hello_word.html</link>
+        <guid>randomid</guid>
+        <pubDate>6/4/2015 7:08 pm</pubDate>
+        <description>
+This will be a blog of my travels thru the virtual new world. tim
+
+</description>
+    </item>
+
+    </channel>
+</rss>

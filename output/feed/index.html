@@ -6,29 +6,29 @@
 <!----><meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="personal world" name="description"/>
-<meta content="Tim Davenport" name="author"/>
-<meta content="tim, davenport, engineer" name="keywords"/>
-<title>tim(othy)</title>
+<meta content="blank index page of feed directory" name="description"/>
+<meta content="tmthydvnprt" name="author"/>
+<meta content="i,n,d,e,x" name="keywords"/>
+<title>feed directory index</title>
 <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Poiret+One|Ubuntu|Sorts+Mill+Goudy" rel="stylesheet" type="text/css"/>
-<link href="img/favicon.ico" id="favicon" rel="shortcut icon" type="image/x-icon"/>
-<link href="img/icon_60x60.png" rel="apple-touch-icon"/>
-<link href="img/icon_76x76.png" rel="apple-touch-icon" sizes="76x76"/>
-<link href="img/icon_120x120.png" rel="apple-touch-icon" sizes="120x120"/>
-<link href="img/icon_152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+<link href="../../../../../../img/favicon.ico" id="favicon" rel="shortcut icon" type="image/x-icon"/>
+<link href="../../../../../../img/icon_60x60.png" rel="apple-touch-icon"/>
+<link href="../../../../../../img/icon_76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+<link href="../../../../../../img/icon_120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+<link href="../../../../../../img/icon_152x152.png" rel="apple-touch-icon" sizes="152x152"/>
 <meta content="tmthydvnprt.com" property="og:url"/>
 <meta content="website" property="og:type"/>
-<meta content="tim(othy)" property="og:title"/>
+<meta content="feed directory index" property="og:title"/>
 <meta content="tmthydvnprt.com/img/icon.png" property="og:image"/>
 <meta content="tmthydvnprt.com/img/icon.png" name="msapplication-TileImage"/>
 <meta content="#16a085" name="msapplication-TileColor"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="@tmthydvnprt" name="twitter:site"/>
 <meta content="tmthydvnprt.com" name="twitter:domain"/>
-<meta content="tim(othy)" name="twitter:title"/>
-<meta content="personal world" name="twitter:description"/>
+<meta content="feed directory index" name="twitter:title"/>
+<meta content="blank index page of feed directory" name="twitter:description"/>
 <meta content="tmthydvnprt.com/img/icon.png" name="twitter:img"/>
-<link href="css/bootstrap.min_font-awesome.min_tim.css" rel="stylesheet" type="text/css"/></head>
+<link href="../../../../../../css/bootstrap.min_font-awesome.min_tim.css" rel="stylesheet" type="text/css"/></head>
 <body>
 <!--quilted header patch-->
 <div class="holdoff updn" id="menu">
@@ -60,7 +60,12 @@
 </div>
 </div>
 <!--quilted page patch-->
-<main class="container-fluid fill-container" id="page">&zwnj;</main>
+<div class="container text-center" id="page">
+<h2><br/></h2>
+<h2>Index page of the <code>feed/</code> directory.</h2>
+<h3>This page was intentionally left blank.</h3>
+<h3><small>Nothing to see here, move along.</small></h3>
+</div>
 <!--quilted footer patch-->
 <div class="holdoff updn2" id="clock">
 <a alt="time" class="no-hover" href="#!/time" title="time">
@@ -550,7 +555,7 @@ Ecclesiastes 1:9
 <hr/>
 <h2>Hmm...<br/><small>This place doesn't<br/>seem to exist.</small></h2>
 <hr/>
-<h3>Please go back or return <a alt="home." href="index.html" title="home.">home.</a></h3>
+<h3>Please go back or return <a alt="home." href="../../../../../../index.html" title="home.">home.</a></h3>
 </header>
 </div>
 </section>
@@ -936,6 +941,6 @@ Ecclesiastes 1:9
 </template>
 </div>
 <!--quilted scripts patch-->
-<script id="scripts" rel="javascript" src="js/jquery-1.11.1.min_pretty.min_microformat2_contact_resume_tim.js" type="text/javascript"></script>
+<script id="scripts" rel="javascript" src="../../../../../../js/jquery-1.11.1.min_pretty.min_microformat2_contact_resume_tim.js" type="text/javascript"></script>
 </body>
 </html>

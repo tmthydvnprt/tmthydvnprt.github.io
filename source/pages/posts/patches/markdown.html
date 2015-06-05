@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-md-8 col-md-offset-1">
+            <ul class="breadcrumb">
+                {{page_path}}
+            </ul>
+            <article class="markdowned">
+                {{markdown}}
+            </article>
+        </div>
+        <div class="col-sm-4 col-md-2 well">
+            <h6>{{title}}<br><small>{{description}}</small></h6>
+            <ul class="list-inline">
+                <li><a href="../feed/feed.atom" class="label label-primary">atom</a></li>
+                <li><a href="../feed/feed.rss" class="label label-primary">rss</a></li>
+            </ul>
+            <hr>
+            <nav>
+                <ul class="pager">
+                    <li class="previous {{disable_last}}">
+                        <a href="{{last_post}}" alt="{{last_title}}" title="{{last_title}}"><span>&larr;</span> older</a>
+                    </li>
+                    <li class="next {{disable_next}}">
+                        <a href="{{next_post}}" alt="{{next_title}}" title="{{next_title}}">newer <span>&rarr;</span></a>
+                    </li>
+                </ul>
+            </nav>              
+            <hr>
+            <ul class="list-unstyled">
+                <li>
+                    <h5><a href="categories/index.html">Categories</a></h5>
+                    <ul class="list-inline">
+                        {{category_list}}
+                    </ul>
+                </li>
+                <li>
+                    <h5><a href="tags/index.html">Tags</a></h5>
+                    <ul class="list-inline">
+                        {{tag_list}}
+                    </ul>
+                </li>
+            </ul>            
+            <hr>
+            <ul class="list-inline center-block">
+                <li>
+                    <a href="#page" class="btn btn-default btn-sm" alt="top" title="top"><span>&uarr;</span> top</a>
+                </li>
+                <li>
+                    <a href="#footer" class="btn btn-default btn-sm" alt="bottom" title="bottom">bottom<span>&darr;</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-md-8 col-md-offset-1">
+            <hr class="visible-xs">
+            <ul class="list-inline visible-xs">
+                <li>
+                    <h4><a href="categories/index.html">Categories</a></h4>
+                    <ul class="list-inline">
+                        {{category_list}}
+                    </ul>
+                </li>
+                <li>
+                    <h4><a href="tags/index.html">Tags</a></h4>
+                    <ul class="list-inline">
+                        {{tag_list}}
+                    </ul>
+                </li>
+            </ul>
+            <hr class="visible-xs">
+            <nav>
+                <ul class="pager">
+                    <li class="previous {{disable_last}}">
+                        <a href="{{last_post}}" alt="{{last_title}}" title="{{last_title}}"><span>&larr;</span> older</a>
+                    </li>
+                    <li class="next {{disable_next}}">
+                        <a href="{{next_post}}" alt="{{next_title}}" title="{{next_title}}">newer <span>&rarr;</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <a class="markdown-link" href="{{markdownlink}}" alt="view original markdown" title="view original markdown" role="button">markdown</a>
+</div>

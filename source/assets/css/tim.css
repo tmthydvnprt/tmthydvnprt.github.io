@@ -70,8 +70,11 @@ main:not(#page) > section > div {
     margin-left: 32px!important;
 }
 .navbar-brand {
+/*    line-height: 1;*/
+/*    padding: 8px 16px;*/
     margin-left:0px!important;
 }
+
 .navbar-nav.navbar-left {
     float: left!important;
     margin: 0;
@@ -84,13 +87,51 @@ main:not(#page) > section > div {
     float:left!important;
 }
 .navbar-nav>li>a {
-    padding: 21px 16px;
+    padding: 21px 8px;
 /*
     font-size: 19px;
     line-height: 22px;
 */
     height: 64px;
 }
+
+.navbar-form.navbar-left {
+    float:left!important
+}
+.navbar-form.navbar-right {
+    float:right!important
+}
+.navbar-form {
+    width: auto!important;
+    border: 0!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    padding: 0!important;
+    box-shadow: none!important;
+}
+.navbar-form .input-group {
+    display: inline-table!important;
+    vertical-align: middle!important;
+}
+.navbar-form .input-group .input-group-addon, 
+.navbar-form .input-group .input-group-btn, 
+.navbar-form .input-group .form-control {
+    width: auto!important;
+}
+.navbar-form .form-control {
+    display: inline-block!important;
+    width: auto!important;
+    vertical-align: middle!important;
+}
+.navbar-form .input-group-addon {
+    padding-left: 4px!important;
+    padding-right: 4px!important;
+}
+
+#nav-search-blog {
+    width: 128px!important;
+}
+
 
 .valign-top {
     display: inline-block;
@@ -119,6 +160,7 @@ a[href*="http://en.wikipedia.org"] {
 .geometers {
 	opacity:0;
 }
+.force-hover[title]::before,
 abbr[title]::before,
 a[href]:not(.no-hover)::before,
 time[datetime]:not(.no-hover)::before {
@@ -155,11 +197,26 @@ a[href]:not(.no-hover)::before {
 time[datetime]:not(.no-hover)::before {
 	content: " (ISO8601 : " attr(datetime) ")";
 }
+.force-hover[title]:hover::before,
 abbr[title]:hover::before,
 a[href]:not(.no-hover):hover::before,
 time[datetime]:not(.no-hover):hover::before {
 	width:400%;
 	padding:8px 16px;
+}
+.force-hover[title]::before,
+abbr[title]::before,
+a[href]:not(.no-hover)::before,
+time[datetime]:not(.no-hover)::before {
+	margin-top: 0px;    
+}
+nav .force-hover[title]:hover::before,
+nav abbr[title]:hover::before,
+nav a[href]:not(.no-hover):hover::before,
+nav time[datetime]:not(.no-hover):hover::before {
+	width:400%;
+	padding:8px 16px;
+	margin-top:64px;
 }
 
 h1,.h1,
@@ -257,6 +314,9 @@ blockquote,.lead {
 .updn5 {
 	animation: updn 6000ms linear 4s infinite both;
 }
+.updn6 {
+	animation: updn 5000ms linear 3.5s infinite both;
+}
 .logo {
 	position: relative;
 	height:1024px;
@@ -298,6 +358,49 @@ blockquote,.lead {
 	}
 }
 
+/* Blog sub-site overrides
+----------------------------------------------------------------------------------------------------------------------------- */
+.blog .navbar-header{
+    position: relative;
+    margin-left: 8px!important;
+    margin-right: 8px!important;
+}
+.blog .navbar-brand {
+    margin-top: -16px;
+}
+.blog .navbar-sub-brand {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0 32px;
+}
+body.blog {
+    padding-top:64px;
+}
+
+.blog .blog-nav {
+	animation: introDn 512ms ease-in-out 0s 1 both;
+}
+.blog footer {
+	animation: introUp 1024ms ease-in-out 0s 1 both;
+}
+.blog #page {
+	animation: introOut 512ms ease-in-out 256ms 1 both;
+}
+@keyframes introDn {
+	0%   {opacity: 0; transform: scale(1.2) translateY(-64px);}
+	100% {opacity: 1; transform: scale(1) translateY(  0px);}
+}
+@keyframes introUp {
+	0%   {opacity: 0; transform: scale(0.98) translateY(32px);}
+	100% {opacity: 1; transform: scale(1) translateY( 0px);}
+}
+@keyframes introOut {
+	0%   {opacity: 0; transform: scale(0.95) translateY(10px);}
+	100% {opacity: 1; transform: scale(1) translateY( 0px);}
+}
 /* Menu Corner
 ----------------------------------------------------------------------------------------------------------------------------- */
 #menu {
@@ -600,6 +703,7 @@ blockquote,.lead {
 
 /* Copy/At Corner
 ----------------------------------------------------------------------------------------------------------------------------- */
+#blog-link,
 #at,
 #copy {
 	position: fixed;
@@ -611,20 +715,28 @@ blockquote,.lead {
 	text-shadow: 2px 1px 1px #1bbc9b;
 	cursor: pointer;
 }
+#blog-link {
+    bottom:64px;
+}
 #at {
     bottom:32px;
 }
 @media (min-width: 768px) {
+    #blog-link,
     #at,
 	#copy {
 		bottom:16px;
 		left:16px;
 		text-shadow: none;
 	}
+    #blog-link {
+        bottom:112px;
+    }
     #at {
         bottom:64px;
     }
 }
+#blog-link #slideover,
 #at #slideover,
 #copy #slideover {
 	position: absolute;
@@ -641,17 +753,20 @@ blockquote,.lead {
 	text-shadow: none;
 	z-index: -1;
 }
+#blog-link #slideover a,
 #at #slideover a,
 #copy #slideover a {
 	color:#bbebe1;
 }
 @media (min-width: 768px) {
+    #blog-link #slideover,
     #at #slideover,
 	#copy #slideover {
 		top:0px;
 		font-size: 100%;
 	}
 }
+#blog-link:hover #slideover,
 #at:hover #slideover,
 #copy:hover #slideover {
 	left:-8px;
@@ -1654,11 +1769,14 @@ li.L9 {
 #backnext.holdoff {
 	transform: translateY(64px) translateX(64px)!important;
 }
-#copy.holdoff {
-	transform: translateY(64px) translateX(-64px)!important;
+#blog-link.holdoff {
+	transform: translateY(192px) translateX(-64px)!important;
 }
 #at.holdoff {
 	transform: translateY(128px) translateX(-64px)!important;
+}
+#copy.holdoff {
+	transform: translateY(64px) translateX(-64px)!important;
 }
 
 /* Page Switching
