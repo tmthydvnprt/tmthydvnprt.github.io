@@ -3,12 +3,21 @@ date:        6/4/2015 7:08 pm
 description: An almost obligatory first blog post for a programmer :)
 author:      tmthydvnprt
 categories:  personal
-tags:        programming, blog
+tags:        programming
+             blog
 
-# {{title}} <br><small>{{description}}</small>
+
+<div id="postinfo" class="jumbotron" markdown="1">
+
+# {{title}} 
+
+## <small>{{description}}</small>
+
 by {{author}} <small>on {{date}}</small>
-{: .h4}
-****************************************************************************************************************
+{: .h5}
+
+</div>
+
 
 <div id="post" markdown="1">
 

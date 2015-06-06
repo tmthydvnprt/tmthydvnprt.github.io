@@ -17,5 +17,6 @@
     "quiltcomment": false,
     "assetcomment": true,
     "pagecomment" : false,
-    "pageobject"  : false
+    "pageobject"  : false,
+    "local"       : true
 }

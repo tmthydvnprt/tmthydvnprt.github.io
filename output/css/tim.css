@@ -62,7 +62,7 @@ main:not(#page) > section > div {
 ----------------------------------------------------------------------------------------------------------------------------- */
 /* this navbar does not collapse */
 .navbar {
-    background-color: rgba(27, 188, 155, 0.9);
+    background-color: rgba(27, 188, 155, 0.95);
 }
 .navbar-header {
     float:left!important;
@@ -132,7 +132,6 @@ main:not(#page) > section > div {
     width: 128px!important;
 }
 
-
 .valign-top {
     display: inline-block;
     vertical-align: top;
@@ -188,6 +187,7 @@ time[datetime]:not(.no-hover)::before {
 time[datetime]:not(.no-hover)::before {
 	background-color: #34495e;
 }
+.force-hover[title]::before,
 abbr[title]::before {
 	content: " (" attr(title) ")";
 }
@@ -360,26 +360,98 @@ blockquote,.lead {
 
 /* Blog sub-site overrides
 ----------------------------------------------------------------------------------------------------------------------------- */
+/* Blog body */
+body.blog {
+    padding-top:64px;
+    background-color: #fefefe;
+}
+/* Blog navbar */
 .blog .navbar-header{
     position: relative;
     margin-left: 8px!important;
     margin-right: 8px!important;
 }
 .blog .navbar-brand {
-    margin-top: -16px;
+    padding-top: 2px;
 }
 .blog .navbar-sub-brand {
     position: absolute;
-    top: 42px;
+    top: 38px;
     left: 0;
     white-space: nowrap;
     text-align: center;
     padding: 0 32px;
 }
-body.blog {
-    padding-top:64px;
+.blog nav .force-hover[title]::before,
+.blog nav abbr[title]::before,
+.blog nav a[href]:not(.no-hover)::before,
+.blog nav time[datetime]:not(.no-hover)::before {
+    opacity: 0;
+    white-space: nowrap;
 }
-
+.blog nav .force-hover[title]:hover::before,
+.blog nav abbr[title]:hover::before,
+.blog nav a[href]:not(.no-hover):hover::before,
+.blog nav time[datetime]:not(.no-hover):hover::before {
+    opacity: 1;
+	width: auto;
+	padding:8px 16px;
+	margin-top:64px;
+}
+/* general blog */
+.blog .list-group-item {
+    background-color: #fefefe;
+}
+.blog {
+	color: #232323;
+}
+.blog .text-muted {
+	color: #767676;
+}
+.blog h1, .blog .h1,
+.blog h2, .blog .h2,
+.blog h3, .blog .h3,
+.blog h4, .blog .h4,
+.blog h5, .blog .h5,
+.blog h6, .blog .h6 {
+	color: #343434;
+}
+.blog h1 small, .blog .h1 small,
+.blog h2 small, .blog .h2 small,
+.blog h3 small, .blog .h3 small,
+.blog h4 small, .blog .h4 small,
+.blog h5 small, .blog .h5 small,
+.blog h6 small, .blog .h6 small {
+	color: #565656;
+}
+.blog .pager li>a {
+    padding: 4px 8px;
+}
+.blog .jumbotron a.headerlink {
+    color:#99d6c9;
+}
+.blog .jumbotron a.headerlink:hover {
+    color:#78c3b3;
+}
+.blog .markdown-link {
+    position: fixed;
+    bottom: 32px;
+    left: -110px;
+    border-right: 10px solid #005496;
+    background: #addbff;
+    color: #eee;
+    padding: 4px 16px;
+    z-index:1000;
+    width: 128px;
+	transition: all 512ms cubic-bezier(0.28, 1.51, 0.54, 0.75);
+}
+.blog .markdown-link:hover {
+    left: 0px;    
+    background: #2196f3;
+    border-right: 3px solid #addbff;
+    color: #eee;
+}
+/* Blog animations */
 .blog .blog-nav {
 	animation: introDn 512ms ease-in-out 0s 1 both;
 }
@@ -401,6 +473,7 @@ body.blog {
 	0%   {opacity: 0; transform: scale(0.95) translateY(10px);}
 	100% {opacity: 1; transform: scale(1) translateY( 0px);}
 }
+
 /* Menu Corner
 ----------------------------------------------------------------------------------------------------------------------------- */
 #menu {
