@@ -2,23 +2,25 @@
     <div class="well">
         <h2><a class="no-hover" href="{{grouplink}}">{{group}}</a></h2>
         <h3>{{post-count}} Posts</h3>
-        <ul class="list-unstyled">
-            <li>words : {{post-words}}</li>
-<!--
-            <li>length : {{post-length}}</li>
-            <li>characters : {{post-characters}}</li>
-            <li>lines : {{post-lines}}</li>
-            <li>symbols : {{post-symbols}}</li>
-            <li>numbers : {{post-numbers}}</li>
-            <li>diversity : {{post-diversity}}</li>
-            <li>sentences : {{post-sentences}}</li>
-            <li>questions : {{post-questions}}</li>
-            <li>extlinks : {{post-extlinks}}</li>
-            <li>intlinks : {{post-intlinks}}</li>
-            <li>anchors : {{post-anchors}}</li>
-            <li>images : {{post-images}}</li>
-            <li>headers : {{post-headers}}</li>
--->
-        </ul>
+        <hr>
+        <small>
+            <ul class="list-inline text-muted">
+                <li class="force-hover" title="length">{{post-length}}<br><i class="fa fa-fw fa-text-width"></i></li>
+                <li class="force-hover" title="lines">{{post-lines}}<br><i class="fa fa-fw fa-text-height"></i></li>
+                <li class="force-hover" title="characters">{{post-characters}}<br><strong>C</strong></li>
+                <li class="force-hover" title="words">{{post-words}}<br><strong>W</strong></li>
+                <li class="force-hover" title="diversity">{{post-diversity}}<br><strong>%</strong></li>
+                <li class="force-hover" title="headers">{{post-headers}}<br><i class="fa fa-fw fa-header"></i></li>
+                <li class="force-hover" title="sentences">{{post-sentences}}<br><strong>S</strong></li>
+                <li class="force-hover" title="symbols">{{post-symbols}}<br><strong>&amp;</strong></li>
+                <li class="force-hover" title="numbers">{{post-numbers}}<br><strong>1</strong></li>
+                <li class="force-hover" title="quotes">{{post-quotes}}<br><i class="fa fa-fw fa-quote-left"></i></li>
+                <li class="force-hover" title="questions">{{post-questions}}<br><i class="fa fa-fw fa-question"></i></li>
+                <li class="force-hover" title="internal links">{{post-intlinks}}<br><i class="fa fa-fw fa-link" ></i></li>
+                <li class="force-hover" title="external links">{{post-extlinks}}<br><i class="fa fa-fw fa-external-link" ></i></li>
+                <li class="force-hover" title="anchors">{{post-anchors}}<br><strong>#</strong></li>
+                <li class="force-hover" title="images">{{post-images}}<br><i class="fa fa-fw fa-picture-o" ></i></li>
+            </ul>
+        </small>
     </div>
 </li>

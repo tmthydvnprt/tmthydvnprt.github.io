@@ -556,6 +556,16 @@ body.blog {
 	100% {opacity: 1; transform: scale(1) translateY( 0px);}
 }
 
+#post-social-list li:hover {
+	animation: popdown 256ms ease-in-out 0s 1 both;
+}
+@keyframes popdown {
+	0%   {transform: translateY(0px)}
+	33%  {transform: translateY(8px)}
+	66%  {transform: translateY(-4px)}
+	100% {transform: translateY(0px)}
+}
+
 .group-item {
     float:left;
     position: relative;
@@ -601,7 +611,6 @@ body.blog {
 .group-item > div ul li {
 
 }
-
 /* Menu Corner
 ----------------------------------------------------------------------------------------------------------------------------- */
 #menu {
