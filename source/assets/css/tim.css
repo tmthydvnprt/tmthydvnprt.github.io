@@ -378,7 +378,56 @@ blockquote,.lead {
 		margin-top: 22px;
 	}
 }
+.jumbotron {
+    background-color: #4a7f8b;
+    padding: 16px 32px;
+}
+.jumbotron h1, .jumbotron .h1, 
+.jumbotron h2, .jumbotron .h2, 
+.jumbotron h3, .jumbotron .h3, 
+.jumbotron h4, .jumbotron .h4, 
+.jumbotron h5, .jumbotron .h5, 
+.jumbotron h6, .jumbotron .h6 {
+    color:#00ffcc!important;
+}
+.jumbotron small {
+    color: #94dfd0!important;
+}
 
+/*
+.post-title,
+.post-description,
+.post-author-date {
+    position: relative;
+    float:left;
+    overflow: hidden;
+    border-right:0px solid #00ffcc;
+}
+.post-title {
+    animation: type 1s steps(20, end) 0.5s 1 both;
+}
+.post-description {
+    animation: type 1s steps(60, end) 1.5s 1 both;
+}
+.post-author-date {
+    animation: type 1s steps(60, end) 2.5s 1 both;
+}
+@keyframes type {
+    0%   {width:   0%; border-right-width: 0px;}
+    1%   {width:   1%; border-right-width: 2px;}
+    99%  {width:  99%; border-right-width: 2px;}
+    100% {width: 100%; border-right-width: 0px;}
+}
+*/
+.blinky {
+	animation: blinky 512ms ease-in-out 0s infinite alternate both;
+}
+@keyframes blinky {
+	0%   {opacity:0}
+	33%  {opacity:0}
+	66%  {opacity:1}
+	100% {opacity:1}
+}
 /* Blog sub-site overrides
 ----------------------------------------------------------------------------------------------------------------------------- */
 /* Blog body */
@@ -505,6 +554,52 @@ body.blog {
 @keyframes introOut {
 	0%   {opacity: 0; transform: scale(0.95) translateY(10px);}
 	100% {opacity: 1; transform: scale(1) translateY( 0px);}
+}
+
+.group-item {
+    float:left;
+    position: relative;
+    width: 46%;
+    padding-bottom : 46%;
+    margin:1.66%;
+}
+@media (min-width: 992px) {
+    .group-item {
+        float: left;
+        position: relative;
+        width: 30%;
+        padding-bottom : 30%;
+        margin:1.66%;
+    }
+}
+.group-item > div {
+    position: absolute;
+    text-align: center;
+    height: 90%;
+    width: 90%;
+    padding: 5%;
+    background-color:#bbebe1;
+    border-color:#4a7f8b;
+}
+.group-item > div:hover {
+	animation: popone 256ms ease-in-out 0s 1 both;
+}
+@keyframes popone {
+	0%   {transform: scale(1.00)}
+	15%  {transform: scale(0.98)}
+	85%  {transform: scale(1.02)}
+	100% {transform: scale(1.00)}
+}
+.group-item h1, .group-item .h1,
+.group-item h2, .group-item .h2,
+.group-item h3, .group-item .h3,
+.group-item h4, .group-item .h4,
+.group-item h5, .group-item .h5,
+.group-item h6, .group-item .h6 {
+    margin: 2px 4px;
+}
+.group-item > div ul li {
+
 }
 
 /* Menu Corner

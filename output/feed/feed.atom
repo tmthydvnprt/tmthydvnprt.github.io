@@ -5,19 +5,21 @@
     <link href="tmthydvnprt.com/feed/" rel="self"/>
     <link href="tmthydvnprt.com"/>
     <id>randomid</id>
-    <updated>2015-06-06T11:16:26-7:00</updated>
+    <updated>2015-06-07T21:11:23-7:00</updated>
         <entry>
-        <title>Income<title>
+        <title>Hi, this is another post<title>
         <link href="/Users/timothydavenport/GitHub/tmthydvnprt.github.io/output/posts/hi.html"/>
         <link rel="alternate" type="text/html" href="/Users/timothydavenport/GitHub/tmthydvnprt.github.io/output/posts/hi.html"/>
         <id>randomid</id>
         <updated>6/6/2015 6:00 am</updated>
         <summary>
-this is the blah blah blah of the post, I just needed a second post.
-</summary>
+This is the blah blah blah of the post, I just needed a second one. I don't know what to write. This will just be some text that I can run my code on. Eventually there will be a real post here, an</summary>
         <content type="xhtml">
             <div xmlns="http://www.w3.org/1999/xhtml">
-                <p></p>
+                <p><article class="markdowned" id="post">
+<p>This is the blah blah blah of the post, I just needed a second one.  I don't know what to write.  </p>
+<p>This will just be some text that I can run my code on. Eventually there will be a real post here, and the content will be for the content not just to have a second post.</p>
+</article></p>
             </div>
         </content>
         <author>
@@ -32,11 +34,111 @@ this is the blah blah blah of the post, I just needed a second post.
         <id>randomid</id>
         <updated>6/4/2015 7:08 pm</updated>
         <summary>
-This will be a blog of my travels thru the virtual new world.  
-</summary>
+This will be a blog of my travels thru the virtual new world. Starting as an electrical engineer, I have been turned into a computer scientist. After coming across extremely interesting techniques</summary>
         <content type="xhtml">
             <div xmlns="http://www.w3.org/1999/xhtml">
-                <p></p>
+                <p><article class="markdowned" id="post">
+<p>This will be a blog of my travels thru the virtual new world.  </p>
+<p>Starting as an electrical engineer, I have been turned into a computer scientist.  After coming across extremely interesting techniques used during graduate research, I realized abstract algorithms and data processing (<abbr title="Computer Science">CS</abbr>) are much more interesting (to me) than their specific implementations in hardware (<abbr title="Electrical Engineering">EE</abbr>) &amp; to some degree even software (<abbr title="Software Engineering">SE</abbr>).</p>
+<p>I love high-level languages &amp; algorithms that allow for development at an information/data level where <em>most</em> of the low level implementation is abstracted from the processing (enter python, stage right, playing the part of executable pseudo-code). With a good dose of client side web stack experience (<code>html</code>, <code>css</code>, <code>js</code>) for personal enjoyment, a professional history of writing low level <abbr title="Digital Signal Processing">DSP</abbr> algorithms in <code>vhdl</code> on <abbr title="Field Programmable Gate Arrays">FPGA</abbr>s, and a continued research interest in machine learning, data-mining, natural language processing via <code>python</code>, my overall skill and career focus can be summed up as computer and machine teacher, I speak their language, I convince them to do what I want.</p>
+<p>I rationalize my juxtaposed levels of experience by having an forward looking focus on the high level to drive my interests, development ideas, and future projects, while using the background of low level to stay grounded in reality and computational practicality. While I prefer the abstract processing for my future endeavors, my hardware background gives me an appreciation for the physical implementation, this becomes useful and the tool I pull out when profiling or optimizing a bottleneck. High Level is what <em>could</em> be done tomorrow, low level is what <em>can</em> be done today.</p>
+<p>You know when you read a good book or a quote from your favorite author and you find one of those sentences where you just can't believe what they were able to express with a particular sequence of words? It can be simple or complex, short or long. It was so creative, exactly what you feel and know, but so clever that you are surprised?  Your spirits rise, you say Hmm? and AH HA! simultaneously and your mind is satisfied. That is how I feel when I read and write <code>python</code>!  I can't believe what and how things can be expressed with this language.  It is beautiful.</p>
+<p>I am a digital explorer. I find an interesting symbolism in the fact that silicon valley is in california, westward expansion did not stop when we reached the ocean, it just became virtual.  Humans must still explore this new land.  Like the pioneers moving west, not knowing where they are going on a daily timeframe or how they will provide for themself, they kept pushing in one direction, eventually finding a perfect spot to settle.  This is how I work and live, I am exploring the virtual and computational landscape, I often wonder where I'm going, but it all adds up to one direction: teaching machines to do what I am incapable of.</p>
+</article></p>
+            </div>
+        </content>
+        <author>
+            <name>tmthydvnprt</name>
+            <email>tim@tmthydvnprt.com</email>
+        </author>
+    </entry>
+    <entry>
+        <title>Markdown Basics<title>
+        <link href="/Users/timothydavenport/GitHub/tmthydvnprt.github.io/output/posts/markdown_basics.html"/>
+        <link rel="alternate" type="text/html" href="/Users/timothydavenport/GitHub/tmthydvnprt.github.io/output/posts/markdown_basics.html"/>
+        <id>randomid</id>
+        <updated>6/7/2015 3:54 am</updated>
+        <summary>
+Markdown Basics§
+Markdown allows you to write using an easy-to-read, easy-to-write plain text format, which then converts to valid HTML for viewing on GitHub
+Basic writing§
+
+Paragraphs§
+Paragraphs in</summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p><article class="markdowned" id="post">
+<h1 id="markdown-basics">Markdown Basics<a class="headerlink" href="#markdown-basics" title="Permanent link">§</a></h1>
+<p>Markdown allows you to write using an easy-to-read, easy-to-write plain text format, which then converts to valid HTML for viewing on GitHub</p>
+<h2 id="basic-writing">Basic writing<a class="headerlink" href="#basic-writing" title="Permanent link">§</a></h2>
+<hr/>
+<h3 id="paragraphs">Paragraphs<a class="headerlink" href="#paragraphs" title="Permanent link">§</a></h3>
+<p>Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.</p>
+<pre class="codehilite"><code>On July 2, an alien mothership entered Earth's orbit and deployed several dozen saucer-shaped "destroyer" spacecraft, each 15 miles (24 km) wide.
+
+On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, participated in an assault on a destroyer near the city of Los Angeles.</code></pre>
+<h3 id="headings">Headings<a class="headerlink" href="#headings" title="Permanent link">§</a></h3>
+<p>You can create a heading by adding one or more <code>#</code> symbols before your heading text. The number of <code>#</code> you use will determine the size of the heading.</p>
+<h1 id="the-largest-heading-an-h1-tag">The largest heading (an <code>&lt;h1&gt;</code> tag)<a class="headerlink" href="#the-largest-heading-an-h1-tag" title="Permanent link">§</a></h1>
+<pre class="codehilite"><code>## The second largest heading (an &lt;h2&gt; tag)
+…
+###### The 6th largest heading (an &lt;h6&gt; tag)</code></pre>
+<h3 id="blockquotes">Blockquotes<a class="headerlink" href="#blockquotes" title="Permanent link">§</a></h3>
+<p>You can indicate blockquotes with a <code>&gt;</code>.</p>
+<pre class="codehilite"><code>In the words of Abraham Lincoln:
+
+&gt; Pardon my french</code></pre>
+<h3 id="styling-text">Styling text<a class="headerlink" href="#styling-text" title="Permanent link">§</a></h3>
+<p>You can make text <strong>bold</strong> or <em>italic</em>.</p>
+<pre class="codehilite"><code>*This text will be italic*
+**This text will be bold**</code></pre>
+<p>Both <strong>bold</strong> and <em>italic</em> can use either a <code>*</code> or an <code>_</code> around the text for styling. This allows you to combine both bold and italic if needed.</p>
+<pre class="codehilite"><code>**Everyone _must_ attend the meeting at 5 o'clock today.**</code></pre>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">§</a></h2>
+<hr/>
+<h3 id="unordered-lists">Unordered lists<a class="headerlink" href="#unordered-lists" title="Permanent link">§</a></h3>
+<p>You can make an unordered list by preceding list items with either a <code>*</code> or a <code>-</code>.</p>
+<pre class="codehilite"><code>* Item
+* Item
+* Item
+
+- Item
+- Item
+- Item</code></pre>
+<h3 id="ordered-lists">Ordered lists<a class="headerlink" href="#ordered-lists" title="Permanent link">§</a></h3>
+<p>You can make an ordered list by preceding list items with a number.</p>
+<pre class="codehilite"><code>1. Item 1
+2. Item 2
+3. Item 3</code></pre>
+<h3 id="nested-lists">Nested lists<a class="headerlink" href="#nested-lists" title="Permanent link">§</a></h3>
+<p>You can create nested lists by indenting list items by two spaces.</p>
+<pre class="codehilite"><code>1. Item 1
+  1. A corollary to the above item.
+  2. Yet another point to consider.
+2. Item 2
+  * A corollary that does not need to be ordered.
+    * This is indented four spaces, because it's two spaces further than the item above.
+    * You might want to consider making a new list.
+3. Item 3</code></pre>
+<h2 id="code-formatting">Code formatting<a class="headerlink" href="#code-formatting" title="Permanent link">§</a></h2>
+<hr/>
+<h3 id="inline-formats">Inline formats<a class="headerlink" href="#inline-formats" title="Permanent link">§</a></h3>
+<p>Use single backticks (<code>`</code>) to format text in a special monospace format. Everything within the backticks appear as-is, with no other special formatting.</p>
+<pre class="codehilite"><code>Here's an idea: why don't we take `SuperiorProject` and turn it into `**Reasonable**Project`.</code></pre>
+<h3 id="multiple-lines">Multiple lines<a class="headerlink" href="#multiple-lines" title="Permanent link">§</a></h3>
+<p>You can use triple backticks (<code>```</code>) to format text as its own distinct block.</p>
+<p>Check out this neat program I wrote:</p>
+<pre class="codehilite"><code>```
+x = 0
+x = 2 + 2
+what is x
+```</code></pre>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">§</a></h2>
+<hr/>
+<p>You can create an inline link by wrapping link text in brackets (<code>[ ]</code>), and then wrapping the link in parentheses (<code>( )</code>).</p>
+<p>For example, to create a hyperlink to www.github.com, with a link text that says, Visit GitHub!, you'd write this in Markdown: <code>[Visit GitHub!](www.github.com)</code>.</p>
+<p>See also</p>
+</article></p>
             </div>
         </content>
         <author>
