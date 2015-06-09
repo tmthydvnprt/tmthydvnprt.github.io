@@ -3,8 +3,8 @@
         <div id="postinfo" class="jumbotron code-font" markdown="1">
             <div class="row">
                 <div class="col-xs-9">
-                    <h1>Autonomy &amp; Mastery</h1>
-                    <h2><small>In search of extreme skill on topics I find interesting.</small></h2>
+                    <h1>{{blogtitle}}</h1>
+                    <h2><small>{{blogdescription}}</small></h2>
                     <h5>by {{author}}<span class="blinky">|</span></h5>
                 </div>
                 <div class="col-xs-3">
@@ -18,23 +18,34 @@
     </div>
     <div class="row">
         <div class="col-sm-8 col-sm-offset-1">
-            <h2>Latest Post</h2>
-            <article id="post" class="markdowned">
-                {{latest_post}}
-            </article>
-            <hr>
-            <patch id="sociallist"></patch>
-            <hr>
-            <patch id="pager"></patch>
-            <hr>
-            <patch id="bio"></patch>
-            <hr>
-            <h2>All Post</h2>
-            <patch id="post_list"></patch>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Latest Post</h2>
+                    <article id="post" class="markdowned">
+                        {{latest_post}}
+                    </article>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr>
+                    <patch id="sociallist"></patch>
+                    <hr>
+                    <patch id="pager"></patch>
+                    <hr>
+                    <patch id="bio"></patch>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>All Post</h2>
+                    <patch id="post_list"></patch>
+                </div>
+            </div>
         </div>
         <div class="col-sm-3">
             <div class="well">
-                <a class="markdown-link no-hover" href="{{markdownlink}}" alt="view original markdown" title="view original markdown" role="button">markdown</a>
             </div>
             <div class="ad">
                 <img class="img-responsive" src="{{relativepath}}js/holder.js/300x600">
