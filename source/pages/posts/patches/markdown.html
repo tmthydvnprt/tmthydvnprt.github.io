@@ -1,11 +1,18 @@
 <div class="container-fluid">
     <div class="row">
-        <div id="postinfo" class="jumbotron code-font" markdown="1">
+        <div id="postinfo" class="jumbotron code-font">
             <div class="row">
                 <div class="col-xs-9">
-                    <h1 class="post-title">{{title}}</h1>
-                    <h2 class="post-description"><small>{{description}}</small></h2>
-                    <h5 class="post-author-date">by {{author}} <small>on {{date}}</small><span class="blinky">|</span></h5>
+                    <header>
+                        <h1 class="post-title">{{title}}</h1>
+                        <h2 class="post-description"><small>{{description}}</small></h2>
+                        <h5 class="post-author-date">by {{author}} <small>on {{date}}</small><span class="blinky">|</span></h5>
+                    </header>
+                    <div class="blank-header-for-spacing">
+                        <h1>{{title}}</h1>
+                        <h2><small>{{description}}</small></h2>
+                        <h5>by {{author}} <small>on {{date}}</small><span class="blinky">|</span></h5>
+                    </div>
                 </div>
                 <div class="col-xs-3">
                     <div class="ad pull-right">
@@ -60,34 +67,7 @@
             </div>
         </div>
         <div class="col-sm-3">
-            <div class="well">
-                <h4>{{blogtitle}}</h4>
-                <h5><small>{{blogdescription}}</small></h5>
-                <hr>
-                <ul class="list-inline">
-                    <li><a class="" href="{{markdownlink}}" alt="view original markdown" title="view original markdown"><i class="fa fa-fw fa-file-text-o" ></i><span class="code-font">.md</span></a></li>
-                    <li><a class="" href="{{relativepath}}feed/feed.atom" alt="atom feed" title="atom feed"><i class="fa fa-fw fa-rss" ></i><span class="code-font">.atom</span></a></li>
-                    <li><a class="" href="{{relativepath}}feed/feed.rss" alt="rss feed" title="rss feed"><i class="fa fa-fw fa-rss" ></i><span class="code-font">.rss</span></a></li>
-                </ul>
-                <hr>
-                <h5><i class="fa fa-fw fa-edit"></i> See something wrong?</h5>
-                <p>Bad information, bad grammar, spelling mistake? Suggest an edit on <a href="#">GitHub</a>!</p>
-            </div>
-            <div class="well well-sm">
-                <h5>Categories</h5>
-                <ul class="list-inline">
-                    {{all_category_list}}
-                </ul>
-            </div>
-            <div class="well well-sm">
-                <h5>Tags</h5>
-                <ul class="list-inline">
-                    {{all_tag_list}}
-                </ul>
-            </div>
-            <div class="ad">
-                <img class="img-responsive" src="{{relativepath}}js/holder.js/300x600">
-            </div>                
+            <patch id="sidebar"></patch>
         </div>
     </div>
     <div class="row">

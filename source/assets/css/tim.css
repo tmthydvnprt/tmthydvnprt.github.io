@@ -514,25 +514,48 @@ body.blog {
     border: 1px solid #179f83;
 }
 .blog .markdown-link {
-/*    position: fixed;*/
-/*    bottom: 32px;*/
-/*    left: -110px;*/
     border-right: 10px solid #005496;
     border-left: 10px solid #005496;
     background: #addbff;
     color: #005496;
     padding: 4px 16px;
-/*    z-index:1000;*/
     width: 128px;
 	transition: all 512ms cubic-bezier(0.28, 1.51, 0.54, 0.75);
 }
 .blog .markdown-link:hover {
-/*    left: 0px;    */
     background: #2196f3;
     border-right: 3px solid #addbff;
     border-left: 3px solid #addbff;
     color: #eee;
 }
+.blog .group-link {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fdfefd;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #1bbc9b
+}
+
+.blog .jumbotron {
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+}
+.blog .jumbotron header {
+    position: absolute;
+}
+.blog .jumbotron header * {
+    transform-origin: 33% 50%;
+}
+.blog .jumbotron .blank-header-for-spacing {
+    opacity: 0;
+}
+
 /* Blog animations */
 .blog .blog-nav {
 	animation: introDn 512ms ease-in-out 0s 1 both;
@@ -543,6 +566,10 @@ body.blog {
 .blog #page {
 	animation: introOut 512ms ease-in-out 256ms 1 both;
 }
+.blog .jumbotron header *:nth-child(1) { animation: tilt 1024ms ease-in-out 256ms 1 both;}
+.blog .jumbotron header *:nth-child(2) { animation: tilt 1024ms ease-in-out 384ms 1 both;}
+.blog .jumbotron header *:nth-child(3) { animation: tilt 1024ms ease-in-out 512ms 1 both;}
+
 @keyframes introDn {
 	0%   {opacity: 0; transform: scale(1.2) translateY(-64px);}
 	100% {opacity: 1; transform: scale(1) translateY(  0px);}
@@ -554,6 +581,10 @@ body.blog {
 @keyframes introOut {
 	0%   {opacity: 0; transform: scale(0.95) translateY(10px);}
 	100% {opacity: 1; transform: scale(1) translateY( 0px);}
+}
+@keyframes tilt {
+	0%   {transform: translateY(-128px) rotateY(90deg);}
+	100% {transform: translateY(   0px) rotateY(20deg);}
 }
 
 #post-social-list li:hover {
