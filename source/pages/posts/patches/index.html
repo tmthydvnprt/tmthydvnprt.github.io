@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <div class="row">
-        <div id="postinfo" class="jumbotron code-font">
+    <div id="postinfo" class="row">
+        <div class="jumbotron code-font">
             <div class="row">
                 <div class="col-xs-9">
                     <header>
@@ -23,47 +23,49 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-8 col-sm-offset-1">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>Latest Post</h2>
-                    <article id="post" class="markdowned">
-                        {{latest_post}}
-                    </article>
+    <div id="postpage">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-1">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Latest Post</h2>
+                        <article id="post" class="markdowned">
+                            {{latest_post}}
+                        </article>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+                        <patch id="sociallist"></patch>
+                        <hr>
+                        <patch id="pager"></patch>
+                        <hr>
+                        <patch id="bio"></patch>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>All Post</h2>
+                        <patch id="post_list"></patch>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <hr>
-                    <patch id="sociallist"></patch>
-                    <hr>
-                    <patch id="pager"></patch>
-                    <hr>
-                    <patch id="bio"></patch>
-                    <hr>
+            <div class="col-sm-3">
+                <div class="well">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>All Post</h2>
-                    <patch id="post_list"></patch>
-                </div>
+                <div class="ad">
+                    <img class="img-responsive" src="{{relativepath}}js/holder.js/300x600">
+                </div>                
             </div>
         </div>
-        <div class="col-sm-3">
-            <div class="well">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-1">
+                <div class="ad">
+                    <img class="img-responsive" src="{{relativepath}}js/holder.js/728x90">
+                </div>    
             </div>
-            <div class="ad">
-                <img class="img-responsive" src="{{relativepath}}js/holder.js/300x600">
-            </div>                
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-8 col-sm-offset-1">
-            <div class="ad">
-                <img class="img-responsive" src="{{relativepath}}js/holder.js/728x90">
-            </div>    
         </div>
     </div>
 </div>

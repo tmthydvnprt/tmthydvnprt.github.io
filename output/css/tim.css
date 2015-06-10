@@ -555,27 +555,38 @@ body.blog {
 .blog .jumbotron .blank-header-for-spacing {
     opacity: 0;
 }
+.blog .jumbotron h1,
+.blog .jumbotron h2 {
+    margin: 0px;
+}
 
 /* Blog animations */
 .blog .blog-nav {
-	animation: introDn 512ms ease-in-out 0s 1 both;
+	animation: introDnIn 512ms ease-in-out 0s 1 both;
 }
 .blog footer {
 	animation: introUp 1024ms ease-in-out 0s 1 both;
 }
 .blog #page {
-	animation: introOut 512ms ease-in-out 256ms 1 both;
+	animation: introOut 768ms ease-in-out 0ms 1 both;
 }
-.blog .jumbotron header *:nth-child(1) { animation: tilt 1024ms ease-in-out 256ms 1 both;}
-.blog .jumbotron header *:nth-child(2) { animation: tilt 1024ms ease-in-out 384ms 1 both;}
+.blog #postpage {
+	animation: introDn 768ms ease-in-out 128ms 1 both;    
+}
+.blog .jumbotron header *:nth-child(1) { animation: tilt 1024ms ease-in-out 128ms 1 both;}
+.blog .jumbotron header *:nth-child(2) { animation: tilt 1024ms ease-in-out 256ms 1 both;}
 .blog .jumbotron header *:nth-child(3) { animation: tilt 1024ms ease-in-out 512ms 1 both;}
 
-@keyframes introDn {
-	0%   {opacity: 0; transform: scale(1.2) translateY(-64px);}
+@keyframes introDnIn {
+	0%   {opacity: 0; transform: scale(1.3) translateY(-64px);}
 	100% {opacity: 1; transform: scale(1) translateY(  0px);}
 }
 @keyframes introUp {
 	0%   {opacity: 0; transform: scale(0.98) translateY(32px);}
+	100% {opacity: 1; transform: scale(1) translateY( 0px);}
+}
+@keyframes introDn {
+	0%   {opacity: 0; transform: scale(1.07) translateY(32px);}
 	100% {opacity: 1; transform: scale(1) translateY( 0px);}
 }
 @keyframes introOut {

@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <div class="row">
-        <div id="postinfo" class="jumbotron code-font">
+    <div id="postinfo" class="row">
+        <div class="jumbotron code-font">
             <div class="row">
                 <div class="col-xs-9">
                     <header>
@@ -23,56 +23,53 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-8 col-sm-offset-1">
-            <div class="row">
-                <div class="col-xs-12">
-                    <article id="post" class="markdowned">
-                        {{markdown}}
-                    </article>
-                </div>
-            </div>
-            <div class="well well-sm">
+    <div id="postpage">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-1">
                 <div class="row">
-                    <div class="col-xs-6">
-                        <h5>Categories</h5>
-                        <ul class="list-inline">
-                            {{category_list}}
-                        </ul>
-                    </div>
-                    <div class="col-xs-6">
-                        <h5>Tags</h5>
-                        <ul class="list-inline">
-                            {{tag_list}}
-                        </ul>
+                    <div class="col-xs-12">
+                        <article id="post" class="markdowned">
+                            {{markdown}}
+                        </article>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <hr>
-                    <patch id="sociallist"></patch>
-                    <hr>
-                    <patch id="pager"></patch>
-                    <hr>
-                    <patch id="bio"></patch>
-                    <hr>
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h5>Categories</h5>
+                            <ul class="list-inline">
+                                {{category_list}}
+                            </ul>
+                        </div>
+                        <div class="col-xs-6">
+                            <h5>Tags</h5>
+                            <ul class="list-inline">
+                                {{tag_list}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+                        <patch id="sociallist"></patch>
+                        <hr>
+                        <patch id="pager"></patch>
+                        <hr>
+                        <patch id="bio"></patch>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Comments</h2>
+                        <patch id="comments"></patch>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>Comments</h2>
-                    <patch id="comments"></patch>
-                </div>
+            <div class="col-sm-3">
+                <patch id="sidebar"></patch>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <patch id="sidebar"></patch>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-8 col-sm-offset-1">
-            <p class="text-center">...</p>
         </div>
     </div>
 </div>
