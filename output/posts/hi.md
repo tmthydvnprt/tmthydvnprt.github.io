@@ -2,6 +2,7 @@ title:       Hi, this is another post
 date:        6/6/2015 6:00 am
 description: this is an awesome second post
 author:      tmthydvnprt
+featured:    true
 categories:  personal
 tags:        post
              blog

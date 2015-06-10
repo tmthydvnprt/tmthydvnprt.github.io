@@ -148,7 +148,9 @@ main:not(#page) > section > div {
     padding-left: 4px!important;
     padding-right: 4px!important;
 }
-
+.center-block {
+    margin: 0 auto;
+}
 #nav-search-blog {
     width: 128px!important;
 }
@@ -538,9 +540,20 @@ body.blog {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    background-color: #1bbc9b
 }
-
+.post-group-lists h4 {
+    margin: 2px;
+}
+.blog .tags .group-link {
+    background-color: #1bbc9b;
+}
+.blog .featured {
+    color: #34495e;
+    background-color: #bcfc9a;
+}
+.blog .categories .group-link {
+    background-color: #59ceb6;
+}
 .blog .jumbotron {
     position: relative;
     perspective: 1000px;
@@ -560,6 +573,13 @@ body.blog {
     margin: 0px;
 }
 
+.blog .jumbotron .post-group-lists {
+    position: absolute;
+}
+.blog .jumbotron .post-group-lists * {
+    transform-origin: 10% 50%;
+}
+
 /* Blog animations */
 .blog .blog-nav {
 	animation: introDnIn 512ms ease-in-out 0s 1 both;
@@ -577,25 +597,34 @@ body.blog {
 .blog .jumbotron header *:nth-child(2) { animation: tilt 1024ms ease-in-out 256ms 1 both;}
 .blog .jumbotron header *:nth-child(3) { animation: tilt 1024ms ease-in-out 512ms 1 both;}
 
+
+.blog .jumbotron .post-group-lists ul:nth-child(1) { animation: introDnInRot 1024ms ease-in-out  512ms 1 both;}
+.blog .jumbotron .post-group-lists ul:nth-child(2) { animation: introDnInRot 1024ms ease-in-out  768ms 1 both;}
+.blog .jumbotron .post-group-lists ul:nth-child(3) { animation: introDnInRot 1024ms ease-in-out 1024ms 1 both;}
+
 @keyframes introDnIn {
 	0%   {opacity: 0; transform: scale(1.3) translateY(-64px);}
-	100% {opacity: 1; transform: scale(1) translateY(  0px);}
+	100% {opacity: 1; transform: scale(1.0) translateY(  0px);}
+}
+@keyframes introDnInRot {
+	0%   {opacity: 0; transform: scale(1.3) translateY(64px) rotateY(90deg);}
+	100% {opacity: 1; transform: scale(1.0) translateY( 0px) rotateY( 0deg);}
 }
 @keyframes introUp {
 	0%   {opacity: 0; transform: scale(0.98) translateY(32px);}
-	100% {opacity: 1; transform: scale(1) translateY( 0px);}
+	100% {opacity: 1; transform: scale(1.00) translateY( 0px);}
 }
 @keyframes introDn {
 	0%   {opacity: 0; transform: scale(1.07) translateY(32px);}
-	100% {opacity: 1; transform: scale(1) translateY( 0px);}
+	100% {opacity: 1; transform: scale(1.00) translateY( 0px);}
 }
 @keyframes introOut {
 	0%   {opacity: 0; transform: scale(0.95) translateY(10px);}
-	100% {opacity: 1; transform: scale(1) translateY( 0px);}
+	100% {opacity: 1; transform: scale(1.00) translateY( 0px);}
 }
 @keyframes tilt {
-	0%   {transform: translateY(-128px) rotateY(90deg);}
-	100% {transform: translateY(   0px) rotateY(20deg);}
+	0%   {transform: translateX( 0px) translateY(-128px) rotateY(90deg);}
+	100% {transform: translateX(16px) translateY(  -8px) rotateY(20deg);}
 }
 
 #post-social-list li:hover {

@@ -2,7 +2,7 @@
     <div id="postinfo" class="row">
         <div class="jumbotron code-font">
             <div class="row">
-                <div class="col-xs-9">
+                <div class="col-xs-10 col-sm-7">
                     <header>
                         <h1 class="post-title">{{title}}</h1>
                         <h2 class="post-description"><small>{{description}}</small></h2>
@@ -14,10 +14,32 @@
                         <h5>by {{author}} <small>on {{date}}</small><span class="blinky">|</span></h5>
                     </div>
                 </div>
-                <div class="col-xs-3">
+                <div class="col-xs-2 col-sm-1">
+                    <div class="post-group-lists">
+                        <ul class="list-unstyled">
+                            {{featured_label}}
+                        </ul>
+                        <ul class="list-unstyled">
+                            <h4>Categories</h4>
+                            {{category_list}}
+                        </ul>
+                        <ul class="list-unstyled">
+                            <h4>Tags</h4>
+                            {{tag_list}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden-xs col-sm-3 col-sm-offset-1">
                     <div class="ad pull-right">
                         <img class="img-responsive" src="{{relativepath}}js/holder.js/300x250">
                         <!--336x280-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="visible-xs col-xs-12">
+                    <div class="ad">
+                        <img class="img-responsive center-block" src="{{relativepath}}js/holder.js/320x100">
                     </div>
                 </div>
             </div>
