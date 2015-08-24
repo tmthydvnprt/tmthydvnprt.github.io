@@ -11,11 +11,11 @@
 <meta content="i,n,d,e,x" name="keywords"/>
 <title>css directory index</title>
 <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Poiret+One|Ubuntu|Sorts+Mill+Goudy" rel="stylesheet" type="text/css"/>
-<link href="../../../../../../img/favicon.ico" id="favicon" rel="shortcut icon" type="image/x-icon"/>
-<link href="../../../../../../img/icon_60x60.png" rel="apple-touch-icon"/>
-<link href="../../../../../../img/icon_76x76.png" rel="apple-touch-icon" sizes="76x76"/>
-<link href="../../../../../../img/icon_120x120.png" rel="apple-touch-icon" sizes="120x120"/>
-<link href="../../../../../../img/icon_152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+<link href="../img/favicon.ico" id="favicon" rel="shortcut icon" type="image/x-icon"/>
+<link href="../img/icon_60x60.png" rel="apple-touch-icon"/>
+<link href="../img/icon_76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+<link href="../img/icon_120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+<link href="../img/icon_152x152.png" rel="apple-touch-icon" sizes="152x152"/>
 <meta content="tmthydvnprt.com" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="css directory index" property="og:title"/>
@@ -28,7 +28,7 @@
 <meta content="css directory index" name="twitter:title"/>
 <meta content="blank index page of css directory" name="twitter:description"/>
 <meta content="tmthydvnprt.com/img/icon.png" name="twitter:img"/>
-<link href="../../../../../../css/bootstrap.min_font-awesome.min_tim.css" rel="stylesheet" type="text/css"/></head>
+<link href="../css/bootstrap.min_font-awesome.min_tim.css" rel="stylesheet" type="text/css"/></head>
 <body>
 <!--quilted header patch-->
 <div class="holdoff updn" id="menu">
@@ -110,7 +110,7 @@
 </span>
 </div>
 <div class="holdoff updn4" id="copy">
-	&copy; <span id="slideover"> 2015, <a alt="Timothy Davenport" class="no-hover" href="#!/contact" title="Timothy Davenport">Timothy Davenport</a>.</span>
+    &copy; <span id="slideover"> 2015, <a alt="Timothy Davenport" class="no-hover" href="#!/contact" title="Timothy Davenport">Timothy Davenport</a>.</span>
 </div>
 <!--quilted templates patch-->
 <template id="monogram-template">
@@ -363,21 +363,21 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA
 <h3>Design</h3>
 <hr/>
 <p>
-						The site's structure is based loosely on a book (epigraph, fliping animation, colophon, <abbr title="et cetera 'and so forth'">etc.</abbr>).
+                        The site's structure is based loosely on a book (epigraph, fliping animation, colophon, <abbr title="et cetera 'and so forth'">etc.</abbr>).
                         A look at the <span class="code-font">source</span> of this site will identify a static one-page design with <code>&lt;template&gt;</code>s and a simple
-						 <code>hashchange</code> router. Downloading a whole website from one <code><abbr title="Uniform Resource Locator">url</abbr></code>,
-						 still with an interactive or nested experience, seems very elegant. Being interested in Machine Learning, the idea of
-						 a semantic web is wonderful; therefore, the <samp><a alt="#!/resume" href="#!/resume" title="#!/resume">#!/resume</a></samp> and <samp><a alt="#!/contact" href="#!/contact" title="#!/contact">#!/contact</a></samp>
+                         <code>hashchange</code> router. Downloading a whole website from one <code><abbr title="Uniform Resource Locator">url</abbr></code>,
+                         still with an interactive or nested experience, seems very elegant. Being interested in Machine Learning, the idea of
+                         a semantic web is wonderful; therefore, the <samp><a alt="#!/resume" href="#!/resume" title="#!/resume">#!/resume</a></samp> and <samp><a alt="#!/contact" href="#!/contact" title="#!/contact">#!/contact</a></samp>
 <em>pages</em> use <a alt="microformat2" href="http://microformats.org/wiki/microformats2" target="_blank" title="microformat2">microformat2</a> structured data.
                          The <samp><a alt="#!/projects" href="#!/projects" title="#!/projects">#!/projects</a></samp> <em>page</em> uses <code>ajax</code> calls to the <a alt="GitHub API" href="https://developer.github.com/v3/" title="GitHub API">GitHub API</a> for gathering project data.
                          All hover events and animations, less one, are implemented using <code>css</code> and <strong>not</strong> <code>JavaScript</code>.
-					</p>
+                    </p>
 <p>This site was <em>stitched</em> together with my own static site generator, <a alt="quilt" href="http://tmthydvnprt.com/quilt/" title="quilt">quilt</a>.</p>
 <p> All <code>.html</code>, <code>.css</code> &amp; <code>.js</code> is home grown except for <small>(credit where credit is due)</small> :</p>
 <ol>
 <li>a customized <code><a alt="bootstrap.css" href="http://getbootstrap.com/customize/?id=1e76d717b84935ce2665" target="_blank" title="bootstrap.css">bootstrap.css</a></code>
-							(<code>bootstrap.js</code> is <strong><em>not</em></strong> used)
-						</li>
+                            (<code>bootstrap.js</code> is <strong><em>not</em></strong> used)
+                        </li>
 <li><code><a alt="prettify.js" href="https://code.google.com/p/google-code-prettify/" target="_blank" title="prettify.js">prettify.js</a></code> for syntax highlighting</li>
 <li>a modified <code><a alt="tomorrow-night-eighties.css" href="http://jmblog.github.io/color-themes-for-google-code-prettify/css/themes/tomorrow-night-eighties.css" target="_blank" title="tomorrow-night-eighties.css">tomorrow-night-eighties.css</a></code> syntax color theme</li>
 <li>an adapted one page routing <a alt="idea" href="http://benhowdle.im/building-a-backendless-web-app-in-two-hours.html" target="_blank" title="idea">idea</a></li>
@@ -401,25 +401,25 @@ Ecclesiastes 1:9
 <h3>Typography</h3>
 <hr/>
 <p>
-						This site
-						 uses <a alt="Ubuntu" class="typo" href="https://www.google.com/fonts/specimen/Ubuntu" target="_blank" title="Ubuntu">Ubuntu</a> for prose &amp; headings,
-						 <a alt="Ubuntu Mono" class="typo code-font" href="https://www.google.com/fonts/specimen/Ubuntu+Mono" target="_blank" title="Ubuntu Mono">Ubuntu Mono</a> for code,
-						 <a alt="Sorts Mill Goudy" class="typo wiki-font" href="https://www.google.com/fonts/specimen/Sorts+Mill+Goudy" target="_blank" title="Sorts Mill Goudy">Sorts Mill Goudy</a> for
-						 wikipedia <a alt="W" href="http://en.wikipedia.org/" target="_blank" title="W">W</a> links, &amp;
-						 <a alt="Poiret One" class="typo logo-font" href="https://www.google.com/fonts/specimen/Poiret+One" target="_blank" title="Poiret One">Poiret One</a> f
-						 or the <abbr title="Timothy Michael Davenport">tmd</abbr> monogram, all served via google webfonts.
-					</p>
+                        This site
+                         uses <a alt="Ubuntu" class="typo" href="https://www.google.com/fonts/specimen/Ubuntu" target="_blank" title="Ubuntu">Ubuntu</a> for prose &amp; headings,
+                         <a alt="Ubuntu Mono" class="typo code-font" href="https://www.google.com/fonts/specimen/Ubuntu+Mono" target="_blank" title="Ubuntu Mono">Ubuntu Mono</a> for code,
+                         <a alt="Sorts Mill Goudy" class="typo wiki-font" href="https://www.google.com/fonts/specimen/Sorts+Mill+Goudy" target="_blank" title="Sorts Mill Goudy">Sorts Mill Goudy</a> for
+                         wikipedia <a alt="W" href="http://en.wikipedia.org/" target="_blank" title="W">W</a> links, &amp;
+                         <a alt="Poiret One" class="typo logo-font" href="https://www.google.com/fonts/specimen/Poiret+One" target="_blank" title="Poiret One">Poiret One</a> f
+                         or the <abbr title="Timothy Michael Davenport">tmd</abbr> monogram, all served via google webfonts.
+                    </p>
 <p>
-						The <code>font-size</code> is set by the original <a alt="bootstrap" href="http://getbootstrap.com/css/#type" target="_blank" title="bootstrap">bootstrap</a>
-						 headings <samp>{36px ,30px, 24px, 18px, 14px, 12px}</samp> curve-fit to the cubic polynomial
-					</p>
+                        The <code>font-size</code> is set by the original <a alt="bootstrap" href="http://getbootstrap.com/css/#type" target="_blank" title="bootstrap">bootstrap</a>
+                         headings <samp>{36px ,30px, 24px, 18px, 14px, 12px}</samp> curve-fit to the cubic polynomial
+                    </p>
 <p class="text-center">
-						f<sub>1</sub>(<var>x</var>) =
-						 <var>a</var><var>x</var><sup>3</sup>
-						 + <var>b</var><var>x</var><sup>2</sup>
-						 + <var>c</var><var>x</var>
-						 + <var>d</var>,
-					</p>
+                        f<sub>1</sub>(<var>x</var>) =
+                         <var>a</var><var>x</var><sup>3</sup>
+                         + <var>b</var><var>x</var><sup>2</sup>
+                         + <var>c</var><var>x</var>
+                         + <var>d</var>,
+                    </p>
 <p>where <var>x</var> is in heading levels and f<sub>1</sub>(x) is in <abbr title="pixels">px</abbr>, with coefficients</p>
 <p class="text-center code-font">
 <var>a</var> = &nbsp;0.14814815,<br/>
@@ -428,23 +428,23 @@ Ecclesiastes 1:9
 <var>d</var> = 40.66666667,<br/>
 </p>
 <p>
-						transformed to satisfy a base <code>font-size</code> of f<sub>2</sub>(5) = 16px &amp; a max
-						 <code>font-size</code> of f<sub>2</sub>(1) = 40px using the transformation
-					</p>
+                        transformed to satisfy a base <code>font-size</code> of f<sub>2</sub>(5) = 16px &amp; a max
+                         <code>font-size</code> of f<sub>2</sub>(1) = 40px using the transformation
+                    </p>
 <p class="text-center">
-						f<sub>2</sub>(<var>x</var>) = <span class="lfloor">&lfloor;</span><var>A</var>f<sub>1</sub>(<var>B</var>(<var>x</var> - <var>C</var>)) + <var>D</var><span class="rceil">&rceil;</span>,
-					</p>
+                        f<sub>2</sub>(<var>x</var>) = <span class="lfloor">&lfloor;</span><var>A</var>f<sub>1</sub>(<var>B</var>(<var>x</var> - <var>C</var>)) + <var>D</var><span class="rceil">&rceil;</span>,
+                    </p>
 <p>with transform coefficients</p>
 <p class="text-center code-font">
 <var>A</var> = &nbsp;1.12203198,<br/>
 <var>B</var> = &nbsp;0.92616879,<br/>
 <var>C</var> = &nbsp;0.42603192,<br/>
 <var>D</var> = -3.06785714,
-					</p>
+                    </p>
 <p>
-						and evaluated for 1 &le; <var>x</var> &le; 6 giving a final set of sizes equal to <samp>{40px, 34px, 28px, 22px, 16px, 12px}</samp>.
-						 This was accomplished with a <a alt="python script" href="#!/fontpy" title="python script">python script</a>.
-					</p>
+                        and evaluated for 1 &le; <var>x</var> &le; 6 giving a final set of sizes equal to <samp>{40px, 34px, 28px, 22px, 16px, 12px}</samp>.
+                         This was accomplished with a <a alt="python script" href="#!/fontpy" title="python script">python script</a>.
+                    </p>
 <p>The <code>line-height</code> is &radic;<span style="text-decoration: overline">2</span> = <em>1.4142135623&hellip;</em></p>
 <h3>Color Palette</h3>
 <hr/>
@@ -504,11 +504,11 @@ Ecclesiastes 1:9
                     </p>
 <p>There is a programming pun on the <samp><a alt="#!/epigraph" href="#!/epigraph" title="#!/epigraph">#!/epigraph</a></samp> <em>page</em>.</p>
 <p>
-						There is something enjoyable about hovering over text and seeing a change, therefore, most
-						 <code>&lt;a&gt;</code> tags display their <code>href</code> attribute to show where the link goes,
-						 <code>&lt;abbr&gt;</code> tags display their <code>title</code> attribute to explain the abbreviation and
-						 <code>&lt;time&gt;</code> tags display their <code>datetime</code> attribute to show an ISO8601 <a alt="W" href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank" title="W"><sup>W</sup></a> timestamp or duration.
-					</p>
+                        There is something enjoyable about hovering over text and seeing a change, therefore, most
+                         <code>&lt;a&gt;</code> tags display their <code>href</code> attribute to show where the link goes,
+                         <code>&lt;abbr&gt;</code> tags display their <code>title</code> attribute to explain the abbreviation and
+                         <code>&lt;time&gt;</code> tags display their <code>datetime</code> attribute to show an ISO8601 <a alt="W" href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank" title="W"><sup>W</sup></a> timestamp or duration.
+                    </p>
 <p>There are other hidden hover events throughout this <em>page</em> and the rest of the site!</p>
 <div class="row"><p class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</p></div>
 </div>
@@ -534,13 +534,13 @@ Ecclesiastes 1:9
 <h2 class="text-center"><small>aA bB cC dD eE fF gG hH iI jJ kK lL mM nN oO pP qQ rR sS tT uU vV wW xX yY zZ 1 2 3 4 5 6 7 8 9 0 ` - = [ ] \ ; \ ' , . / ~ ! @ # $ % ^ &amp; * ( ) _ + { } | : " &lt; &gt; ?</small></h2>
 <h2 class="text-center"><em>Lorem Ipsum</em>
 </h2><p class="lead">
-					Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				</p>
+                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
 <p>
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-					 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
 </div>
 </div>
 </div>
@@ -555,7 +555,7 @@ Ecclesiastes 1:9
 <hr/>
 <h2>Hmm...<br/><small>This place doesn't<br/>seem to exist.</small></h2>
 <hr/>
-<h3>Please go back or return <a alt="home." href="../../../../../../index.html" title="home.">home.</a></h3>
+<h3>Please go back or return <a alt="home." href="../index.html" title="home.">home.</a></h3>
 </header>
 </div>
 </section>
@@ -571,8 +571,9 @@ Ecclesiastes 1:9
 </div>
 </div>
 <div class="row">
-<div class="col-sm-4">
+<div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
 <h3><em>Computational</em><br/><small>exploration for exploration's sake</small></h3>
+<hr/>
 <ul>
 <li><code>Python</code> <small>(<abbr title="id est 'that is'">i.e.</abbr> executable pseudo-code!)</small></li>
 <li>Data Visualization
@@ -584,7 +585,7 @@ Ecclesiastes 1:9
 </ul>
 </li>
 <li>
-								Machine Learning <a alt="W" href="http://en.wikipedia.org/wiki/Machine_learning" target="_blank" title="W"><sup>W</sup></a> <small>( <strong>Not</strong> Artificial Intelligence <a alt="W" href="http://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" title="W"><sup>W</sup></a>)</small>
+                                Machine Learning <a alt="W" href="http://en.wikipedia.org/wiki/Machine_learning" target="_blank" title="W"><sup>W</sup></a> <small>( <strong>Not</strong> Artificial Intelligence <a alt="W" href="http://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" title="W"><sup>W</sup></a>)</small>
 <ul>
 <li>Natural Language Processing <a alt="W" href="http://en.wikipedia.org/wiki/Natural_language_processing" target="_blank" title="W"><sup>W</sup></a></li>
 <li>Genetic Algorithms <a alt="W" href="http://en.wikipedia.org/wiki/Genetic_algorithm" target="_blank" title="W"><sup>W</sup></a>
@@ -609,21 +610,25 @@ Ecclesiastes 1:9
 </li>
 </ul>
 </div>
-<div class="col-sm-4">
+</div>
+<div class="row">
+<div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
 <h3><em>Recreational</em><br/><small>activity for activity's sake</small></h3>
+<hr/>
 <ul>
 <li>Walking / Hiking</li>
 <li>Reading</li>
 <li>Writing (code &amp; prose)</li>
+<li>Investing / Personal Finance</li>
 <li>Gardening</li>
 <li>Cooking</li>
-<li>Investing / Personal Finance</li>
-<li>Curing / Fermenting Foods</li>
-<li>Vermiculture <a alt="W" href="http://en.wikipedia.org/wiki/Compost#Vermicompost" target="_blank" title="W"><sup>W</sup></a></li>
 </ul>
 </div>
-<div class="col-sm-4">
+</div>
+<div class="row">
+<div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
 <h3><em>Philosophical</em><br/><small>thought for thought's sake</small></h3>
+<hr/>
 <ul>
 <li>Numbers &amp; Mathematical Relationships</li>
 <li>Time &amp; Space
@@ -639,7 +644,7 @@ Ecclesiastes 1:9
 </li>
 <li>Technology as an offspring of Nature</li>
 <li>Purposeful Growth<br/>
-<small>(<abbr title="id est 'that is'">i.e.</abbr> <em>goal oriented algorithmic expansion</em> be it plant/computer/economic/<abbr title="et cetera 'and so forth'">etc.</abbr> based)</small>
+<small>(<abbr title="id est 'that is'">i.e.</abbr> <em>goal oriented algorithmic expansion</em> be it plant/computer/economic/<abbr title="et cetera 'and so forth'">etc.</abbr>)</small>
 </li>
 <!--  &mdash;or both&#8253;, see Lindenmayer Systems<a href="http://en.wikipedia.org/wiki/L-system" target="_blank"><sup>W</sup></a>) -->
 </ul>
@@ -717,19 +722,18 @@ Ecclesiastes 1:9
 <header><h1><em>Synopsis</em></h1></header>
 <hr/>
 <p class="lead">
-                    Starting as an electrical engineer, I have been turned into a computer scientist.  After coming across extremely interesting techniques used during graduate research, I realized abstract algorithms and data processing (<abbr title="Computer Science">CS</abbr>) are much more interesting (to me) than their specific implementations in hardware (<abbr title="Electrical Engineering">EE</abbr>) &amp; to some degree even software (<abbr title="Software Engineering">SE</abbr>).
-                    <!--(<abbr title="Principal Component Analysis">PCA</abbr>, Clustering, Genetic Algorithms)-->
-</p>
-<p>
-                    I love high-level languages &amp; algorithms that allow for development at an information/data level where <em>most</em> of the low level implementation is abstracted from the processing (enter python, stage right, playing the part of executable pseudo-code). With a good dose of client side web stack experience (<code>html</code>, <code>css</code>, <code>js</code>) for personal enjoyment, a professional history of writing low level <abbr title="Digital Signal Processing">DSP</abbr> algorithms in <code>vhdl</code> on <abbr title="Field Programmable Gate Arrays">FPGA</abbr>s, and a continued research interest in machine learning, data-mining, natural language processing via <code>python</code>, my overall skill and career focus can be summed up as computer and machine teacher, I speak their language, I convince them to do what I want.
-				</p>
-<p>
-                    I rationalize my juxtaposed levels of experience by having an forward looking focus on the high level to drive my interests, development ideas, and future projects, while using the background of low level to stay grounded in reality and computational practicality. While I prefer the abstract processing for my future endeavors, my hardware background gives me an appreciation for the physical implementation, this becomes useful and the tool I pull out when profiling or optimizing a bottleneck. High Level is what <em>could</em> be done tomorrow, low level is what <em>can</em> be done today.
+                    Starting as an electrical engineer, I have been turned into a computer scientist!  After coming across <span class="force-hover" title="Principal Component Analysis, Clustering, &amp; Genetic Algorithms">extremely interesting techniques</span> used during my graduate research, I realized abstract algorithms and data processing (<abbr title="Computer Science">CS</abbr>) are much more interesting (to me) than their specific actual implementations in hardware (<abbr title="Electrical Engineering">EE</abbr>) or software (<abbr title="Software Engineering">SE</abbr>).
                 </p>
 <p>
-                You know when you read a good book or a quote from your favorite author and you find one of those sentences where you just can't believe what they were able to express with a particular sequence of words? It can be simple or complex, short or long. It was so creative, exactly what you feel and know, but so clever that you are surprised?  Your spirits rise, you say Hmm? and AH HA! simultaneously and your mind is satisfied. That is how I feel when I read and write <code>python</code>!  I can't believe what and how things can be expressed with this language.  It is beautiful.
-				</p>
-<p>I am a digital explorer. I find an interesting symbolism in the fact that silicon valley is in california, westward expansion did not stop when we reached the ocean, it just became virtual.  Humans must still explore this new land.  Like the pioneers moving west, not knowing where they are going on a daily timeframe or how they will provide for themself, they kept pushing in one direction, eventually finding a perfect spot to settle.  This is how I work and live, I am exploring the virtual and computational landscape, I often wonder where I'm going, but it all adds up to one direction: teaching machines to do what I am incapable of.<br/>Here is a <a alt="log" href="posts/index.html" title="log">log</a> of my <em>travels</em>.</p>
+                    I love high-level languages &amp; algorithms that allow for development at an information/data level where <em>most</em> of the low level implementation is abstracted from the processing (enter <code>python</code>, stage right, playing the part of executable pseudo-code). With a good dose of client side web stack experience (<code>html</code>, <code>css</code>, <code>js</code>) for personal enjoyment, a professional history of writing low level <abbr title="Digital Signal Processing">DSP</abbr> algorithms in <code>vhdl</code> on <abbr title="Field Programmable Gate Arrays">FPGA</abbr>s, and a continuing research interest in machine learning, data-mining, natural language processing via <code>matlab</code> or <code>python</code>, my overall skill and career focus can be summed up as computer and machine teacher/trainer. I speak their language, I convince them to do cool things.
+                </p>
+<p>
+                    I rationalize my juxtaposed levels of experience by having an a focus on the high level to drive my interests, development ideas, and future projects, while using my background in the low level to stay grounded in reality and computational practicality. While I prefer the abstract processing for my future endeavors, my hardware background gives me an appreciation for the physical implementation, this becomes useful and the tool I pull out when profiling or optimizing a bottleneck. <s>High Level is what <em>could</em> be done tomorrow, low level is what <em>can</em> be done today.</s>
+</p>
+<p>
+                    You know when you read a good book or a quote from your favorite author and you find one of those sentences where you just can't believe what they were able to express with a particular sequence of words? It can be simple or complex, short or long. It was so creative, exactly what you feel and know, but so clever that you are surprised?  Your spirits rise, you say Hmm? and AH HA! simultaneously and your mind is satisfied. That is how I feel when I read and write <code>python</code>!  I can't believe what <em>and how</em> things can be expressed with this language.  It is beautiful.</p>
+<p>
+                    I am a digital explorer. I find an interesting symbolism in the fact that silicon valley is in california, westward expansion did not stop when we reached the ocean, it just became virtual.  Humans must still explore this new land.  Like the pioneers moving west, not knowing where they are going on a daily timeframe or how they will provide for themself, they kept pushing in one direction, eventually finding a perfect spot to settle.  This is how I work and live, I am exploring the virtual and computational landscape, I often wonder where I'm going, but it all adds up to one direction: teaching machines to do what I am incapable of.<br/>Here is a <a alt="log" href="posts/index.html" title="log">log</a> of my <em>travels</em>.</p>
 <!--// for creating interesting and beautiful presentation layers or user interactions // the possibilities of what can be done when one learns to talk to machines are endless! -->
 </div>
 </div>
@@ -789,10 +793,10 @@ Ecclesiastes 1:9
 <li><i class="fa-fw fa fa-location-arrow valign-top">&zwnj;</i> <div class="p-adr valign-top"></div></li>
 </ul>
 <!--
-			<ul class="list-unstyled">
-				<li><sub class="p-category"></sub></li>
-				<li><aside><sub class="p-note"></sub></aside></li>
-			</ul>
+            <ul class="list-unstyled">
+                <li><sub class="p-category"></sub></li>
+                <li><aside><sub class="p-note"></sub></aside></li>
+            </ul>
 -->
 </div>
 </div>
@@ -941,6 +945,6 @@ Ecclesiastes 1:9
 </template>
 </div>
 <!--quilted scripts patch-->
-<script id="scripts" rel="javascript" src="../../../../../../js/jquery-1.11.1.min_pretty.min_microformat2_contact_resume_tim.js" type="text/javascript"></script>
+<script id="scripts" rel="javascript" src="../js/jquery-1.11.1.min_pretty.min_microformat2_contact_resume_tim.js" type="text/javascript"></script>
 </body>
 </html>

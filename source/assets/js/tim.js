@@ -2,136 +2,136 @@
 
 $(document).ready(function () {
 
-	// page js
-	// -------------------------------------------------------------------------------------
-	var page              = $('#page'),
-		second            = $('#second'),
-		minute            = $('#minute'),
-		hour              = $('#hour'),
-		localtime         = $('#localtime'),
-		bigSecond         = {},
-		bigMinute         = {},
-		bigHour           = {},
-		bigWord           = {},
-		local             = {},
-		utc               = {},
-		julian            = {},
-		posix             = {},
-		hash              = '',
+    // page js
+    // -------------------------------------------------------------------------------------
+    var page              = $('#page'),
+        second            = $('#second'),
+        minute            = $('#minute'),
+        hour              = $('#hour'),
+        localtime         = $('#localtime'),
+        bigSecond         = {},
+        bigMinute         = {},
+        bigHour           = {},
+        bigWord           = {},
+        local             = {},
+        utc               = {},
+        julian            = {},
+        posix             = {},
+        hash              = '',
         urlpath           = '',
         filename          = '',
         newlocation       = '',
         API_FAIL_STR      = '<li class="list-group-item"><h1 class="text-center"><s>...gathering data...</s><br>...<em>tried</em> to gather data...<br>We\'ve been <strong><a href="https://developer.github.com/v3/#rate-limiting" target="_blank">rate-limited</a></strong> by GitHub\'s API</a>!<br><small>Calls from this <a href="https://www.google.com/#q=what+is+my+ip" target="_blank"><abbr title="Internet Protocol">IP</abbr> address</a> will fail for one hour.</small><br><i class="fa fa-frown-o fa-2x"></i></h1></li>',
-		alphabet          = '`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?',
-		verbInterval      = 0,
-		verbTimeout       = 0,
-		charInterval      = 0,
-		secondInterval    = 0,
-		secondBigInterval = 0,
-		initHoldOff       = 0,
-		bringOut          = 0,
-		pageOrder         = ['home', 'epigraph', 'synopsis', 'ruminations', 'projects', 'resume', 'colophon', 'contact'],
-		currentPage       = 0,
+        alphabet          = '`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?',
+        verbInterval      = 0,
+        verbTimeout       = 0,
+        charInterval      = 0,
+        secondInterval    = 0,
+        secondBigInterval = 0,
+        initHoldOff       = 0,
+        bringOut          = 0,
+        pageOrder         = ['home', 'epigraph', 'synopsis', 'ruminations', 'projects', 'resume', 'colophon', 'contact'],
+        currentPage       = 0,
         //this will store the scroll position
         keepScroll        = false,
         keepHash          = '',
         cachedRepos       = null,
-		geometers         = '<h1 class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</h1>';
+        geometers         = '<h1 class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</h1>';
 
     
-	// General Functions
-	// -------------------------------------------------------------------------------------
-	function wordTime(time) {
-		var hour      = time.getHours(),
-			minute    = time.getMinutes(),
-			second    = time.getSeconds(),
-			ones      = [null, 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'],
-			teens     = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'],
-			tens      = [null, null, 'twenty', 'thirty', 'forty', 'fifty'],
-			hourStr   = '',
-			minuteStr = '',
-			secondStr = '';
-		if (second === 0) {
-			secondStr = '&nbsp;';
-		} else if (second < 10) {
-			secondStr = 'o\'' + ones[second];
-		} else if (second < 19) {
-			secondStr = teens[second - 10];
-		} else {
-			secondStr  = tens[Math.floor(second / 10)];
-			secondStr += (second % 10 === 0) ? '' : '-' + ones[second % 10];
-		}
-		if (minute === 0) {
-			minuteStr = 'o\'clock';
-		} else if (minute < 10) {
-			minuteStr = 'o\'' + ones[minute];
-		} else if (minute < 19) {
-			minuteStr = teens[minute - 10];
-		} else {
-			minuteStr  = tens[Math.floor(minute / 10)];
-			minuteStr += (minute % 10 === 0) ? '' : '-' + ones[minute % 10];
-		}
-		hourStr = ones.concat(teens)[hour % 12];
-		return '<p>' + hourStr + '</p><p>' + minuteStr + '</p><p>' + secondStr + '</p>';
-	}
+    // General Functions
+    // -------------------------------------------------------------------------------------
+    function wordTime(time) {
+        var hour      = time.getHours(),
+            minute    = time.getMinutes(),
+            second    = time.getSeconds(),
+            ones      = [null, 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'],
+            teens     = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'],
+            tens      = [null, null, 'twenty', 'thirty', 'forty', 'fifty'],
+            hourStr   = '',
+            minuteStr = '',
+            secondStr = '';
+        if (second === 0) {
+            secondStr = '&nbsp;';
+        } else if (second < 10) {
+            secondStr = 'o\'' + ones[second];
+        } else if (second < 19) {
+            secondStr = teens[second - 10];
+        } else {
+            secondStr  = tens[Math.floor(second / 10)];
+            secondStr += (second % 10 === 0) ? '' : '-' + ones[second % 10];
+        }
+        if (minute === 0) {
+            minuteStr = 'o\'clock';
+        } else if (minute < 10) {
+            minuteStr = 'o\'' + ones[minute];
+        } else if (minute < 19) {
+            minuteStr = teens[minute - 10];
+        } else {
+            minuteStr  = tens[Math.floor(minute / 10)];
+            minuteStr += (minute % 10 === 0) ? '' : '-' + ones[minute % 10];
+        }
+        hourStr = ones.concat(teens)[hour % 12];
+        return '<p>' + hourStr + '</p><p>' + minuteStr + '</p><p>' + secondStr + '</p>';
+    }
     function formatDate(d) {
         var MONTHS = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
         return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
     }
-	function tickClock() {
-		var now    = new Date(),
-			hrDeg  = 180 + Math.floor(360 * (now.getHours()   / 12)) % 360,
-			minDeg = 180 + Math.floor(360 * (now.getMinutes() / 60)),
-			secDeg = 180 + Math.floor(360 * (now.getSeconds() / 60));
-		second.css('-webkit-transform', 'rotate(' + secDeg + 'deg)');
-		minute.css('-webkit-transform', 'rotate(' + minDeg + 'deg)');
-		hour.css('-webkit-transform', 'rotate(' + hrDeg + 'deg)');
-		localtime.html('<h4><span class="time">' + now.toLocaleTimeString().split('').join('</span><span class="time">') + '</span> <small><span class="time">' + now.toLocaleDateString().split('').join('</span><span class="time">') + '</span></small></h4>');
-		return false;
-	}
-	function tickBigClock() {
-		var now    = new Date(),
-			hrDeg  = 180 + Math.floor(360 * (now.getHours()   / 12)) % 360,
-			minDeg = 180 + Math.floor(360 * (now.getMinutes() / 60)),
-			secDeg = 180 + Math.floor(360 * (now.getSeconds() / 60)),
+    function tickClock() {
+        var now    = new Date(),
+            hrDeg  = 180 + Math.floor(360 * (now.getHours()   / 12)) % 360,
+            minDeg = 180 + Math.floor(360 * (now.getMinutes() / 60)),
+            secDeg = 180 + Math.floor(360 * (now.getSeconds() / 60));
+        second.css('-webkit-transform', 'rotate(' + secDeg + 'deg)');
+        minute.css('-webkit-transform', 'rotate(' + minDeg + 'deg)');
+        hour.css('-webkit-transform', 'rotate(' + hrDeg + 'deg)');
+        localtime.html('<h4><span class="time">' + now.toLocaleTimeString().split('').join('</span><span class="time">') + '</span> <small><span class="time">' + now.toLocaleDateString().split('').join('</span><span class="time">') + '</span></small></h4>');
+        return false;
+    }
+    function tickBigClock() {
+        var now    = new Date(),
+            hrDeg  = 180 + Math.floor(360 * (now.getHours()   / 12)) % 360,
+            minDeg = 180 + Math.floor(360 * (now.getMinutes() / 60)),
+            secDeg = 180 + Math.floor(360 * (now.getSeconds() / 60)),
             isoString  = now.getUTCFullYear() + '-' + (now.getUTCMonth() + 1) + '-' + now.getUTCDate() + 'T' + now.getUTCHours() + ':' + now.getUTCMinutes() + ':' + now.getUTCSeconds();
 
-		bigSecond.css('-webkit-transform', 'rotate( ' + secDeg + 'deg)');
-		bigMinute.css('-webkit-transform', 'rotate( ' + minDeg + 'deg)');
-		bigHour.css('-webkit-transform', 'rotate(' + hrDeg + 'deg)');
+        bigSecond.css('-webkit-transform', 'rotate( ' + secDeg + 'deg)');
+        bigMinute.css('-webkit-transform', 'rotate( ' + minDeg + 'deg)');
+        bigHour.css('-webkit-transform', 'rotate(' + hrDeg + 'deg)');
 
-		bigWord.html(wordTime(now));
-		local.text(now.toLocaleString());
-		utc.text(now.toUTCString());
-		posix.text((+Math.floor(now / 1000)));
-		julian.text(((now / 86400000) + 2440587.5));
+        bigWord.html(wordTime(now));
+        local.text(now.toLocaleString());
+        utc.text(now.toUTCString());
+        posix.text((+Math.floor(now / 1000)));
+        julian.text(((now / 86400000) + 2440587.5));
 
-		bigWord.attr('datetime', isoString);
-		local.attr('datetime', isoString);
-		utc.attr('datetime', isoString);
-		posix.attr('datetime', isoString);
-		julian.attr('datetime', isoString);
+        bigWord.attr('datetime', isoString);
+        local.attr('datetime', isoString);
+        utc.attr('datetime', isoString);
+        posix.attr('datetime', isoString);
+        julian.attr('datetime', isoString);
 
-		return false;
-	}
-	function renderTemplate(name, titleText) {
-		if (titleText) {
-			$('title').html(titleText);
-		} else {
-			$('title').text(name);
-		}
-		page.html($('#' + name + '-template').html());
-		$(page.children()[0]).attr('id', name);
-	}
-	function backNextChange(url) {
-		if (url === 'back') {
-			currentPage = (currentPage > 0) ? (currentPage - 1) : 0;
-			window.location = window.location.href.replace(window.location.hash, '') + '#!/' + pageOrder[currentPage];
-		} else if (url === 'next') {
-			currentPage = (currentPage < pageOrder.length - 1) ? (currentPage + 1) : pageOrder.length - 1;
-			window.location = window.location.href.replace(window.location.hash, '') + '#!/' + pageOrder[currentPage];
-		}
-	}
+        return false;
+    }
+    function renderTemplate(name, titleText) {
+        if (titleText) {
+            $('title').html(titleText);
+        } else {
+            $('title').text(name);
+        }
+        page.html($('#' + name + '-template').html());
+        $(page.children()[0]).attr('id', name);
+    }
+    function backNextChange(url) {
+        if (url === 'back') {
+            currentPage = (currentPage > 0) ? (currentPage - 1) : 0;
+            window.location = window.location.href.replace(window.location.hash, '') + '#!/' + pageOrder[currentPage];
+        } else if (url === 'next') {
+            currentPage = (currentPage < pageOrder.length - 1) ? (currentPage + 1) : pageOrder.length - 1;
+            window.location = window.location.href.replace(window.location.hash, '') + '#!/' + pageOrder[currentPage];
+        }
+    }
 
     // add string formatting
     if (!String.prototype.format) {
@@ -151,11 +151,11 @@ $(document).ready(function () {
         };
     }
     
-	// store pages
-	var pages = {
-		home     : function () {
+    // store pages
+    var pages = {
+        home     : function () {
             
-			renderTemplate('home', 'tim(othy)');
+            renderTemplate('home', 'tim(othy)');
 
             var verb           = $('#verb'),
                 verbList       = $('#verb-list'),
@@ -185,10 +185,10 @@ $(document).ready(function () {
             
             verbList.html('<span class="big bracket left">{</span>' + verbHtml.join('') + '<span class="big bracket right">}</span>');
             
-			// find max length
+            // find max length
             verbs.forEach(function (item) {
-				maxVerbLen = Math.max(maxVerbLen, item.length);
-			});
+                maxVerbLen = Math.max(maxVerbLen, item.length);
+            });
             
             //verbText = new Array(maxVerbLen + 1).join('_');
             for (i = 0; i < maxVerbLen; i += 1) {
@@ -234,19 +234,19 @@ $(document).ready(function () {
             
             // kickoff first timeout
             verbTimeout = setTimeout(renderVerb, verbPeriod);
-		},
-		epigraph    : function () {
-			renderTemplate('epigraph', 'tim(othy) > epigraph');
-		},
-		synopsis    : function () {
-			renderTemplate('synopsis', 'tim(othy) > synopsis');
-		},
-		ruminations : function () {
-			renderTemplate('ruminations', 'tim(othy) > ruminations');
-		},
-		projects : function () {
+        },
+        epigraph    : function () {
+            renderTemplate('epigraph', 'tim(othy) > epigraph');
+        },
+        synopsis    : function () {
+            renderTemplate('synopsis', 'tim(othy) > synopsis');
+        },
+        ruminations : function () {
+            renderTemplate('ruminations', 'tim(othy) > ruminations');
+        },
+        projects : function () {
             
-			renderTemplate('projects', 'tim(othy) > projects');
+            renderTemplate('projects', 'tim(othy) > projects');
             
             if (!cachedRepos) {
             
@@ -340,85 +340,85 @@ $(document).ready(function () {
                 $('#project-list').html(cachedRepos.join('\n'));
             }
 
-		},
-		resume      : function () {
-			renderTemplate('resume', 'tim(othy) > r&eacute;sum&eacute;');
-			$('#tim-resume').html(renderMicroFormat(timResume, $('#h-resume-template').html()));
-			$('#tim-resume div').attr('id', 'document');
-			$('#tim-timeline').html(ganttResume(timResume, 'Timeline'));
+        },
+        resume      : function () {
+            renderTemplate('resume', 'tim(othy) > r&eacute;sum&eacute;');
+            $('#tim-resume').html(renderMicroFormat(timResume, $('#h-resume-template').html()));
+            $('#tim-resume div').attr('id', 'document');
+            $('#tim-timeline').html(ganttResume(timResume, 'Timeline'));
             $('#tim-timeline div').attr('id', 'timeline');
-		},
-		jsonresume  : function () {
-			renderTemplate('jsonresume', 'tim(othy) > r&eacute;sum&eacute; > (json + microformat2)');
-			$('#tim-jsonresume').text(JSON.stringify(timResume, undefined, '  '));
-			$('#tim-jsonresume').append(geometers);
-			prettyPrint();
-		},
-		contact     : function () {
-			renderTemplate('contact', 'tim(othy) > contact');
-			$('#tim-contact').html(renderMicroFormat(timContact, $('#h-card-template').html()));
-			$('#tim-contact .p-note').remove();
-		},
-		colophon    : function () {
-			renderTemplate('colophon', 'tim(othy) > colophon');
+        },
+        jsonresume  : function () {
+            renderTemplate('jsonresume', 'tim(othy) > r&eacute;sum&eacute; > (json + microformat2)');
+            $('#tim-jsonresume').text(JSON.stringify(timResume, undefined, '  '));
+            $('#tim-jsonresume').append(geometers);
+            prettyPrint();
+        },
+        contact     : function () {
+            renderTemplate('contact', 'tim(othy) > contact');
+            $('#tim-contact').html(renderMicroFormat(timContact, $('#h-card-template').html()));
+            $('#tim-contact .p-note').remove();
+        },
+        colophon    : function () {
+            renderTemplate('colophon', 'tim(othy) > colophon');
 
-			$('.typo').hover(function () {
-				$('#lorem h1').text($(this).css('font-family').split(', ')[0].replace(/'/g, ''));
-				$('#lorem').css({
-					'font-family' : $(this).css('font-family'),
-					'top'         : window.pageYOffset
-				});
-			}, function () {
-				$('#lorem').css({
-					'top' : '-1000px'
-				});
-			});
+            $('.typo').hover(function () {
+                $('#lorem h1').text($(this).css('font-family').split(', ')[0].replace(/'/g, ''));
+                $('#lorem').css({
+                    'font-family' : $(this).css('font-family'),
+                    'top'         : window.pageYOffset
+                });
+            }, function () {
+                $('#lorem').css({
+                    'top' : '-1000px'
+                });
+            });
 
-		},
-		monogram   : function () {
-			renderTemplate('monogram', 'tim(othy) > monogram');
-		},
-		fontpy    : function () {
-			renderTemplate('fontpy', 'tim(othy) > font-size python script');
-			prettyPrint();
-		},
-		base64imagepy : function () {
-			renderTemplate('base64imagepy', 'tim(othy) > base64 image python script');
-			prettyPrint();
-		},
-		time        : function () {
-			renderTemplate('time', 'tim(othy) > time');
-			$('#clock').addClass('holdoff-time');
-			bigSecond = $('#bigsecond');
-			bigMinute = $('#bigminute');
-			bigHour   = $('#bighour');
-			bigWord   = $('#bigword');
-			local     = $('#local');
-			utc       = $('#utc');
-			julian    = $('#julian');
-			posix     = $('#posix');
-			tickBigClock();
-			secondBigInterval = setInterval(function () {
-				tickBigClock();
-			}, 1000);
-		},
-		unknown   : function () {
-			renderTemplate('unknown', 'tim(othy) > unknown');
-		}
-	};
+        },
+        monogram   : function () {
+            renderTemplate('monogram', 'tim(othy) > monogram');
+        },
+        fontpy    : function () {
+            renderTemplate('fontpy', 'tim(othy) > font-size python script');
+            prettyPrint();
+        },
+        base64imagepy : function () {
+            renderTemplate('base64imagepy', 'tim(othy) > base64 image python script');
+            prettyPrint();
+        },
+        time        : function () {
+            renderTemplate('time', 'tim(othy) > time');
+            $('#clock').addClass('holdoff-time');
+            bigSecond = $('#bigsecond');
+            bigMinute = $('#bigminute');
+            bigHour   = $('#bighour');
+            bigWord   = $('#bigword');
+            local     = $('#local');
+            utc       = $('#utc');
+            julian    = $('#julian');
+            posix     = $('#posix');
+            tickBigClock();
+            secondBigInterval = setInterval(function () {
+                tickBigClock();
+            }, 1000);
+        },
+        unknown   : function () {
+            renderTemplate('unknown', 'tim(othy) > unknown');
+        }
+    };
 
-	// route hashchanges to page
-	function router(e) {
-        		
+    // route hashchanges to page
+    function router(e) {
+                
         // clear last page stuff
-		clearInterval(charInterval);
-		clearInterval(verbInterval);
-		clearInterval(secondBigInterval);
-		$('.holdoff-time').removeClass('holdoff-time');
+        clearInterval(charInterval);
+        clearInterval(verbInterval);
+        clearInterval(secondBigInterval);
+        $('.holdoff-time').removeClass('holdoff-time');
 
-		// cache page, hash, and filename
-		page = page || $('#page');
-		hash = location.hash.slice(1);
+        // cache page, hash, and filename
+        page = page || $('#page');
+        hash = location.hash.slice(1);
         urlpath = location.pathname.split('/');
         filename = urlpath.slice(-1)[0];
         
@@ -505,28 +505,28 @@ $(document).ready(function () {
         }
         
         return false;
-	}
+    }
 
-	initHoldOff = setTimeout(function () {
-		$('.holdoff').removeClass('holdoff');
-		clearTimeout(initHoldOff);
-	}, 256);
+    initHoldOff = setTimeout(function () {
+        $('.holdoff').removeClass('holdoff');
+        clearTimeout(initHoldOff);
+    }, 256);
 
-	// listen for hash change or page load
-	$(window).on('hashchange', router);
-	$(window).on('load', router);
+    // listen for hash change or page load
+    $(window).on('hashchange', router);
+    $(window).on('load', router);
 
-	// listen for key up change
-	$(window).keyup(function (e) {
-		if (e.keyCode === 37) {
-			backNextChange('back');
-		} else if (e.keyCode === 39) {
-			backNextChange('next');
-		}
-	});
+    // listen for key up change
+    $(window).keyup(function (e) {
+        if (e.keyCode === 37) {
+            backNextChange('back');
+        } else if (e.keyCode === 39) {
+            backNextChange('next');
+        }
+    });
 
-	tickClock();
-	secondInterval = setInterval(function () {
-		tickClock();
-	}, 1000);
+    tickClock();
+    secondInterval = setInterval(function () {
+        tickClock();
+    }, 1000);
 });

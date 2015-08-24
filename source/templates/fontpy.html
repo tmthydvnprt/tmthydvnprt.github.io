@@ -1,9 +1,9 @@
 <template id="fontpy-template">
-	<section class="bringIn">
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<header><h1 class="text-center"><em><code>font-size</code> Derivation Script</em></h1></header>
-				<h4>script :</h4>
+    <section class="bringIn">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <header><h1 class="text-center"><em><code>font-size</code> Derivation Script</em></h1></header>
+                <h4>script :</h4>
 <pre class="prettyprint linenums">
 import numpy as np
 from scipy.optimize import curve_fit
@@ -39,7 +39,7 @@ print ('A = %s\nB = %s\nC = %s\nD = %s') % (A,B,C,D)
 print 'result : '
 print 'f2(x) =', np.round( f2( xdata, A, B, C, D ) )
 </pre>
-					<h4>output :</h4>
+                    <h4>output :</h4>
 <pre class="prettyprint">
 bootstrap curve-fit font-size :
 f1(x) = a*x^3 + b*x^2 + c*x + d
@@ -59,7 +59,7 @@ D = -2.77089436869
 result :
 f2(x) = [ 40.  34.  28.  22.  16.  12.]
 </pre>
-			</div>
-		</div>
-	</section>
+            </div>
+        </div>
+    </section>
 </template>
