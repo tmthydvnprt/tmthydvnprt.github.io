@@ -84,10 +84,10 @@
 <div class="row">
 <div class="col-sm-8 col-sm-offset-2">
 <header>
-<h1><em>Help {?}</em></h1>
+<h2><em>Help {?}</em></h2>
 </header>
 <p>
-                Use the <em>planetary</em> menu in the upper left, or your keyboard's arrows to navigate this site.
+                Use the <em>planetary</em> menu in the upper left, or your keyboard's arrows to navigate the site.  In the upper right you will find a small clock that displays the current time, and the lower left contains links to my blog, contact information, and copyright.
             </p>
 </div>
 </div>
