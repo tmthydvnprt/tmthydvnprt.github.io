@@ -941,27 +941,30 @@ body.blog {
 
 /* Back/Next Corner
 ----------------------------------------------------------------------------------------------------------------------------- */
-#backnext {
+#help {
     position: fixed;
     bottom:8px;
     right:8px;
     transition: all 1.5s cubic-bezier(0.94, 2.61, 0.53, 0.18);
     z-index: 1100;
+    font-size: 150%;
+    color:#fdfefd;
+    text-shadow: 2px 1px 1px #1bbc9b;
+    cursor: pointer;
 }
 @media (min-width: 768px) {
-    #backnext {
+    #help {
         bottom:16px;
         right:16px;
     }
 }
-#backnext #back,
-#backnext #next {
+
+#help #question {
     transition: all 0.8s ease;
-    opacity: 0.2;
+    opacity: 0.8;
 }
-#backnext:hover #back,
-#backnext:hover #next {
-    opacity: 0.6;
+#help:hover #question {
+    opacity: 0.95;
 }
 #info {
     position: fixed;
@@ -977,8 +980,7 @@ body.blog {
     border-top: 3px solid #16a085;
     z-index: 1000;
 }
-#backnext:hover + #info,
-#backnext:hover + #info {
+#help:hover + #info {
     margin-top: -180px;
     opacity: 1;
 }
@@ -2049,7 +2051,7 @@ li.L9 {
 #clock.holdoff {
     transform: translateY(-64px) translateX(64px)!important;
 }
-#backnext.holdoff {
+#help.holdoff {
     transform: translateY(64px) translateX(64px)!important;
 }
 #blog-link.holdoff {
