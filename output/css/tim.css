@@ -461,6 +461,12 @@ body.blog {
     text-align: center;
     padding: 0 32px;
 }
+
+.blog .navbar-header .blogtitle {
+    width: 128px!important;
+}
+
+
 .blog .navbar .force-hover[title]::before,
 .blog .navbar abbr[title]::before,
 .blog .navbar a[href]:not(.no-hover)::before,
@@ -1111,38 +1117,6 @@ body.blog {
 #intro h1 .t2 {
     color: #336E7B;
 }
-#intro #definition {
-    position: absolute;
-    font-family: 'Ubuntu Mono';
-    right:0%;
-    margin-right:-6%;
-    margin-top:-5%;
-    font-size: 15px;
-    line-height: 0.8;
-}
-@media (min-width: 768px) {
-    #intro #definition {
-        margin-right:0%;
-        font-size: 24px;
-    }
-}
-@media (min-width: 992px) {
-    #intro #definition {
-        font-size: 32px;
-    }
-}
-@media (min-width: 1200px) {
-    #intro #definition {
-        font-size: 40px;
-    }
-}
-#intro #definition li:nth-child(1) { color: #4c8f9f; }
-#intro #definition li:nth-child(2) { color: #40808e; }
-#intro #definition li:nth-child(3) { color: #336E7B; }
-
-#intro #definition li:nth-child(1) { animation: fadeIn 1024ms linear 1000ms 1 both; }
-#intro #definition li:nth-child(2) { animation: fadeIn 1024ms linear 1500ms 1 both; }
-#intro #definition li:nth-child(3) { animation: fadeIn 1024ms linear 2000ms 1 both; }
 
 #verb-container {
     position: relative;

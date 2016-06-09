@@ -38,7 +38,7 @@ $(document).ready(function () {
         cachedRepos       = null,
         geometers         = '<h1 class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</h1>';
 
-    
+
     // General Functions
     // -------------------------------------------------------------------------------------
     function wordTime(time) {
@@ -150,18 +150,18 @@ $(document).ready(function () {
             return str;
         };
     }
-    
+
     // store pages
     var pages = {
         home     : function () {
-            
+
             renderTemplate('home', 'tim(othy)');
 
             var verb           = $('#verb'),
                 verbList       = $('#verb-list'),
                 VERB_TEMPLATE  = '<span class="label label-primary" style="-webkit-transition-delay:{delay}s;-moz-transition-delay:{delay}s;-ms-transition-delay:{delay}s;-o-transition-delay:{delay}s;transition-delay:{delay}s;">{verb}</span>',
                 verbHtml       = [],
-                verbs          = 'code read write study learn think ponder wonder wander walk hike garden plant grow calc design develop compute graph plot save invest "work"'.split(' '),
+                verbs          = 'code read write study learn think ponder wonder wander walk hike garden plant grow calc design develop compute graph plot save invest '.split(' '),
                 verbIndx       = 0,
                 maxVerbLen     = 0,
                 blankText      = '',
@@ -174,7 +174,7 @@ $(document).ready(function () {
                 randCharNum    = 6,
                 randChar       = 0,
                 charIndx       = 0;
-            
+
             // add all verbs for showing on hover
             for (v = 0; v < verbs.length; v += 1) {
                 verbHtml.push(VERB_TEMPLATE.format({
@@ -182,19 +182,19 @@ $(document).ready(function () {
                     "verb" : verbs[v]
                 }));
             }
-            
+
             verbList.html('<span class="big bracket left">{</span>' + verbHtml.join('') + '<span class="big bracket right">}</span>');
-            
+
             // find max length
             verbs.forEach(function (item) {
                 maxVerbLen = Math.max(maxVerbLen, item.length);
             });
-            
+
             //verbText = new Array(maxVerbLen + 1).join('_');
             for (i = 0; i < maxVerbLen; i += 1) {
                 blankText += '_';
             }
-            
+
             // 'build' verb by randomly iterate thru characters and 'landing' on correct letters
             function renderVerb() {
 
@@ -231,7 +231,7 @@ $(document).ready(function () {
                     }
                 }, charPeriod);
             }
-            
+
             // kickoff first timeout
             verbTimeout = setTimeout(renderVerb, verbPeriod);
         },
@@ -245,11 +245,11 @@ $(document).ready(function () {
             renderTemplate('ruminations', 'tim(othy) > ruminations');
         },
         projects : function () {
-            
+
             renderTemplate('projects', 'tim(othy) > projects');
-            
+
             if (!cachedRepos) {
-            
+
                 function getRepo() {
                     return $.getJSON('https://api.github.com/users/tmthydvnprt/repos');
                 }
@@ -286,7 +286,7 @@ $(document).ready(function () {
 
                     var url_array = [],
                         lang_list = {};
-                    
+
                     function getLanguage(data) {
                         return $.getJSON(data.languages_url, function (languages) {
                             var lang_array = [],
@@ -312,7 +312,7 @@ $(document).ready(function () {
                         console.log(lang_list);
                         for (i = 0; i < data.length; i += 1) {
                             repo_item = data[i];
-                            
+
                             // make time nice
                             repo_item.created_at = formatDate(new Date(repo_item.created_at));
                             repo_item.updated_at = formatDate(new Date(repo_item.updated_at));
@@ -326,7 +326,7 @@ $(document).ready(function () {
                             repo_item.language_list = lang_list[data[i].name].join('');
                             repos.push(ITEM_TEMPLATE.format(repo_item));
                         }
-                        
+
                         // cached git data for later
                         cachedRepos = repos;
                         $('#project-list').html(repos.join('\n'));
@@ -409,7 +409,7 @@ $(document).ready(function () {
 
     // route hashchanges to page
     function router(e) {
-                
+
         // clear last page stuff
         clearInterval(charInterval);
         clearInterval(verbInterval);
@@ -421,25 +421,25 @@ $(document).ready(function () {
         hash = location.hash.slice(1);
         urlpath = location.pathname.split('/');
         filename = urlpath.slice(-1)[0];
-        
+
         console.log('urlpath : ' + urlpath);
         console.log('hash    : ' + hash);
         console.log('filename: ' + filename);
-        
+
         // index page with internal hash routing
         if (filename === 'index.html') {
-            
+
             // default to home if on index page
             hash = hash || '!/home';
-            
+
             // on-page hash
             if (hash.slice(0, 2) === '!/') {
-                
+
                 // zoom to the top
                 $('html,body').animate({
                     scrollTop: 0
                 }, 300);
-                
+
                 // animate out
                 //$('#page section').addClass('bringOut');
                 $('.bringIn').addClass('bringOut');
@@ -503,7 +503,7 @@ $(document).ready(function () {
                 pages.unknown();
             }
         }
-        
+
         return false;
     }
 

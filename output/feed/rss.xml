@@ -6,8 +6,8 @@
         <link>tmthydvnprt.com</link>
         <id>randomid</id>
         <language>en-us</language>
-        <lastBuildDate>2015-08-24T06:00:35-07:00</lastBuildDate>
-        <pubDate>2015-08-24T06:00:35-07:00</pubDate>
+        <lastBuildDate>2016-06-09T08:05:17-07:00</lastBuildDate>
+        <pubDate>2016-06-09T08:05:17-07:00</pubDate>
         <managingEditor>tmthydvnprt</managingEditor>
            <item>
         <title>Hi, this is another post</title>
@@ -15,7 +15,7 @@
         <guid>randomid</guid>
         <pubDate>6/6/2015 6:00 am</pubDate>
         <description>
-This is the blah blah blah of the post, I just needed a second one. I don't know what to write. This will just be some text that I can run my code on. Eventually there will be a real post here, an</description>
+This is the blah blah blah of the post, I just needed a second one. I don't know what to write. This will just be some text that I can run my code on.</description>
     </item>
    <item>
         <title>Hello World</title>
@@ -23,20 +23,8 @@ This is the blah blah blah of the post, I just needed a second one. I don't know
         <guid>randomid</guid>
         <pubDate>6/4/2015 7:08 pm</pubDate>
         <description>
-This will be a blog of my travels thru the virtual new world. Starting as an electrical engineer, I have been turned into a computer scientist. After coming across extremely interesting techniques</description>
-    </item>
-   <item>
-        <title>Markdown Basics</title>
-        <link>/Users/timothydavenport/GitHub/tmthydvnprt.github.io/output/posts/markdown_basics.html</link>
-        <guid>randomid</guid>
-        <pubDate>6/7/2015 3:54 am</pubDate>
-        <description>
-Markdown Basics§
-Markdown allows you to write using an easy-to-read, easy-to-write plain text format, which then converts to valid HTML for viewing on GitHub
-Basic writing§
-
-Paragraphs§
-Paragraphs in</description>
+Hello world. This will be a log of my travels.
+</description>
     </item>
 
     </channel>

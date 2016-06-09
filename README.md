@@ -1,2 +1,3 @@
 # tmthydvnprt.github.io
-the internet-facing extension of my self
+
+The internet facing extension of my self. [tmthydvnprt.com](http://tmthydvnprt.com)
