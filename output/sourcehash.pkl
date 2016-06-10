@@ -185,7 +185,7 @@ S'x\x18\xb0-R\xe3\x83#\xd4\x14\x1e\xb2\xd7\xbfk5\xcb\x9dA\x18'
 p92
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/pages/posts/patches/bio.html'
 p93
-S')X\xcf;\x8ec\x93w\nn\xf6\xe7z\xe6\xc9\x16B~\x04\xd6'
+S'\x99q\xb7\xa0\x07\x0c\x9dsOQ\xb8#\xeb\x84\xa8\xa0>j\x96\xf3'
 p94
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/css/bootstrap.css'
 p95
@@ -289,7 +289,7 @@ S'%\xfe\xffx.L.\x0f\x05\x9e\xfa\xe1\xd2\xdd\xe1\xd8Al\n7'
 p144
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/patches/footer.html'
 p145
-S'\xd4A\r\xf4\xeb&\rw\xde}\xab`\xf0\xd9\xb3\xb5&\x86e\x1d'
+S'\xfe\xfd\xb9X\xe1\xc9\xb3\x04\xc4\xdd\\}!A\xa4\xe2:[p\x1a'
 p146
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/fonts/FontAwesome.otf'
 p147
@@ -301,7 +301,7 @@ S'\x94\x9f7\xd3d`RR\xc0\x02l\x01V\x81\xe2\xc4Z\xb0z$'
 p150
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/synopsis.html'
 p151
-S'y\x9f\xc2-\xd5I\x9an\x9eF\xbae\xc5t\xb0\xadRXF\xb6'
+S'\x7f\x86u/\x0fl\x15l@R`\x94\xee\xfa\xf6"u\xac\t\x9e'
 p152
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/patches/head.html'
 p153
