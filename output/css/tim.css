@@ -452,11 +452,11 @@ h5:hover a.headerlink {
 ----------------------------------------------------------------------------------------------------------------------------- */
 /* Blog body */
 body.blog {
-    padding-top:64px;
-    background-color: #fefefe;
+    /*padding-top:64px;*/
+    /*background-color: #fefefe;*/
 }
 /* Blog navbar */
-.blog .navbar-header{
+/*.blog .navbar-header{
     position: relative;
     margin-left: 8px!important;
     margin-right: 8px!important;
@@ -482,8 +482,6 @@ body.blog {
 .blog .navbar-header .blogtitle {
     width: 128px!important;
 }
-
-
 .blog .navbar .force-hover[title]::before,
 .blog .navbar abbr[title]::before,
 .blog .navbar a[href]:not(.no-hover)::before,
@@ -499,8 +497,9 @@ body.blog {
     width: auto;
     padding:8px 16px;
     margin-top:64px;
-}
-/* general blog */
+}*/
+
+/* Blog General */
 .blog .list-group-item {
     background-color: #fefefe;
 }
@@ -564,6 +563,7 @@ body.blog {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
+    border: 1px solid #eee;
 }
 .post-group-lists h4 {
     margin: 2px;
@@ -578,19 +578,43 @@ body.blog {
 .blog .categories .group-link {
     background-color: #59ceb6;
 }
+
+/* Blog Jumbotron */
 .blog .jumbotron {
     position: relative;
     perspective: 1000px;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    padding-top: 64px;
+    background-color: #1bbc9b;
 }
+.blog .jumbotron {
+    padding-right: 48px;
+    padding-left: 48px;
+}
+
+.blog  .jumbotron h1, .jumbotron .h1,
+.blog  .jumbotron h2, .jumbotron .h2,
+.blog  .jumbotron h3, .jumbotron .h3,
+.blog  .jumbotron h4, .jumbotron .h4,
+.blog  .jumbotron h5, .jumbotron .h5,
+.blog  .jumbotron h6, .jumbotron .h6 {
+      color:#34495e!important;
+}
+.blog .jumbotron small {
+    color: #336e7b!important;
+}
+
 .blog .jumbotron header {
     position: absolute;
+    transform-origin: 33% 50%;
+    z-index: 1000;
 }
 .blog .jumbotron header * {
     transform-origin: 33% 50%;
 }
 .blog .jumbotron .blank-header-for-spacing {
     opacity: 0;
+    z-index: -1000;
 }
 .blog .jumbotron h1,
 .blog .jumbotron h2 {
@@ -604,6 +628,10 @@ body.blog {
     transform-origin: 10% 50%;
 }
 
+/*.blog * {
+    border: 1px dashed rgba(256,256,256,0.5);
+}*/
+
 /* Blog animations */
 .blog .blog-nav {
     animation: introDnIn 512ms ease-in-out 0s 1 both;
@@ -615,12 +643,15 @@ body.blog {
     animation: introOut 768ms ease-in-out 0ms 1 both;
 }
 .blog #postpage {
-    animation: introDn 768ms ease-in-out 128ms 1 both;
+    animation: introDn 1024ms ease-in-out 768ms 1 both;
 }
 .blog .jumbotron header *:nth-child(1) { animation: tilt 1024ms ease-in-out 128ms 1 both;}
 .blog .jumbotron header *:nth-child(2) { animation: tilt 1024ms ease-in-out 256ms 1 both;}
 .blog .jumbotron header *:nth-child(3) { animation: tilt 1024ms ease-in-out 512ms 1 both;}
 
+.blog .jumbotron .blank-header-for-spacing *:nth-child(1) { animation: tilt 1024ms ease-in-out 128ms 1 both;}
+.blog .jumbotron .blank-header-for-spacing *:nth-child(2) { animation: tilt 1024ms ease-in-out 256ms 1 both;}
+.blog .jumbotron .blank-header-for-spacing *:nth-child(3) { animation: tilt 1024ms ease-in-out 512ms 1 both;}
 
 .blog .jumbotron .post-group-lists ul:nth-child(1) { animation: introDnInRot 1024ms ease-in-out  512ms 1 both;}
 .blog .jumbotron .post-group-lists ul:nth-child(2) { animation: introDnInRot 1024ms ease-in-out  768ms 1 both;}
@@ -648,7 +679,8 @@ body.blog {
 }
 @keyframes tilt {
     0%   {transform: translateX( 0px) translateY(-128px) rotateY(90deg);}
-    100% {transform: translateX(16px) translateY(  -8px) rotateY(20deg);}
+    100% {transform: translateX(0px) translateY(  0px) rotateY(0deg);}
+    /*100% {transform: translateX(16px) translateY(  -8px) rotateY(20deg);}*/
 }
 
 #post-social-list li:hover {

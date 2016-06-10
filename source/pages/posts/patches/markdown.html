@@ -2,44 +2,35 @@
     <div id="postinfo" class="row">
         <div class="jumbotron code-font">
             <div class="row">
-                <div class="col-xs-10 col-sm-7">
-                    <header>
-                        <h1 class="post-title">{{title}}</h1>
-                        <h2 class="post-description"><small>{{description}}</small></h2>
-                        <h5 class="post-author-date">by {{author}} <small>on {{date}}</small><span class="blinky">|</span></h5>
-                    </header>
-                    <div class="blank-header-for-spacing">
-                        <h1>{{title}}</h1>
-                        <h2><small>{{description}}</small></h2>
-                        <h5>by {{author}} <small>on {{date}}</small><span class="blinky">|</span></h5>
-                    </div>
-                </div>
-                <div class="col-xs-2 col-sm-1">
-                    <div class="post-group-lists">
-                        <ul class="list-unstyled">
-                            {{featured_label}}
-                        </ul>
-                        <ul class="list-unstyled">
-                            <h4>Categories</h4>
-                            {{category_list}}
-                        </ul>
-                        <ul class="list-unstyled">
-                            <h4>Tags</h4>
-                            {{tag_list}}
-                        </ul>
-                    </div>
-                </div>
-                <div class="hidden-xs col-sm-3 col-sm-offset-1">
-                    <div class="ad pull-right">
-                        <img class="img-responsive" src="{{relativepath}}js/holder.js/300x250">
-                        <!--336x280-->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="visible-xs col-xs-12">
-                    <div class="ad">
-                        <img class="img-responsive center-block" src="{{relativepath}}js/holder.js/320x100">
+                <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="row">
+                        <div class="col-xs-10 col-sm-11">
+                            <header>
+                                <h1 class="post-title">{{title}}</h1>
+                                <h2 class="post-description"><small>{{description}}</small></h2>
+                                <h5 class="post-author-date">by <a href="{{relativepath}}index.html#!/contact">{{author}}</a> <small>on {{date}}</small><span class="blinky">|</span></h5>
+                            </header>
+                            <div class="blank-header-for-spacing">
+                                <h1>{{title}}</h1>
+                                <h2><small>{{description}}</small></h2>
+                                <h5>by <a href="{{relativepath}}index.html#!/contact">{{author}}</a> <small>on {{date}}</small><span class="blinky">|</span></h5>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-1">
+                            <div class="post-group-lists">
+                                <ul class="list-unstyled">
+                                    {{featured_label}}
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <h4>Categories</h4>
+                                    {{category_list}}
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <h4>Tags</h4>
+                                    {{tag_list}}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -47,28 +38,12 @@
     </div>
     <div id="postpage">
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-1">
+            <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
                 <div class="row">
                     <div class="col-xs-12">
                         <article id="post" class="markdowned">
                             {{markdown}}
                         </article>
-                    </div>
-                </div>
-                <div class="well well-sm">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <h5>Categories</h5>
-                            <ul class="list-inline">
-                                {{category_list}}
-                            </ul>
-                        </div>
-                        <div class="col-xs-6">
-                            <h5>Tags</h5>
-                            <ul class="list-inline">
-                                {{tag_list}}
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -89,9 +64,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <!-- <div class="col-sm-3">
                 <patch id="sidebar"></patch>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

@@ -4,6 +4,7 @@ aggregit
 juxtapy
 ummm
 hmmm
+jupyter
 fpgas
 efefef
 fdfefd
