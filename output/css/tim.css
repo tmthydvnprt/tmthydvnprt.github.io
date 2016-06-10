@@ -396,6 +396,23 @@ blockquote,.lead {
     color: #94dfd0!important;
 }
 
+a.headerlink {
+    opacity: 0;
+    -webkit-transition: opacity .8s ease;
+    -moz-transition: opacity .8s ease;
+    -ms-transition: opacity .8s ease;
+    -o-transition: opacity .8s ease;
+    transition: opacity .8s ease
+}
+h1:hover a.headerlink,
+h2:hover a.headerlink,
+h3:hover a.headerlink,
+h4:hover a.headerlink,
+h5:hover a.headerlink {
+    opacity: 1;
+    color:#336e7b;
+}
+
 /*
 .post-title,
 .post-description,
@@ -1080,7 +1097,7 @@ body.blog {
 }
 #intro {
     position: absolute;
-    top:200%;
+    top:400%;
     left:50%;
     transition: all 1s ease 0.1s;
     transform: translate(-50%,-50%);
