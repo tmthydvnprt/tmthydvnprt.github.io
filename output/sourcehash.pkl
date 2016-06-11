@@ -21,7 +21,7 @@ S'X\x1f\x01\xf1U|t\xccMs\xd2l\x9c{FO\xa3\xaf\x02e'
 p10
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/time.html'
 p11
-S'<\x0c/\xa1\xce\x0cJ\xe9S\xf5\xe4\xda\x7f\xb7\x94\x02\xceS\x08R'
+S'\xa9\x97\x85\x13!\x05\x11\xb1\x1f#\x99`\x15\\\xa69v4=\xcd'
 p12
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/pages/posts/patches/group_list.html'
 p13
