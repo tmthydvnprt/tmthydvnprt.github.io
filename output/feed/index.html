@@ -503,14 +503,16 @@ Ecclesiastes 1:9
 <hr/>
 <p>What's with the <code><abbr title="Uniform Resource Locator">url</abbr></code> &amp; name?</p>
 <ol>
-<li>consistent user name, nobody had claimed it on <em>any</em> service I needed \o/,</li>
-<li>being interested in language and information transferred via characters, vowels are somewhat unnecessary to record, like the phoenician alphabet <a alt="W" href="http://en.wikipedia.org/wiki/Phoenician_alphabet" target="_blank" title="W"><sup>W</sup></a> or any abjad <a alt="W" href="http://en.wikipedia.org/wiki/Abjad" target="_blank" title="W"><sup>W</sup></a>.</li>
+<li>Consistency. This particular group of letters provides a consistent and typically available user name across the services I use. &mdash; \o/</li>
+<li>Unique. It's my name...but not. Somewhere between a typical <em>real life</em> name and a full blown <em>internet-y</em> alias or handle.</li>
+<li>Ancient. Being a slight language/information-transferred-via-character nerd, vowels are somewhat unnecessary to record, like the Phoenician alphabet <a alt="W" href="http://en.wikipedia.org/wiki/Phoenician_alphabet" target="_blank" title="W"><sup>W</sup></a> or any abjad <a alt="W" href="http://en.wikipedia.org/wiki/Abjad" target="_blank" title="W"><sup>W</sup></a> (I took artistic license by leaving the y).</li>
+<li>I like it.</li>
 </ol>
-<h5>Monogram</h5>
+<h4>Monogram</h4>
 <p>The <a alt="monogram" href="#!/monogram" title="monogram">monogram</a> was made with tightly placed <code>html</code>/<code>css</code>. An embedded <code>base64</code> image version for the <samp><a alt="#!/resume" href="#!/resume" title="#!/resume">#!/resume</a></samp> <em>page</em> was made with this really simple <a alt="python script" href="#!/base64imagepy" title="python script">python script</a>.</p>
-<h5>Astronomical Navigation</h5>
+<h4>Astronomical Navigation</h4>
 <p>The <em>planetary menu</em> is a nod to the wonder of astronomy and a, potentially humorous, commentary to the fact that by <em>navigating</em> my website, you are metaphorically <em>navigating</em> a world I created.</p>
-<h5>Mathematically Aesthetic</h5>
+<h4>Mathematically Aesthetic</h4>
 <p>I find it interesting to use mathematical relationships to define numbers instead of arbitrary or aesthetic choice.  Often the mathematical becomes aesthetic. If an overall trend/equation is not used to set a group of numbers (as in the typography described above), or if only a single number is needed, I try to use something that first satisfies</p>
 <p class="text-center">
 <span class="code-font">log<sub>2</sub>(<var>x</var>) == <abbr title="the set of integers">ℤ</abbr></span> <span class="abs-right">(a power of two)</span>.
@@ -523,7 +525,7 @@ Ecclesiastes 1:9
 <p class="text-center">
 <span class="code-font"><var>x</var> % 5 == 0</span> <span class="abs-right">(a multiple of five)</span>.
                     </p>
-<h5>Hovering</h5>
+<h4>Hovering</h4>
 <p>
                         There is something enjoyable about hovering over text and seeing a change, therefore, most
                          <code>&lt;a&gt;</code> tags display their <code>href</code> attribute to show where the link goes,
@@ -586,8 +588,8 @@ Ecclesiastes 1:9
 <div class="row">
 <div class="col-sm-12">
 <div class="row">
-<div class="col-sm-12">
-<header><h1><em>Ruminations</em> <small>&mdash; basically the things I find <em>cool</em>!</small></h1></header>
+<div class="col-sm-10 col-sm-offset-1">
+<header><h1><em>Ruminations</em> <small>&mdash; the things I find <em>cool</em> and enjoy thinking about!</small></h1></header>
 <hr/>
 </div>
 </div>
@@ -697,7 +699,8 @@ Ecclesiastes 1:9
 <template id="home-template">
 <section class="bringIn">
 <header id="intro">
-<h1 class="text-font"><span class="bigger"><span class="t1">tim</span><span class="bracket">(</span><span class="t2">othy</span><span class="bracket">)</span></span></h1>
+<h1 class="text-font" id="tmthydvnprt"><span class="bigger"><span class="t1">tm</span><span class="t2">thy</span><span class="t1">dvn</span><span class="t2">prt</span></span></h1>
+<h1 class="text-font" id="timothy"><span class="bigger"><span class="t1">tim</span><span class="bracket">(</span><span class="t2">othy</span><span class="bracket">)</span></span></h1>
 <h1 class="text-font"><span class="bigger">I <span id="verb-container"><span id="verb">_______</span><div id="verb-list"></div></span> for fun.</span></h1>
 </header>
 <p class="geometers">&Alpha;&Gamma;&Epsilon;&Omega;&Mu;&Epsilon;&Tau;&Rho;&Eta;&Tau;&Omicron;&Sigma; &Mu;&Eta;&Delta;&Epsilon;&Iota;&Sigma; &Epsilon;&Iota;&Sigma;&Iota;&Tau;&Omega;</p>
@@ -711,7 +714,7 @@ Ecclesiastes 1:9
 </header>
 <hr/>
 <div>
-<p class="lead">Here are some fun personal fact &amp; figures!</p>
+<p class="lead">Here are some fun facts &amp; figures!</p>
 <h2>Time Alive</h2>
 <p>
                     I've been alive for about
@@ -774,11 +777,11 @@ Ecclesiastes 1:9
 <h2>Hi!</h2>
 <p class="lead">
                     My name is Timothy Davenport, most call me Tim.
-                    <br/>Some places I am known by <code>tmthydvnprt</code>.
+                    <br/>Some places I go by <code>tmthydvnprt</code>.
                     <br/>I am a Number Cruncher; finding or creating value with data.
                 </p>
 <p>
-                    Want to see some <a alt="random data" href="#!/data" title="random data">random data</a> on me?
+                    Want to see some <a alt="random data" href="#!/data" title="random data">random data</a> about me?
                 </p>
 </div>
 </div>

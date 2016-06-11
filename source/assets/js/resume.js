@@ -2,7 +2,7 @@
 
 var timResume = $.extend({}, microformat["h-resume"], {
     "p-name"             : "R&eacute;sum&eacute;",
-    "p-summary"          : "An electrical engineer turned computer scientist. A professional history of <code>vhdl</code>, a personal and academic history of <code>matlab</code>, <code>javascript</code>, and <code>python</code>.  I talk to and teach machines, I convince them to do what I want.",
+    "p-summary"          : "An electrical engineer turned computer scientist. A professional history of <code>VHLD</code> and <code>MATLAB</code>, a personal and academic history of <code>MATLAB</code>, <code>Javascript</code>, and <code>Python</code>  I am a number cruncher, finding and creating value with data.",
     "p-contact"          : timContact,
     "p-education"        : [
         $.extend({}, microformat["h-event"], {
@@ -33,16 +33,26 @@ var timResume = $.extend({}, microformat["h-resume"], {
             "p-location"         : "Foothill Technology High School, Ventura California"
         })
     ],
-    "p-experience"       : [
+    "p-experience" : [
         $.extend({}, microformat["h-event"], {
-            "p-name"             : "Electrical Engineer II",
-            "p-abbr"             : "EE II",
-            "dt-start"           : "2012-10",
+            "p-name"             : "Systems Engineer",
+            "p-abbr"             : "SE",
+            "dt-start"           : "2014-08",
             "dt-end"             : "present",
-            "dt-duration"        : timeDuration("2012-10", "present"),
+            "dt-duration"        : timeDuration("2014-08", "present"),
+            "p-category"         : "Full Time",
+            "p-description"      : 'Digital Signal Processing Design and System Integration for <abbr title="Electronic Warfare">EW</abbr> applications',
+            "p-location"         : 'Raytheon Company <abbr title="Space and Airborne Systems">SAS</abbr>'
+        }),
+        $.extend({}, microformat["h-event"], {
+            "p-name"             : "Electrical Engineer",
+            "p-abbr"             : "EE",
+            "dt-start"           : "2012-10",
+            "dt-end"             : "2014-08",
+            "dt-duration"        : timeDuration("2012-10", "2014-08"),
             "p-category"         : "Full Time",
             "p-description"      : 'Hardware & Firmware design for Digital Signal Processing in <abbr title="Electronic Warfare">EW</abbr> applications',
-            "p-location"         : 'Raytheon <abbr title="Space and Airborne Systems">SAS</abbr>'
+            "p-location"         : 'Raytheon Company <abbr title="Space and Airborne Systems">SAS</abbr>'
         }),
         $.extend({}, microformat["h-event"], {
             "p-name"             : "Electrical Engineering Intern",
@@ -52,7 +62,7 @@ var timResume = $.extend({}, microformat["h-resume"], {
             "dt-duration"        : timeDuration("2009-06", "2011-09"),
             "p-category"         : "Full Time Summer Internship",
             "p-description"      : 'Hardware & Firmware design for Digital Signal Processing in <abbr title="Electronic Warfare">EW</abbr> applications',
-            "p-location"         : 'Raytheon <abbr title="Space and Airborne Systems">SAS</abbr>'
+            "p-location"         : 'Raytheon Company <abbr title="Space and Airborne Systems">SAS</abbr>'
         }),
         /*
             "dt-start"           : "2010-07",

@@ -1127,15 +1127,18 @@ body.blog {
 }
 #intro {
     position: absolute;
-    top:400%;
+    top:200%;
     left:50%;
     transition: all 1s ease 0.1s;
     transform: translate(-50%,-50%);
     white-space: nowrap;
 }
+#intro h1,
+#intro h2 {
+    color: #34495E!important;
+}
 #intro h1 {
     font-size: 30px;
-    color: #34495E!important;
 }
 @media (min-width: 768px) {
     #intro h1 {
@@ -1156,13 +1159,33 @@ body.blog {
     color: #ffffff;
     font-family: 'Ubuntu Mono';
 }
-#intro h1 .t1 {}
+#intro h1 .t1,
+#intro h2 .t1 {}
 #slideover .bracket,
-#intro h1 .bracket {
+#intro h1 .bracket,
+#intro h2 .bracket {
     color: #16A085;
 }
-#intro h1 .t2 {
+#intro h1 .t2,
+#intro h2 .t2 {
     color: #336E7B;
+}
+#tmthydvnprt, #timothy {
+    transition: all 512ms ease;
+}
+#timothy {
+    position: absolute;
+    margin-top:-32%;
+    opacity: 0;
+    z-index: -1;
+}
+#tmthydvnprt:hover {
+    opacity: 0;
+    margin-top:20%;
+}
+#tmthydvnprt:hover + #timothy {
+    opacity: 1;
+    margin-top:-20%;
 }
 
 #verb-container {

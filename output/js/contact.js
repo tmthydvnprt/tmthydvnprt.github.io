@@ -35,6 +35,6 @@ var timContact = $.extend({}, microformat["h-card"], {
     "dt-bday"            : "1989-03-27T06:18:00-08:00",
     "p-sex"              : "Male",
     "p-gender-identity"  : "Male",
-    "p-category"         : "engineer, programmer ( really a scripter at heart )",
+    "p-category"         : "Engineer, programmer ( really a scripter at heart )",
     "p-note"             : "The monogram, (<code>u-logo</code>) is a base64 data URI (<code>data:image/png;base64,</code>)"
 });

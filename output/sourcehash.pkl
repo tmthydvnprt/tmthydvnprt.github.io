@@ -13,7 +13,7 @@ S'\xa8\x8b\xda5\x01s\x85\x1bw\xc9_\x8eQ\xcfl0\xa4l\xb5='
 p6
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/js/resume.js'
 p7
-S'C\xc7\x0b\xd6\xf7V\xfe\x86\xffF4\xc8Wv\xeav\x12\xe2\x10\x8f'
+S"\x80W\x06\x92\xfa\xc5\xd4\x1a5\x9c'B\x16\xc5\xd1\x81j8\x97\x85"
 p8
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/resume.html'
 p9
@@ -41,7 +41,7 @@ S'\xe2\x8b<\x19\xb7\xa7\xa9\xfa9\t\xc4\x0b-Xs_`c&Q'
 p20
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/data.html'
 p21
-S"\x02p\xd9\x03\xf2\x05l\xe2'\x8e\xe3Ej\x8e\xc3\xa5)~\x9e\xea"
+S"'\xda\xbd\x02>T72\xea\x84n\xe0\x15\xb3\x06\xc5\x92z\xa6\xed"
 p22
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/fonts/fontawesome-webfont.woff'
 p23
@@ -113,7 +113,7 @@ S'U\x8c\x1b[\x8f\xc0\xe8\r*\xa5\x94\x13<}\xdcc\xa7\x9f\xf5\x0f'
 p56
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/ruminations.html'
 p57
-S'm\xac\xadO\xf2w\xd4\xc1]\x0f\x1b$\xead1Q\xff\xbe\x03\xc0'
+S'&\xb0\x98\x1b\xf1\x87\xcd-\xd2\x9e\xa7K\x1d@\xd6\xf7\xfd\xba\x90\x11'
 p58
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/pages/posts/patches/index.html'
 p59
@@ -185,7 +185,7 @@ S"x'\x8c\xb4\xf7I\xf6\x08D\xb5f\xbc\x02N:\x85Age["
 p92
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/home.html'
 p93
-S'x\x18\xb0-R\xe3\x83#\xd4\x14\x1e\xb2\xd7\xbfk5\xcb\x9dA\x18'
+S'3\x99v,\xdf\xf4\xacm\xf21<\xe8\xee\x8d\x04fg\x15\x95\xb1'
 p94
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/pages/posts/patches/bio.html'
 p95
@@ -217,7 +217,7 @@ S'\x9b\x8b\x95\xc3\xb9\x9b\xd0rO\x8aNU\xf6\xd3\x9c\xf3\xae\xce.;'
 p108
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/css/tim.css'
 p109
-S';k\x9eY\xd2\xef@\xfd0\x96\xbc\x84\xa8\x08\x80p^\x9cV\xdc'
+S'r\xbd\x8e\xc1\xe28\x96>Y\xc7EMUmeVx\xf0\xe9\xf2'
 p110
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/patches/header.html'
 p111
@@ -265,7 +265,7 @@ S'<\xe9|\xf6\xd6h\x199lc\xcc\x16\xdc0?\xd1H\xb5\xb3~'
 p132
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/js/contact.js'
 p133
-S'\xb9\xf7-\xd2\xf48\xf88\x9c\xbd,\x01m\xf6\xcb\x04F\x91\x1c\x02'
+S'\xb7\xe1\xf6vY\xc7\x85\x18\xf8ww\xde\xdat\x8f.\xdb\xe5\xc8F'
 p134
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/pages/posts/patches/pager.html'
 p135
@@ -277,7 +277,7 @@ S'\x80;\x12|\xdff\x87\xf7\x9d\x98gN\xd5\x80\xf1\x0b\x8aAi\xac'
 p138
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/colophon.html'
 p139
-S'\xe2\xe1\xbc:m\\e\x95\xe9\x9e\x1b\xd7E\xce\x0b+\xab\xa0v\xa5'
+S'8iQ\x11\xda1\x059s\x1fk9\xaa\x11\xb5\x8bGQ\x86\xfa'
 p140
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/unknown.html'
 p141
@@ -305,7 +305,7 @@ S'\x94\x9f7\xd3d`RR\xc0\x02l\x01V\x81\xe2\xc4Z\xb0z$'
 p152
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/synopsis.html'
 p153
-S'\xa4SL\x02J\xc5\xd14\xe02O\xcb \x11ee\x02\xf85F'
+S'7y\x0ev\xcee\xd2\x12b\x9a}\xce\xa5\xe1\xcc\xa2y\x93\xcdF'
 p154
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/patches/head.html'
 p155
