@@ -1343,6 +1343,27 @@ body.blog {
     margin-bottom: 11px;
 }
 
+/* Data Page
+----------------------------------------------------------------------------------------------------------------------------- */
+#data {
+    position: absolute;
+}
+#data > div {
+    position: absolute;
+    top:200%;
+
+}
+@media (min-width: 768px) {
+    #data > div {
+        top:300%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+}
+#data ul.alive-time {
+    padding-left: 24px;
+}
+
 /* Ruminations Page
 ----------------------------------------------------------------------------------------------------------------------------- */
 #ruminations {

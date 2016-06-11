@@ -9,6 +9,7 @@ $(document).ready(function () {
         minute            = $('#minute'),
         hour              = $('#hour'),
         localtime         = $('#localtime'),
+        birth             = new Date(1989,2,27,6,18,0);
         bigSecond         = {},
         bigMinute         = {},
         bigHour           = {},
@@ -78,6 +79,15 @@ $(document).ready(function () {
         var MONTHS = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
         return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
     }
+    function rounder(x, p) {
+        if (p) {
+            d = Math.pow(10.0, p);
+        } else {
+            d = Math.pow(10.0, 3.0);
+        }
+        y = Math.floor(d * x) / d;
+        return y;
+    }
     function tickClock() {
         var now    = new Date(),
             hrDeg  = 180 + Math.floor(360 * (now.getHours()   / 12)) % 360,
@@ -111,6 +121,41 @@ $(document).ready(function () {
         utc.attr('datetime', isoString);
         posix.attr('datetime', isoString);
         julian.attr('datetime', isoString);
+
+        return false;
+    }
+    function aliveClock() {
+        // Determien time difference from birth
+        var now    = new Date(),
+            alive  = Math.round((now - birth) / 1000.0);
+            // years  = now.getFullYear() - birth.getFullYear(),
+            // shiftYear = new Date(birth.setFullYear(now.getFullYear())),
+            // months = now.getMonth() - shiftYear.getFullYear();
+            // days   = now.getDate()
+
+        var alive_html = '';
+
+        // Set time alive text
+        aliveDuration.html(alive_html);
+        aliveSeconds.text(alive.toFixed(3));
+        aliveMinutes.text(rounder(alive / 60.0).toFixed(3));
+        aliveHours.text(rounder(alive / 3600.0).toFixed(3));
+        aliveDays.text(rounder(alive / 86400.0).toFixed(3));
+        aliveWeeks.text(rounder(alive / 604800.0).toFixed(3));
+        aliveMonths.text(rounder(alive / 2592000.0).toFixed(3));
+        aliveYears.text(rounder(alive / 31557600.0).toFixed(3));
+        aliveDecades.text(rounder(alive / 315576000.0).toFixed(3));
+        aliveCenturies.text(rounder(alive / 3155760000.0).toFixed(3));
+        // Set time alive datetime attributes
+        aliveSeconds.attr('datetime', 'PT' + alive + 'S');
+        aliveMinutes.attr('datetime', 'PT' + Math.round(alive / 60.0) + 'M');
+        aliveHours.attr('datetime', 'PT' + Math.round(alive / 3600.0) + 'H');
+        aliveDays.attr('datetime', 'P' + Math.round(alive / 86400.0) + 'D');
+        aliveWeeks.attr('datetime', 'P' + Math.round(alive / 604800.0) + 'W');
+        aliveMonths.attr('datetime', 'P' + Math.round(alive / 2592000.0) + 'M');
+        aliveYears.attr('datetime', 'P' + Math.round(alive / 31557600.0) + 'Y');
+        aliveDecades.attr('datetime', 'P' + Math.round(alive / 31557600.0) + 'Y');
+        aliveCenturies.attr('datetime', 'P' + Math.round(alive / 31557600.0) + 'Y');
 
         return false;
     }
@@ -400,6 +445,23 @@ $(document).ready(function () {
             tickBigClock();
             secondBigInterval = setInterval(function () {
                 tickBigClock();
+            }, 1000);
+        },
+        data : function () {
+            renderTemplate('data', 'tim(othy) > data');
+            aliveDuration = $('#alive-duration');
+            aliveSeconds = $('#alive-seconds');
+            aliveMinutes = $('#alive-minutes');
+            aliveHours = $('#alive-hours');
+            aliveDays = $('#alive-days');
+            aliveWeeks = $('#alive-weeks');
+            aliveMonths = $('#alive-months');
+            aliveYears = $('#alive-years');
+            aliveDecades = $('#alive-decadess');
+            aliveCenturies = $('#alive-centuries');
+            aliveClock();
+            aliveInterval = setInterval(function () {
+                aliveClock();
             }, 1000);
         },
         unknown   : function () {
