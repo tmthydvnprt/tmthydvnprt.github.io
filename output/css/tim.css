@@ -115,7 +115,6 @@ main:not(#page) > section > div {
         padding: 21px 16px;
     }
 }
-
 .navbar-form.navbar-left {
     float:left!important;
 }
@@ -412,6 +411,9 @@ h5:hover a.headerlink {
     opacity: 1;
     color:#336e7b;
 }
+.indent {
+    padding-left: 20px;
+}
 
 /*
 .post-title,
@@ -438,16 +440,7 @@ h5:hover a.headerlink {
     100% {width: 100%; border-right-width: 0px;}
 }
 */
-.blinky {
-    display: none;
-    /*animation: blinking 512ms ease-in-out 0s infinite alternate both;*/
-}
-@keyframes blinking {
-    0%   {opacity:0}
-    33%  {opacity:0}
-    66%  {opacity:1}
-    100% {opacity:1}
-}
+
 /* Blog sub-site overrides
 ----------------------------------------------------------------------------------------------------------------------------- */
 /* Blog body */

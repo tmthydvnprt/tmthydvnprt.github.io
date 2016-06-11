@@ -41,7 +41,7 @@ S'\xe2\x8b<\x19\xb7\xa7\xa9\xfa9\t\xc4\x0b-Xs_`c&Q'
 p20
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/templates/data.html'
 p21
-S'\xa4\xdbC\xb0T\xc1>\xde\xa4\x84\xa0\xf8k\xd8=L\x0b9}7'
+S"\x02p\xd9\x03\xf2\x05l\xe2'\x8e\xe3Ej\x8e\xc3\xa5)~\x9e\xea"
 p22
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/fonts/fontawesome-webfont.woff'
 p23
@@ -89,7 +89,7 @@ S'5\xd4\xfa\xcb\xdc^\xed\xda.y\xca\xb50\xa2!\x88\x0bT\xed\xbb'
 p44
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/js/tim.js'
 p45
-S'x\xa7=Q\x14q\xd02\xc8\xd7\xca\xb8X\xa8""\x94r\xbc('
+S'_\r\xa6#3\x05\n\xa2\x91\x17\xb6\xc2\x8d&&H6u\xa3l'
 p46
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/fonts/.DS_Store'
 p47
@@ -217,7 +217,7 @@ S'\x9b\x8b\x95\xc3\xb9\x9b\xd0rO\x8aNU\xf6\xd3\x9c\xf3\xae\xce.;'
 p108
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/assets/css/tim.css'
 p109
-S'k.D\xaf\xe8\xa2\xdcs\x05\xcd]\x89S\xc2\xf4v\x9e\x8eF\xd6'
+S';k\x9eY\xd2\xef@\xfd0\x96\xbc\x84\xa8\x08\x80p^\x9cV\xdc'
 p110
 sS'/Users/timothydavenport/GitHub/tmthydvnprt.github.io/source/patches/header.html'
 p111

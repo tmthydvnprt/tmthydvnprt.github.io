@@ -75,6 +75,9 @@ $(document).ready(function () {
         hourStr = ones.concat(teens)[hour % 12];
         return '<p>' + hourStr + '</p><p>' + minuteStr + '</p><p>' + secondStr + '</p>';
     }
+    function formatCommas(x) {
+        return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
     function formatDate(d) {
         var MONTHS = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
         return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
@@ -126,36 +129,104 @@ $(document).ready(function () {
     }
     function aliveClock() {
         // Determien time difference from birth
-        var now    = new Date(),
-            alive  = Math.round((now - birth) / 1000.0);
-            // years  = now.getFullYear() - birth.getFullYear(),
-            // shiftYear = new Date(birth.setFullYear(now.getFullYear())),
-            // months = now.getMonth() - shiftYear.getFullYear();
-            // days   = now.getDate()
+        var R = 1,
+            now = new Date(),
+            alive = Math.round((now - birth) / 1000.0),
+            years = 0,
+            shiftYears = 0,
+            years = 0,
+            months = 0,
+            shiftMonths = 0,
+            days = 0,
+            decDays = 0,
+            hours = 0,
+            decHours = 0,
+            minutes = 0,
+            decMinutes = 0,
+            seconds = 0,
+            alive_html = '',
+            timeStr = '',
+            timeDur = 'P',
+            totalSeconds = 0,
+            totalMinutes = 0,
+            totalHours = 0,
+            totalDays = 0,
+            totalWeeks = 0,
+            totalMonths = 0,
+            totalYears = 0,
+            totalDecades = 0,
+            totalCenturies = 0;
 
-        var alive_html = '';
+        // Calculate exact integer duration for each unit
+        birth = new Date(1989,2,27,6,18,0);
+        now = new Date();
+        years = now.getFullYear() - birth.getFullYear();
+        shiftBirth = new Date(birth);
+        shiftBirth.setFullYear(now.getFullYear());
+        if (shiftBirth > now) {
+            shiftBirth = new Date(birth.setFullYear(now.getFullYear() - 1));
+            years = years - 1;
+        }
+        months = now.getMonth() - shiftBirth.getMonth();
+        shiftBirth.setMonth(now.getMonth());
+        if (shiftBirth > now) {
+            shiftBirth.setMonth(now.getMonth() - 1);
+            months = months - 1;
+        }
+        decDays = (now - shiftBirth) / (24 * 60 * 60 * 1000);
+        days = Math.floor(decDays);
+        decHours = (decDays - days) * 24;
+        hours = Math.floor(decHours);
+        decMinutes = (decHours - hours) * 60;
+        minutes = Math.floor(decMinutes);
+        seconds = Math.floor((decMinutes - minutes) * 60);
 
-        // Set time alive text
+        if (years   > 0) { timeDur += years + 'Y'; timeStr += years + ' years, '; }
+        if (months  > 0) { timeDur += months + 'M'; timeStr += months + ' months, '; }
+        if (days    > 0) { timeDur += days + 'D'; timeStr += days + ' days, '; }
+        if (hours   > 0 || minutes > 0 || seconds > 0) { timeDur += 'T'; }
+        if (hours   > 0) { timeDur += hours + 'H'; timeStr += hours + ' hours, '; }
+        if (minutes > 0) { timeDur += minutes + 'M'; timeStr += minutes + ' minutes and '; }
+        if (seconds > 0) { timeDur += seconds + 'S'; timeStr += seconds + ' seconds'; }
+
+        timeStr = years + ' years, ' + months + ' months, ' + days + ' days, ' + hours + ' hours, ' + minutes + ' minutes and ' + seconds + ' seconds';
+        alive_html = '<time datetime="' + timeDur + '">' + timeStr + '</time>';
+
+        // Calcualte total amount for each unit
+        totalSeconds = alive;
+        totalMinutes = (alive / 60.0);
+        totalHours = (alive / 3600.0);
+        totalDays = (alive / 86400.0);
+        totalWeeks = (alive / 604800.0);
+        totalMonths = (alive / 2592000.0);
+        totalYears = (alive / 31557600.0);
+        totalDecades = (alive / 315576000.0);
+        totalCenturies = (alive / 3155760000.0);
+
+        // Set time alive duration text
         aliveDuration.html(alive_html);
-        aliveSeconds.text(alive.toFixed(3));
-        aliveMinutes.text(rounder(alive / 60.0).toFixed(3));
-        aliveHours.text(rounder(alive / 3600.0).toFixed(3));
-        aliveDays.text(rounder(alive / 86400.0).toFixed(3));
-        aliveWeeks.text(rounder(alive / 604800.0).toFixed(3));
-        aliveMonths.text(rounder(alive / 2592000.0).toFixed(3));
-        aliveYears.text(rounder(alive / 31557600.0).toFixed(3));
-        aliveDecades.text(rounder(alive / 315576000.0).toFixed(3));
-        aliveCenturies.text(rounder(alive / 3155760000.0).toFixed(3));
-        // Set time alive datetime attributes
-        aliveSeconds.attr('datetime', 'PT' + alive + 'S');
-        aliveMinutes.attr('datetime', 'PT' + Math.round(alive / 60.0) + 'M');
-        aliveHours.attr('datetime', 'PT' + Math.round(alive / 3600.0) + 'H');
-        aliveDays.attr('datetime', 'P' + Math.round(alive / 86400.0) + 'D');
-        aliveWeeks.attr('datetime', 'P' + Math.round(alive / 604800.0) + 'W');
-        aliveMonths.attr('datetime', 'P' + Math.round(alive / 2592000.0) + 'M');
-        aliveYears.attr('datetime', 'P' + Math.round(alive / 31557600.0) + 'Y');
-        aliveDecades.attr('datetime', 'P' + Math.round(alive / 31557600.0) + 'Y');
-        aliveCenturies.attr('datetime', 'P' + Math.round(alive / 31557600.0) + 'Y');
+
+        // Set total time alive text
+        aliveSeconds.text(formatCommas(totalSeconds.toFixed(R)));
+        aliveMinutes.text(formatCommas(totalMinutes.toFixed(R)));
+        aliveHours.text(formatCommas(totalHours.toFixed(R)));
+        aliveDays.text(formatCommas(totalDays.toFixed(R)));
+        aliveWeeks.text(formatCommas(totalWeeks.toFixed(R)));
+        aliveMonths.text(formatCommas(totalMonths.toFixed(R)));
+        aliveYears.text(formatCommas(totalYears.toFixed(R)));
+        aliveDecades.text(formatCommas(totalDecades.toFixed(R)));
+        aliveCenturies.text(formatCommas(totalCenturies.toFixed(R)));
+
+        // Set total time alive datetime attributes
+        aliveSeconds.attr('datetime', 'PT' + totalSeconds + 'S');
+        aliveMinutes.attr('datetime', 'PT' + Math.round(totalMinutes) + 'M');
+        aliveHours.attr('datetime', 'PT' + Math.round(totalHours) + 'H');
+        aliveDays.attr('datetime', 'P' + Math.round(totalDays) + 'D');
+        aliveWeeks.attr('datetime', 'P' + Math.round(totalWeeks) + 'W');
+        aliveMonths.attr('datetime', 'P' + Math.round(totalMonths) + 'M');
+        aliveYears.attr('datetime', 'P' + Math.round(totalYears) + 'Y');
+        aliveDecades.attr('datetime', 'P' + Math.round(totalDecades) + 'Y');
+        aliveCenturies.attr('datetime', 'P' + Math.round(totalCenturies) + 'Y');
 
         return false;
     }
@@ -457,7 +528,7 @@ $(document).ready(function () {
             aliveWeeks = $('#alive-weeks');
             aliveMonths = $('#alive-months');
             aliveYears = $('#alive-years');
-            aliveDecades = $('#alive-decadess');
+            aliveDecades = $('#alive-decades');
             aliveCenturies = $('#alive-centuries');
             aliveClock();
             aliveInterval = setInterval(function () {
