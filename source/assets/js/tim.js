@@ -271,7 +271,7 @@ $(document).ready(function () {
     var pages = {
         home     : function () {
 
-            renderTemplate('home', 'tim(othy)');
+            renderTemplate('home', 'tmthydvnprt');
 
             var verb           = $('#verb'),
                 verbList       = $('#verb-list'),
@@ -352,17 +352,17 @@ $(document).ready(function () {
             verbTimeout = setTimeout(renderVerb, verbPeriod);
         },
         epigraph    : function () {
-            renderTemplate('epigraph', 'tim(othy) > epigraph');
+            renderTemplate('epigraph', 'tmthydvnprt > epigraph');
         },
         synopsis    : function () {
-            renderTemplate('synopsis', 'tim(othy) > synopsis');
+            renderTemplate('synopsis', 'tmthydvnprt > synopsis');
         },
         ruminations : function () {
-            renderTemplate('ruminations', 'tim(othy) > ruminations');
+            renderTemplate('ruminations', 'tmthydvnprt > ruminations');
         },
         projects : function () {
 
-            renderTemplate('projects', 'tim(othy) > projects');
+            renderTemplate('projects', 'tmthydvnprt > projects');
 
             if (!cachedRepos) {
 
@@ -458,25 +458,25 @@ $(document).ready(function () {
 
         },
         resume      : function () {
-            renderTemplate('resume', 'tim(othy) > r&eacute;sum&eacute;');
+            renderTemplate('resume', 'tmthydvnprt > r&eacute;sum&eacute;');
             $('#tim-resume').html(renderMicroFormat(timResume, $('#h-resume-template').html()));
             $('#tim-resume div').attr('id', 'document');
             $('#tim-timeline').html(ganttResume(timResume, 'Timeline'));
             $('#tim-timeline div').attr('id', 'timeline');
         },
         jsonresume  : function () {
-            renderTemplate('jsonresume', 'tim(othy) > r&eacute;sum&eacute; > (json + microformat2)');
+            renderTemplate('jsonresume', 'tmthydvnprt > r&eacute;sum&eacute; > (json + microformat2)');
             $('#tim-jsonresume').text(JSON.stringify(timResume, undefined, '  '));
             $('#tim-jsonresume').append(geometers);
             prettyPrint();
         },
         contact     : function () {
-            renderTemplate('contact', 'tim(othy) > contact');
+            renderTemplate('contact', 'tmthydvnprt > contact');
             $('#tim-contact').html(renderMicroFormat(timContact, $('#h-card-template').html()));
             $('#tim-contact .p-note').remove();
         },
         colophon    : function () {
-            renderTemplate('colophon', 'tim(othy) > colophon');
+            renderTemplate('colophon', 'tmthydvnprt > colophon');
 
             $('.typo').hover(function () {
                 $('#lorem h1').text($(this).css('font-family').split(', ')[0].replace(/'/g, ''));
@@ -492,18 +492,18 @@ $(document).ready(function () {
 
         },
         monogram   : function () {
-            renderTemplate('monogram', 'tim(othy) > monogram');
+            renderTemplate('monogram', 'tmthydvnprt > monogram');
         },
         fontpy    : function () {
-            renderTemplate('fontpy', 'tim(othy) > font-size python script');
+            renderTemplate('fontpy', 'tmthydvnprt > font-size python script');
             prettyPrint();
         },
         base64imagepy : function () {
-            renderTemplate('base64imagepy', 'tim(othy) > base64 image python script');
+            renderTemplate('base64imagepy', 'tmthydvnprt > base64 image python script');
             prettyPrint();
         },
         time        : function () {
-            renderTemplate('time', 'tim(othy) > time');
+            renderTemplate('time', 'tmthydvnprt > time');
             $('#clock').addClass('holdoff-time');
             bigSecond = $('#bigsecond');
             bigMinute = $('#bigminute');
@@ -519,7 +519,7 @@ $(document).ready(function () {
             }, 1000);
         },
         data : function () {
-            renderTemplate('data', 'tim(othy) > data');
+            renderTemplate('data', 'tmthydvnprt > data');
             aliveDuration = $('#alive-duration');
             aliveSeconds = $('#alive-seconds');
             aliveMinutes = $('#alive-minutes');
@@ -536,7 +536,7 @@ $(document).ready(function () {
             }, 1000);
         },
         unknown   : function () {
-            renderTemplate('unknown', 'tim(othy) > unknown');
+            renderTemplate('unknown', 'tmthydvnprt > unknown');
         }
     };
 

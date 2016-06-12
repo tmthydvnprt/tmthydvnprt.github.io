@@ -2,7 +2,7 @@
 
 var timResume = $.extend({}, microformat["h-resume"], {
     "p-name"             : "R&eacute;sum&eacute;",
-    "p-summary"          : "An electrical engineer turned computer scientist. A professional history of <code>VHLD</code> and <code>MATLAB</code>, a personal and academic history of <code>MATLAB</code>, <code>Javascript</code>, and <code>Python</code>  I am a number cruncher, finding and creating value with data.",
+    "p-summary"          : "An electrical engineer turning computer scientist. A professional and academic history of <code>VHLD</code> and <code>MATLAB</code> with a personal history of <code>Javascript</code> and <code>Python</code>.  A number cruncher, finding and creating value with data.",
     "p-contact"          : timContact,
     "p-education"        : [
         $.extend({}, microformat["h-event"], {
@@ -41,7 +41,7 @@ var timResume = $.extend({}, microformat["h-resume"], {
             "dt-end"             : "present",
             "dt-duration"        : timeDuration("2014-08", "present"),
             "p-category"         : "Full Time",
-            "p-description"      : 'Digital Signal Processing Design and System Integration for <abbr title="Electronic Warfare">EW</abbr> applications',
+            "p-description"      : 'Digital Signal Processing Design and System Integration for <abbr title="Electronic Warfare">EW</abbr> applications.',
             "p-location"         : 'Raytheon Company <abbr title="Space and Airborne Systems">SAS</abbr>'
         }),
         $.extend({}, microformat["h-event"], {
@@ -51,7 +51,7 @@ var timResume = $.extend({}, microformat["h-resume"], {
             "dt-end"             : "2014-08",
             "dt-duration"        : timeDuration("2012-10", "2014-08"),
             "p-category"         : "Full Time",
-            "p-description"      : 'Hardware & Firmware design for Digital Signal Processing in <abbr title="Electronic Warfare">EW</abbr> applications',
+            "p-description"      : 'Hardware & Firmware design for Digital Signal Processing in <abbr title="Electronic Warfare">EW</abbr> applications.',
             "p-location"         : 'Raytheon Company <abbr title="Space and Airborne Systems">SAS</abbr>'
         }),
         $.extend({}, microformat["h-event"], {
@@ -61,7 +61,7 @@ var timResume = $.extend({}, microformat["h-resume"], {
             "dt-end"             : "2011-09",
             "dt-duration"        : timeDuration("2009-06", "2011-09"),
             "p-category"         : "Full Time Summer Internship",
-            "p-description"      : 'Hardware & Firmware design for Digital Signal Processing in <abbr title="Electronic Warfare">EW</abbr> applications',
+            "p-description"      : 'Hardware & Firmware design for Digital Signal Processing in <abbr title="Electronic Warfare">EW</abbr> applications.',
             "p-location"         : 'Raytheon Company <abbr title="Space and Airborne Systems">SAS</abbr>'
         }),
         /*

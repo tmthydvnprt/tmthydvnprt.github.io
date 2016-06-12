@@ -87,7 +87,7 @@
 <h2><em>Help {?}</em></h2>
 </header>
 <p>
-                Use the <em>planetary</em> menu in the upper left, or your keyboard's arrows to navigate the site.  In the upper right you will find a small clock that displays the current time, and the lower left contains links to my blog, contact information, and copyright.
+                Use the <em>planetary</em> menu in the upper left, or your keyboard's arrows (<kbd>&larr;</kbd> &amp; <kbd>&rarr;</kbd>) to navigate the site.  In the upper right you will find a small clock that displays the current time, and the lower left contains links to my contact information, and copyright.
             </p>
 </div>
 </div>
